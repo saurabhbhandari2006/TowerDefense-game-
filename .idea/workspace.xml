@@ -35,8 +35,8 @@
       <file leaf-file-name="towerdefense.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6570">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="6.63089" vertical-offset="1108" max-vertical-offset="6570">
+              <caret line="343" column="19" selection-start-line="343" selection-start-column="19" selection-end-line="343" selection-end-column="19" />
               <folding>
                 <marker date="1406810672000" expanded="false" signature="10546:10581" placeholder="..." />
               </folding>
@@ -311,8 +311,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2412">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="6.63089" vertical-offset="1108" max-vertical-offset="6570">
+          <caret line="343" column="19" selection-start-line="343" selection-start-column="19" selection-end-line="343" selection-end-column="19" />
           <folding>
             <marker date="1406810672000" expanded="false" signature="10546:10581" placeholder="..." />
           </folding>
