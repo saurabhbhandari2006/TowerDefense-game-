@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GrailHunter</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/treasureroad.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Crafty+Girls' rel='stylesheet' type='text/css'>
+
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+
+<!-- Application content go here -->
+
+<!-- Game Design -->
+
+<div class="gameTitle">
+    <span id="gamename">Grail Hunter</span>
+    <br/>
+    <a href="#" id="startClicker" style="text-decoration: none;font-size:48px;color:black;">Click to Start</a>
+</div>
+
+<div class="game-wrapper" style="padding-top: 6%;display: none;">
+    <div class="stats-wrapper">
+        <h2 id="stats">
+            Life: <span id="life">1000</span>
+            <br/>
+            Gold: <span id="gold">200</span>
+        </h2>
+
+        <div id="baseprompter" style="width:80%;font-size: 12px;">
+            - On each map, pick a city to explore.
+            <br/>
+            - Select what you want to do there
+            <br/>
+            - At any time, travel to one of the other maps by clicking the arrows. It costs 100 gold to make the
+            journey.
+            <br/>
+            - To get clues as to where the Grail might be, find the Sphinx who keeps moving between the cities. Answer his
+            question and he will guide you.
+            <br/>
+            - One of the cities in the Nine Realms has the Grail. Once you think you are in the right city, launch a Grail expedition to find it.
+        </div>
+        <div id="city-card">
+            <div id="citypic"></div>
+            <div id="cityname"></div>
+            <div id="choice-list">
+                <div id="prompter">What do you want to do?</div>
+                <ul id="campaigns"></ul>
+            </div>
+        </div>
+        <div id="qcard">
+            <div id="quiz-content" class="questioned">
+                <img id="sphinxpic" src="#" style="width:30%;"/>
+
+                <div id="qprompt" style="float:right;font-weight: bold;width:65%;">Answer correctly and I will guide
+                    your quest
+                </div>
+                <br/>
+                <br/>
+
+                <div id="qquestion"></div>
+                <div id="qid"></div>
+                <ul id="answerBlock">
+                    <li class="answer" id="optax"></li>
+                    <li class="answer" id="optbx"></li>
+                    <li class="answer" id="optcx"></li>
+                    <li class="answer" id="optdx"></li>
+                </ul>
+                <div id="answerMsg"></div>
+            </div>
+        </div>
+
+    </div>
+    <img id="compass" src="img/treasureroad/compass.gif" style="position: absolute;right:0;width:15%;"/>
+
+    <div class="map-wrapper">
+        <h1 id="map-name"></h1>
+
+        <div id="directions">
+            <img src="img/treasureroad/directions/N.png" id="N" class="N"/>
+            <img src="img/treasureroad/directions/NE.png" id="NE" class="N E"/>
+            <img src="img/treasureroad/directions/E.png" id="E" class="E"/>
+            <img src="img/treasureroad/directions/SE.png" id="SE" class="S E"/>
+            <img src="img/treasureroad/directions/S.png" id="S" class="S"/>
+            <img src="img/treasureroad/directions/SW.png" id="SW" class="S W"/>
+            <img src="img/treasureroad/directions/W.png" id="W" class="W"/>
+            <img src="img/treasureroad/directions/NW.png" id="NW" class="N W"/>
+        </div>
+        <div id="destinations"></div>
+    </div>
+</div>
+
+
+<!-- Javascripts go here  -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script src="js/vendor/jquery.easing.1.3.js"></script>
+
+<script src="js/treasureroad/treasureroad-data.js"></script>
+<script src="js/questionbank.js"></script>
+<script src="js/treasureroad/treasureroad.js"></script>
+<script src="js/counter.js"></script>
+
+<!-- Game Script-->
+
+
+</body>

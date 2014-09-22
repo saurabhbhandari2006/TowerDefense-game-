@@ -1,0 +1,251 @@
+.gameTitle{
+    width:960px;
+    height:640px;
+    margin: 0 auto;
+    font-size: 100px;
+    font-family: 'Impact', sans-serif;
+    color:#333;
+    text-shadow: white 0 0 20px;
+    text-align: center;
+    margin-top: 20%;
+    line-height: 64px;
+}
+
+#compass{
+    display: none;
+    transform: rotate(-10deg);
+}
+.stats-wrapper {
+    float: right;
+    margin-right: 4%;
+    padding-left: 5%;
+    padding-top: 2%;
+    width: 30%;
+    height: 70%;
+    background-size: 100% 100%;
+    transform: rotate(10deg);
+    font-family: 'Crafty Girls', cursive;
+    display: none;
+}
+
+.map-wrapper {
+    width: 60%;
+    height: 75%;
+    transform: rotate(-10deg);
+    background-size: 100% 100%;
+    position: relative;
+    opacity: 0;
+}
+
+#directions {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#directions img {
+    position: absolute;
+    width: 8%;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+#directions img:hover {
+    opacity: 1;
+}
+
+/* Directions IDs */
+
+#N {
+    top: 0;
+    left: 45%;
+}
+
+#NE {
+    top: 0;
+    right: 0;
+}
+
+#E {
+    top: 45%;
+    right: 0;
+}
+
+#SE {
+    bottom: 0;
+    right: 0;
+}
+
+#S {
+    bottom: 0;
+    right: 45%;
+}
+
+#SW {
+    bottom: 0;
+    left: 0;
+}
+
+#W {
+    top: 45%;
+    left: 0;
+}
+
+#NW {
+    top: 0;
+    left: 0;
+}
+
+/* Map Destinations CSS */
+
+#map-name {
+    left: 10%;
+    position: absolute;
+    top: 5%;
+    color: #111;
+    text-shadow: white 0px 0px 10px;
+}
+
+.dstn {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.5;
+    width: 12%;
+}
+
+.dstn:hover {
+    opacity: 1;
+    width: 14%;
+    margin-left: -1%;
+    margin-top: -1%;
+}
+
+/* City Card CSS */
+
+#city-card {
+    width: 80%;
+    height: 50%;
+    display: none;
+}
+
+#citypic img {
+    width: 100%
+}
+
+#citypic {
+    float: left;
+    width: 40%;
+}
+
+#cityname {
+    float: left;
+    font-size: 2em;
+    line-height: 1em;
+    width: 60%;
+}
+
+#choice-list {
+    float: left;
+    width: 100%;
+    cursor: pointer;
+}
+
+#choice-list ul {
+    color: darkred;
+    margin: 0;
+}
+
+#choice-list ul li {
+}
+
+#choice-list li:hover {
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+
+.comm, .payoff {
+    color: black;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.65em;
+}
+
+.cresult {
+    width: 40%;
+    float: left;
+}
+
+.campaign-icon {
+    width: 60%;
+    float: left;
+}
+
+.continuer{
+    color:darkred;
+    font-weight: bold;
+    text-decoration: none;
+}
+.grailer{
+    color:darkred;
+    text-decoration: none;
+}
+
+/* Question Card */
+
+#qcard, #qid{
+    display: none;
+    width: 80%;
+}
+
+#bulletA {
+    background: #a34f32;
+}
+
+#bulletB {
+    background: #7255ff;
+}
+
+#bulletC {
+    background: #8b9f20;
+}
+
+#bulletD {
+    background: #ffcf57;
+}
+
+#answerBlock {
+    list-style: none;
+}
+
+#answerMsg {
+    display: none;
+    color: black;
+    font-size: 1.6em;
+    line-height: 1;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.answer-bullet {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px;
+    border-radius: 50%;
+    margin-right: 10px;
+    text-align: center;
+    color: black;
+}
+
+#answerBlock li {
+    margin-bottom: 2px;
+    margin-left: -39px;
+    cursor: pointer;
+}
+
+#answerBlock li:hover {
+    font-weight: bold;
+}
