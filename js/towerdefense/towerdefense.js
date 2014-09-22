@@ -10,8 +10,13 @@ var keyArray;
 var player;
 var card_type;
 var gameDeck;
+<<<<<<< HEAD
 var flag=0;
 var result;
+=======
+var draw;
+var flag = 3;
+>>>>>>> f98cbe1f677c3fede5fbc082078b0a6f5ca58642
 
 $(function () {
     $('body').css('background-image', "url(" + theme.background + ")");
@@ -84,6 +89,7 @@ function setTowerTop(team, cap, top, posx, posy, wd) {
     }
 }
 
+<<<<<<< HEAD
 
 function initDeck() {
     gameDeck=shuffle(myCards);
@@ -105,33 +111,83 @@ function drawCards(value) {
     }
     $.each(result, function (index, elm) {
     $('.card-container').find('.cards').eq(index).append('<img id='+elm.id+'_'+elm.cost.red+'_'+elm.cost.blue+'_'+elm.cost.green+'_'+elm.value+'" src="'+elm.image+'" class="card-image"/>')
+=======
+function initDeck(index) {
+    gameDeck=shuffle(myCards);
+    drawCards();
+}
+
+function drawCards() {
+
+    draw = [];
+    if(flag+2 < 12) {
+        for (var i = 0; i < 3; i++) {
+            draw.push(gameDeck[flag]);
+            flag++;
+        }
+    }
+    else {
+        flag = 0;
+        initDeck();
+    }
+
+    $.each(draw, function(index, elm){
+        $('.card-container').find('.cards').eq(index).append('<img id='+elm.id+'_'+elm.cost.red+'_'+elm.cost.blue+'_'+elm.cost.green+'_'+elm.value+'" src="'+elm.image+'" class="card-image"/>')
+
+>>>>>>> f98cbe1f677c3fede5fbc082078b0a6f5ca58642
     });
 }
+
 function initTowers() {
     setTower('player', game.startHeight);
     setTower('ai', game.startHeight + 18);
 }
+
 function playerTurn() {
+<<<<<<< HEAD
 //    drawCards(1);
     $(".cards").unbind('click').click(function () {
         console.log($(this));
 
         cardClicked($(this).attr("id"), "player", "ai");
 
+=======
+    $(".cards").unbind('click').click(function () {
+        switch($(this).attr("id")) {
+            case "card1": card = draw[0]; break;
+            case "card2": card = draw[1]; break;
+            case "card3": card = draw[2]; break;
+
+        }
+//        if(card.category == "attack")
+            console.log(card.cost);
+            console.log(card.cost.red);
+        cardClicked(card, "player", "ai");
+>>>>>>> f98cbe1f677c3fede5fbc082078b0a6f5ca58642
     })
 }
+
 function aiTurn() {
     /* Randomly pick from one of the active cards*/
+<<<<<<< HEAD
     var random = flag -(Math.floor(Math.random()*3)+flag-2)
     var card = result[random];
+=======
+    var random = flag - Math.floor((Math.random()*3)+(flag-2));
+    var card = draw[random];
+>>>>>>> f98cbe1f677c3fede5fbc082078b0a6f5ca58642
     cardClicked(card, "player", "ai");
 }
 
-function cardClicked(id, byTeam, onTeam) {
+function cardClicked(card, byTeam, onTeam) {
 
-    var $card = $("#" + id);
-    if ($card.hasClass('attack')) {
-        attack(onTeam, parseInt(id.split("_")[2]));
+    switch(card.category) {
+        case "attack": attack(onTeam, card); break;
+        case "build": build(byTeam, card); break;
+    }
+
+    if (card.category == "attack") {
+        attack(onTeam, card);
     } else {
         if ($card.hasClass('build')) {
             build(byTeam, parseInt(id.split("_")[2]));
@@ -142,16 +198,18 @@ function cardClicked(id, byTeam, onTeam) {
     }
 }
 
-function attack(team, value) {
+function attack(team, card) {
     /*attacklogic*/
     (team == "ai") ? aiTurn() : playerTurn();
 
 }
-function build(team, value) {
+
+function build(team, card) {
     /*buildlogic*/
     (team == "ai") ? playerTurn() : aiTurn();
 }
-function stockUp(team, value) {
+
+function stockUp(team, card) {
     /*resource logic*/
     (team == "ai") ? playerTurn() : aiTurn();
 }
@@ -343,6 +401,7 @@ function processAnswers(answer) {
         $('#answerMsg').fadeOut();
     }, 3000);
 }
+
 $.ionSound({
     sounds: [
         "blast",
@@ -352,6 +411,7 @@ $.ionSound({
     multiPlay: true,
     volume: "1.0"
 });
+
 function card_swape() {
     keyArray = shuffle(myCards);
     var red_val, blue_val, green_val, attack_val, build_val, card_type, card_image;
