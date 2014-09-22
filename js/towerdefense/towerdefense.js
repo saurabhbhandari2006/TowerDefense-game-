@@ -9,6 +9,9 @@ var random_button;
 var keyArray;
 var player;
 var card_type;
+var gameDeck;
+var flag=0;
+var result;
 
 $(function () {
     $('body').css('background-image', "url(" + theme.background + ")");
@@ -33,6 +36,7 @@ function initGame() {
     initDeck();
     initTowers();
     playerTurn();
+
 }
 
 function setTower(team, delta) {
@@ -81,39 +85,46 @@ function setTowerTop(team, cap, top, posx, posy, wd) {
 }
 
 
-function initDeck(index) {
-    var gameDeck=shuffle(myCards);
-    $.each(gameDeck, function(index, elm){
-        $('.deck-container').append('<img id='+elm.id+'_'+elm.cost.red+'_'+elm.cost.blue+'_'+elm.cost.green+'_'+elm.value+'" src="'+elm.image+'" class="card-image"/>')
-    });
+function initDeck() {
+    gameDeck=shuffle(myCards);
     drawCards(3);
     }
 
-function drawCards() {
-    var getMeRandomElements = function(sourceArray, neededElements) {
-        var result = [];
-        for (var i = 0; i < neededElements; i++) {
-            result.push(sourceArray[Math.floor(Math.random()*sourceArray.length)]);
-        }
+function drawCards(value) {
 
-        return result;
-        console.log(result);
+    result = [];
+    if (flag+2 < 12){
+        for (var i = 0; i < value; i++) {
+            result.push(gameDeck[flag]);
+            flag++;
+        }}
+    else
+    {
+        flag =0;
+        initDeck();
     }
+    $.each(result, function (index, elm) {
+    $('.card-container').find('.cards').eq(index).append('<img id='+elm.id+'_'+elm.cost.red+'_'+elm.cost.blue+'_'+elm.cost.green+'_'+elm.value+'" src="'+elm.image+'" class="card-image"/>')
+    });
 }
 function initTowers() {
     setTower('player', game.startHeight);
     setTower('ai', game.startHeight + 18);
 }
 function playerTurn() {
-    drawCards(1);
-    $('.active.card').unbind('click').on('click', function () {
+//    drawCards(1);
+    $(".cards").unbind('click').click(function () {
+        console.log($(this));
+
         cardClicked($(this).attr("id"), "player", "ai");
+
     })
 }
 function aiTurn() {
-    drawCards(1);
     /* Randomly pick from one of the active cards*/
-    cardClicked($(this).attr("id"), "player", "ai");
+    var random = flag -(Math.floor(Math.random()*3)+flag-2)
+    var card = result[random];
+    cardClicked(card, "player", "ai");
 }
 
 function cardClicked(id, byTeam, onTeam) {
