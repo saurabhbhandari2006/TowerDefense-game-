@@ -145,8 +145,8 @@ function cardClicked(card, byTeam, onTeam) {
     if (card.category == "attack") {
         attack(onTeam, card);
     } else {
-        if ($card.hasClass('build')) {
-            build(byTeam, parseInt(id.split("_")[2]));
+        if (card.category == "build") {
+            build(byTeam, card);
         } else {
             stockUp(byTeam, parseInt(id.split("_")[2]), parseInt(id.split("_")[3]));
         }
@@ -155,14 +155,36 @@ function cardClicked(card, byTeam, onTeam) {
 }
 
 function attack(team, card) {
-    /*attacklogic*/
-    (team == "ai") ? aiTurn() : playerTurn();
+    if (team == "ai") {
+        cal_red = $("#red_score").text() - parseInt(card.cost.red);
+        $("#comp_red_score").text(cal_red);
+        setTower("ai", card.value);
+        $("#ai-tower-effect").find('.build_image1').show().delay(1000).fadeOut();
+        $.ionSound.play("blast");
+    } else {
+        cal_red = $("#red_score").text() - parseInt(card.cost.red);
+        $("#red_score").text(cal_red);
+        setTower("player", card.value);
+        $("#player-tower-effect").find('.build_image1').show().delay(1000).fadeOut();
+        $.ionSound.play("blast");
+    }
 
 }
 
 function build(team, card) {
-    /*buildlogic*/
-    (team == "ai") ? playerTurn() : aiTurn();
+    if(team == "ai") {
+        cal_blue = $("#comp_blue_score").text() - parseInt(card.cost.blue);
+        $("#comp_blue_score").text(cal_blue);
+        setTower("ai", build);
+        $("#ai-tower-effect").find('.build_image').show().delay(1000).fadeOut();
+        $.ionSound.play("build");
+    } else {
+        cal_blue = $("#blue_score").text() - parseInt(card.cost.blue);
+        $("#blue_score").text(cal_blue);
+        setTower("player", build);
+        $("#player-tower-effect").find('.build_image').show().delay(1000).fadeOut();
+        $.ionSound.play("build");
+    }
 }
 
 function stockUp(team, card) {
