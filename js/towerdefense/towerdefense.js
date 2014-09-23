@@ -280,11 +280,6 @@ function emptyDeck() {
     $(".cards").empty()
 }
 
-function getTowerHeight(team) {
-    var height = $('#' + team + '-tower').height();
-    return height
-}
-
 function getQuestion() {
     //console.log("card_type in getQuest():- " + card_type);
     //console.log("player_turn in getQuest() :- " + player_turn);
