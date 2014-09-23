@@ -10,13 +10,10 @@ var keyArray;
 var player;
 var card_type;
 var gameDeck;
-<<<<<<< HEAD
-var flag=0;
-var result;
-=======
+var flag=3;
+//var result;
+
 var draw;
-var flag = 3;
->>>>>>> f98cbe1f677c3fede5fbc082078b0a6f5ca58642
 
 $(function () {
     $('body').css('background-image', "url(" + theme.background + ")");
@@ -89,33 +86,12 @@ function setTowerTop(team, cap, top, posx, posy, wd) {
     }
 }
 
-<<<<<<< HEAD
 
 function initDeck() {
     gameDeck=shuffle(myCards);
     drawCards(3);
     }
 
-function drawCards(value) {
-
-    result = [];
-    if (flag+2 < 12){
-        for (var i = 0; i < value; i++) {
-            result.push(gameDeck[flag]);
-            flag++;
-        }}
-    else
-    {
-        flag =0;
-        initDeck();
-    }
-    $.each(result, function (index, elm) {
-    $('.card-container').find('.cards').eq(index).append('<img id='+elm.id+'_'+elm.cost.red+'_'+elm.cost.blue+'_'+elm.cost.green+'_'+elm.value+'" src="'+elm.image+'" class="card-image"/>')
-=======
-function initDeck(index) {
-    gameDeck=shuffle(myCards);
-    drawCards();
-}
 
 function drawCards() {
 
@@ -134,7 +110,6 @@ function drawCards() {
     $.each(draw, function(index, elm){
         $('.card-container').find('.cards').eq(index).append('<img id='+elm.id+'_'+elm.cost.red+'_'+elm.cost.blue+'_'+elm.cost.green+'_'+elm.value+'" src="'+elm.image+'" class="card-image"/>')
 
->>>>>>> f98cbe1f677c3fede5fbc082078b0a6f5ca58642
     });
 }
 
@@ -144,14 +119,7 @@ function initTowers() {
 }
 
 function playerTurn() {
-<<<<<<< HEAD
-//    drawCards(1);
-    $(".cards").unbind('click').click(function () {
-        console.log($(this));
 
-        cardClicked($(this).attr("id"), "player", "ai");
-
-=======
     $(".cards").unbind('click').click(function () {
         switch($(this).attr("id")) {
             case "card1": card = draw[0]; break;
@@ -160,37 +128,33 @@ function playerTurn() {
 
         }
 //        if(card.category == "attack")
-            console.log(card.cost);
-            console.log(card.cost.red);
+//            console.log(card.cost);
+//            console.log(card.cost.red);
         cardClicked(card, "player", "ai");
->>>>>>> f98cbe1f677c3fede5fbc082078b0a6f5ca58642
+
     })
 }
 
 function aiTurn() {
     /* Randomly pick from one of the active cards*/
-<<<<<<< HEAD
-    var random = flag -(Math.floor(Math.random()*3)+flag-2)
-    var card = result[random];
-=======
+
     var random = flag - Math.floor((Math.random()*3)+(flag-2));
     var card = draw[random];
->>>>>>> f98cbe1f677c3fede5fbc082078b0a6f5ca58642
     cardClicked(card, "player", "ai");
 }
 
 function cardClicked(card, byTeam, onTeam) {
-
-    switch(card.category) {
-        case "attack": attack(onTeam, card); break;
-        case "build": build(byTeam, card); break;
-    }
+//
+//    switch(card.category) {
+//        case "attack": attack(onTeam, card); break;
+//        case "build": build(byTeam, card); break;
+//    }
 
     if (card.category == "attack") {
         attack(onTeam, card);
     } else {
-        if ($card.hasClass('build')) {
-            build(byTeam, parseInt(id.split("_")[2]));
+        if (card.category == "build") {
+            build(byTeam, card);
         } else {
             stockUp(byTeam, parseInt(id.split("_")[2]), parseInt(id.split("_")[3]));
         }
@@ -199,19 +163,43 @@ function cardClicked(card, byTeam, onTeam) {
 }
 
 function attack(team, card) {
-    /*attacklogic*/
-    (team == "ai") ? aiTurn() : playerTurn();
+    if (team == "ai") {
+        cal_red = $("#red_score").text() - parseInt(card.cost.red);
+        $("#red_score").text(cal_red);
+        setTower("ai", card.value);
+        $("#ai-tower-effect").find('.build_image1').show().delay(1000).fadeOut();
+        $.ionSound.play("blast");
+    } else {
+        cal_red = $("#comp_red_score").text() - parseInt(card.cost.red);
+        $("#comp_red_score").text(cal_red);
+        setTower("player", card.value);
+        $("#player-tower-effect").find('.build_image1').show().delay(1000).fadeOut();
+        $.ionSound.play("blast");
+    }
 
 }
 
 function build(team, card) {
-    /*buildlogic*/
-    (team == "ai") ? playerTurn() : aiTurn();
+    if(team == "ai") {
+        compp_cal_blue = $("#comp_blue_score").text() - parseInt(card.cost.blue);
+        $("#comp_blue_score").text(compp_cal_blue);
+        setTower("ai", build);
+        $("#ai-tower-effect").find('.build_image').show().delay(1000).fadeOut();
+        $.ionSound.play("build");
+    } else {
+        cal_blue = $("#blue_score").text() - parseInt(card.cost.blue);
+        $("#blue_score").text(cal_blue);
+        setTower("player", build);
+        $("#player-tower-effect").find('.build_image').show().delay(1000).fadeOut();
+        $.ionSound.play("build");
+    }
 }
 
 function stockUp(team, card) {
     /*resource logic*/
-    (team == "ai") ? playerTurn() : aiTurn();
+    if(team == "ai") {
+    }
+    else
 }
 
 
