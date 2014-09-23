@@ -13,6 +13,8 @@ var gameDeck;
 var draw;
 var flag = 0;
 
+var newHt;
+
 var red_val = 50;
 var blue_val = 50;
 var green_val = 50;
@@ -55,7 +57,7 @@ function initGame() {
 function setTower(team, delta) {
     var towerHt = (team == "player") ? playerHt : aiHt;
     var teamTower = $('#' + team + '-tower');
-    var newHt = Math.min(Math.max(parseInt(towerHt) + parseInt(delta), 0), parseInt(game.maxHeight * 10));
+    newHt = Math.min(Math.max(parseInt(towerHt) + parseInt(delta), 0), parseInt(game.maxHeight * 10));
     var existingStoreys = Math.floor(towerHt / 10);
     var newStoreys = Math.floor(newHt / 10);
     var posx = 89;
@@ -149,7 +151,7 @@ function playerTurn() {
                 setTimeout(aiTurn,4000);
 
             } else {
-                //display message and re-call playerTurn()
+                //display message saying card cannot be selected and select different card and re-call playerTurn()
             }
         } else {
             //display message saying re-drawing cards and call playerTurn() again
@@ -205,6 +207,9 @@ function attack(team, card) {
         setTower("ai", card.value);
         $("#ai-tower-effect").find('.build_image1').show().delay(1000).fadeOut();
         $.ionSound.play("blast");
+        if(playerHt <= 0) {
+            //display game over message and stop game
+        }
     } else {
         cal_red = $("#comp_red_score").text() - parseInt(card.cost.red);
         $("#comp_red_score").text(cal_red);
@@ -213,6 +218,9 @@ function attack(team, card) {
         setTower("player", card.value);
         $("#player-tower-effect").find('.build_image1').show().delay(1000).fadeOut();
         $.ionSound.play("blast");
+        if(aiHt <= 0) {
+            //display game over message and stop game
+        }
     }
 
 }
@@ -252,10 +260,6 @@ function checkCost(team, card) {
         cal_blue = $("#blue_score").text() - card.cost.blue;
         cal_green = $("#green_score").text() - card.cost.green;
 
-        console.log(cal_red);
-        console.log(cal_blue);
-        console.log(cal_green);
-
         if(cal_red < 0 || cal_blue < 0 || cal_green < 0)
             return false;
         else
@@ -264,10 +268,6 @@ function checkCost(team, card) {
         cal_red = $("#comp_red_score").text() - card.cost.red;
         cal_blue = $("#comp_blue_score").text() - card.cost.blue;
         cal_green = $("#comp_green_score").text() - card.cost.green;
-
-        console.log(cal_red);
-        console.log(cal_blue);
-        console.log(cal_green);
 
         if(cal_red < 0 || cal_blue < 0 || cal_green < 0)
             return false;
@@ -278,6 +278,11 @@ function checkCost(team, card) {
 
 function emptyDeck() {
     $(".cards").empty()
+}
+
+function getTowerHeight(team) {
+    var height = $('#' + team + '-tower').height();
+    return height
 }
 
 function getQuestion() {
