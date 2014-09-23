@@ -438,10 +438,13 @@ position: absolute;
     opacity: 0.4;
 }
 #message{
-    /*border: 1px solid red;*/
-    width: 20%;
-    height: 24%;
-    top: 30%;
+    display: none;
+    font-size: 50px;
+    height: 144px;
     left: 40%;
+    padding-top: 5%;
     position: absolute;
+    text-align: center;
+    top: 23%;
+    width: 20%;
 }
