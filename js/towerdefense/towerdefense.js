@@ -4,17 +4,11 @@ var aiHt = 0;
 var player_turn = true;
 var red, blue, green, attack , build;
 var cal_red, cal_blue, cal_green;
-var comp_cal_red, comp_cal_blue, comp_cal_green;
-var random_button;
-var keyArray;
 var player;
-var card_type;
 var gameDeck;
 var draw;
 var flag = 0;
-
 var newHt;
-
 var red_val = 50;
 var blue_val = 50;
 var green_val = 50;
@@ -31,22 +25,22 @@ $("#comp_green_score").text(comp_green_val);
 
 $(function () {
     $('body').css('background-image', "url(" + theme.background + ")");
-//    blinkit = setInterval(blinker, 2000);
-//    $('#startClicker').on('click', function () {
-//        $('.gameTitle').fadeOut();
-    $('.game-wrapper').fadeIn();
-//        clearInterval(blinkit);
+    blinkit = setInterval(blinker, 2000);
+    $('#startClicker').on('click', function () {
+        $('.gameTitle').fadeOut();
+    $('.stats-game').fadeIn();
+        clearInterval(blinkit);
     initGame();
-//    })
+    })
 
 
 });
 
-//function blinker() {
-//    $('#startClicker').fadeOut(500, function () {
-//        $('#startClicker').fadeIn(500);
-//    });
-//}
+function blinker() {
+    $('#startClicker').fadeOut(500, function () {
+        $('#startClicker').fadeIn(500);
+    });
+}
 
 function initGame() {
     initDeck();
@@ -130,6 +124,7 @@ function initTowers() {
 }
 
 function playerTurn() {
+    $("#message").text("Player Turn").css("padding-top","20%").fadeOut(3000);
     $(".cards").unbind('click').click(function () {
         switch($(this).attr("id")) {
             case "card1": card = draw[0]; break;
@@ -184,6 +179,7 @@ function aiTurn() {
         emptyDeck();
         drawCards();
         aiTurn();
+
     }
 
 }
@@ -251,7 +247,7 @@ function green(byTeam, onTeam, card) {
 
 function stockUp(team, card) {
     /*resource logic*/
-    (team == "ai") ? playerTurn() : aiTurn();
+    getQuestion();
 }
 
 function checkCost(team, card) {
@@ -310,7 +306,6 @@ function getQuestion() {
 
 function bindAnswers() {
     console.log("player turn in bindAnswers :- " + player_turn);
-    if (player_turn == false) {
 
         setTimeout(function () {
             var comp_random_ans = Math.floor(Math.random() * 4);
@@ -320,7 +315,7 @@ function bindAnswers() {
         }, 3000);
 
 
-    }
+
 
     $('.answer').unbind('click').on('click', function () {
         processAnswers($(this).attr("id").split("x")[0]);
@@ -340,6 +335,8 @@ function processAnswers(answer) {
 
     if (answerPayoff > 1) {
         $('#green_score').text(answer_score);
+        $('#red_score').text(answer_score);
+        $('#blue_score').text(answer_score);
     }
     else {
         $('#green_score').text(answer_score);

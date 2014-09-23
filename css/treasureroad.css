@@ -1,14 +1,14 @@
 .gameTitle{
-    width:960px;
-    height:640px;
-    margin: 0 auto;
-    font-size: 100px;
-    font-family: 'Impact', sans-serif;
-    color:#333;
-    text-shadow: white 0 0 20px;
-    text-align: center;
-    margin-top: 20%;
-    line-height: 64px;
+        width:960px;
+        height:640px;
+        margin: 0 auto;
+        font-size: 100px;
+        font-family: 'Impact', sans-serif;
+        color:#333;
+        text-shadow: white 0 0 20px;
+        text-align: center;
+        margin-top: 20%;
+        line-height: 64px;
 }
 
 #compass{

@@ -30,7 +30,11 @@ var myCards = [
     {name: "The Mangonel", category: "green", value: "-18", cost: {red: 10, blue: 0, green: 10},"image": "img/towerdefense/cardgreen.png"},
     {name: "Blood Mortar", category: "green", value: "-26", cost: {red: 20, blue: 0, green: 20},"image": "img/towerdefense/cardgreen.png"},
     {name: "Strong Belfry", category: "green", value: "18", cost: {red: 0, blue: 20, green: 10},"image": "img/towerdefense/cardgreen.png"},
-    {name: "Dominion Tower", category: "green", value: "20", cost: {red: 0, blue: 10, green: 20},"image": "img/towerdefense/cardgreen.png"}
+    {name: "Dominion Tower", category: "green", value: "20", cost: {red: 0, blue: 10, green: 20},"image": "img/towerdefense/cardgreen.png"},
+    {name: "Resource card", category: "resource", value: "0", cost: {red: 0, blue: 0, green: 0},"image": "img/towerdefense/cardres.png"},
+    {name: "Resource card", category: "resource", value: "0", cost: {red: 0, blue: 0, green: 0},"image": "img/towerdefense/cardres.png"},
+    {name: "Resource card", category: "resource", value: "0", cost: {red: 0, blue: 0, green: 0},"image": "img/towerdefense/cardres.png"},
+    {name: "Resource card", category: "resource", value: "0", cost: {red: 0, blue: 0, green: 0},"image": "img/towerdefense/cardres.png"},
 ]
 
 //var theImages = ["card1", "card2", "card3"];
