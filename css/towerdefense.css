@@ -307,14 +307,19 @@ li {
 #resource-panel{
     width: 10%;
     height: 15%;
-    top: 0%;
-    left: 0%;
-    /*border: 1px solid #000000;*/
+    top: 2%;
+    left: 1%;
+    border: 1px solid white;
+    background-color: black;
     position: absolute;
+    padding-left: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 10px;
+
 }
 .resource{
     width: 100%;
-    /*border: 1px solid red;*/
     height: 32%;
     position: relative;
     top: 0%;
@@ -323,7 +328,6 @@ li {
 .resource-name{
     width: 49%;
     height: 100%;
-    /*border: 1px solid blue;*/
     left: 0%;
     position: absolute;
     font-size: 1.5em;
@@ -342,10 +346,15 @@ position: absolute;
 #comp_resource-panel{
     width: 10%;
     height: 15%;
-    top: 0%;
-    right: 0%;
-    /*border: 1px solid #000000;*/
+    top: 2%;
+    right: 1%;
+    border: 1px solid white;
+    background-color: black;
     position: absolute;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    border-radius: 10px;
 }
 
 /* Question Card */
@@ -353,6 +362,7 @@ position: absolute;
 #qcard, #qid{
     display: none;
     width: 80%;
+
 }
 #quiz-content
 {   width: 41%;
@@ -365,6 +375,12 @@ position: absolute;
     padding: 2px 4px 3px 2px;
     display: none;
     z-index: 2;
+    background-color: black;
+    opacity: 0.8;
+}
+#qquestion{
+    color: #ffffff;
+    padding: 5px;
 }
 
 #bulletA {
@@ -385,6 +401,7 @@ position: absolute;
 
 #answerBlock {
     list-style: none;
+    padding-left: 12%;
 }
 
 #answerMsg {

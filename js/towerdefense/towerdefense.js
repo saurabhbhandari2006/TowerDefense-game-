@@ -132,7 +132,7 @@ function initTowers() {
 }
 
 function playerTurn() {
-    
+
     $(".cards").unbind('click').click(function () {
         switch ($(this).attr("id")) {
             case "card1":
