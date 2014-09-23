@@ -1,36 +1,40 @@
-//var blinkit;
+var blinkit;
 var playerHt = 0;
 var aiHt = 0;
 var player_turn = true;
-var red, blue, green, attack , build;
 var cal_red, cal_blue, cal_green;
 var player;
 var gameDeck;
 var draw;
 var flag = 0;
+var stop = false;
 var newHt;
-var red_val = 50;
-var blue_val = 50;
-var green_val = 50;
-var comp_red_val = 60;
-var comp_blue_val = 60;
-var comp_green_val = 60;
+function scoreData() {
+    var red_val = 50;
+    var blue_val = 50;
+    var green_val = 50;
+    var comp_red_val = 60;
+    var comp_blue_val = 60;
+    var comp_green_val = 60;
 
-$("#red_score").text(red_val);
-$("#blue_score").text(blue_val);
-$("#green_score").text(green_val);
-$("#comp_red_score").text(comp_red_val);
-$("#comp_blue_score").text(comp_blue_val);
-$("#comp_green_score").text(comp_green_val);
+    $("#red_score").text(red_val);
+    $("#blue_score").text(blue_val);
+    $("#green_score").text(green_val);
+    $("#comp_red_score").text(comp_red_val);
+    $("#comp_blue_score").text(comp_blue_val);
+    $("#comp_green_score").text(comp_green_val);
+}
+
 
 $(function () {
     $('body').css('background-image', "url(" + theme.background + ")");
     blinkit = setInterval(blinker, 2000);
     $('#startClicker').on('click', function () {
         $('.gameTitle').fadeOut();
-    $('.stats-game').fadeIn();
+        $('.stats-wrapper').fadeIn();
+        $("#message").text("You win").hide();
         clearInterval(blinkit);
-    initGame();
+        initGame();
     })
 
 
@@ -43,6 +47,7 @@ function blinker() {
 }
 
 function initGame() {
+    scoreData();
     initDeck();
     initTowers();
     playerTurn();
@@ -88,20 +93,23 @@ function setTowerTop(team, cap, top, posx, posy, wd) {
         teamTower.append('<img src="img/towerdefense/' + team + 'tower/top.png" id="' + team + '-cap" class="tower-block cap" style="' + ((team == "ai") ? "right" : "left") + ':' + posx + 'px;bottom:' + posy + 'px;width:' + wd + 'px;"/>');
     } else {
         if (top != 0) {
+            if (top % 2 != 0) {
+                top--;
+            }
             teamTower.append('<img src="img/towerdefense/' + team + 'tower/state' + top + '.png" id="' + team + '-broken-towerblock" class="tower-block broken" style="' + ((team == "ai") ? "right" : "left") + ':' + posx + 'px;bottom:' + posy + 'px;width:' + wd + 'px;"/>');
         }
     }
 }
 
 function initDeck(index) {
-    gameDeck=shuffle(myCards);
+    gameDeck = shuffle(myCards);
     drawCards();
 }
 
 function drawCards() {
 
     draw = [];
-    if(flag+2 < 12) {
+    if (flag + 2 < 12) {
         for (var i = 0; i < 3; i++) {
             draw.push(gameDeck[flag]);
             flag++;
@@ -112,24 +120,30 @@ function drawCards() {
         initDeck();
     }
 
-    $.each(draw, function(index, elm){
-        $('.card-container').find('.cards').eq(index).append('<img id='+elm.id+'_'+elm.cost.red+'_'+elm.cost.blue+'_'+elm.cost.green+'_'+elm.value+'" src="'+elm.image+'" class="card-image"/>')
+    $.each(draw, function (index, elm) {
+        $('.card-container').find('.cards').eq(index).append('<img id=' + elm.id + '_' + elm.cost.red + '_' + elm.cost.blue + '_' + elm.cost.green + '_' + elm.value + '" src="' + elm.image + '" class="card-image"/>')
 
     });
 }
 
 function initTowers() {
     setTower('player', game.startHeight);
-    setTower('ai', game.startHeight + 18);
+    setTower('ai', game.startHeight );
 }
 
 function playerTurn() {
-    $("#message").text("Player Turn").css("padding-top","20%").fadeOut(3000);
+    
     $(".cards").unbind('click').click(function () {
-        switch($(this).attr("id")) {
-            case "card1": card = draw[0]; break;
-            case "card2": card = draw[1]; break;
-            case "card3": card = draw[2]; break;
+        switch ($(this).attr("id")) {
+            case "card1":
+                card = draw[0];
+                break;
+            case "card2":
+                card = draw[1];
+                break;
+            case "card3":
+                card = draw[2];
+                break;
 
         }
 
@@ -137,18 +151,22 @@ function playerTurn() {
         console.log(card);
         console.log(" ");
 
-        if(checkCost("player", draw[0]) || checkCost("player", draw[1]) || checkCost("player", draw[2])) {
-            if(checkCost("player", card)) {
+        if (checkCost("player", draw[0]) || checkCost("player", draw[1]) || checkCost("player", draw[2])) {
+            if (checkCost("player", card)) {
                 cardClicked(card, "player", "ai");
 
-                setTimeout(emptyDeck, 2000);
-                setTimeout(drawCards,2000);
-                setTimeout(aiTurn,4000);
 
             } else {
+                $("#message").text("Not enough Resources").fadeIn(1000).fadeOut(1000);
+                playerTurn();
                 //display message saying card cannot be selected and select different card and re-call playerTurn()
             }
         } else {
+            console.log("Cant pick any of the cards from the draw thus re-drawing");
+            emptyDeck();
+            drawCards();
+            playerTurn();
+            $("#message").text("re-drawing cards").fadeIn(1000).fadeOut(1000);
             //display message saying re-drawing cards and call playerTurn() again
         }
 
@@ -159,19 +177,16 @@ function playerTurn() {
 function aiTurn() {
 
     /* Randomly pick from one of the active cards*/
-    var random = Math.floor((Math.random()*3));
+    var random = Math.floor((Math.random() * 3));
     var card = draw[random];
 
     console.log("Computer's Card:");
     console.log(card);
     console.log(" ");
 
-    if(checkCost("ai", draw[0]) || checkCost("ai", draw[1]) || checkCost("ai", draw[2])) {
-        if(checkCost("ai", card)) {
+    if (checkCost("ai", draw[0]) || checkCost("ai", draw[1]) || checkCost("ai", draw[2])) {
+        if (checkCost("ai", card)) {
             cardClicked(card, "ai", "player");
-            emptyDeck();
-            drawCards();
-            playerTurn();
         } else {
             aiTurn();
         }
@@ -179,18 +194,47 @@ function aiTurn() {
         emptyDeck();
         drawCards();
         aiTurn();
-
     }
 
 }
 
 function cardClicked(card, byTeam, onTeam) {
 
-    switch(card.category) {
-        case "attack": attack(onTeam, card); break;
-        case "build": build(byTeam, card); break;
-        case "green": green(byTeam, onTeam, card); break;
-        case "resource": stockUp(byTeam); break;
+    switch (card.category) {
+        case "attack":
+            attack(onTeam, card);
+            if (aiHt <= 0) {
+
+                $("#message").text("You win").fadeIn(2000).fadeOut(2000);
+                   setTimeout(function () {
+                    $('.gameTitle').fadeIn(2000);
+                    $('.stats-wrapper').fadeOut();
+                    initGame();
+                }, 3000);
+
+            }
+            if (playerHt <= 0) {
+                $("#message").text("Game Over").fadeIn(2000).fadeOut(2000);
+                setTimeout(function () {
+                    $('.gameTitle').fadeIn(2000);
+                    $('.stats-wrapper').fadeOut();
+                    initGame();
+                }, 3000);
+
+            }
+            switchTurn(byTeam);
+            break;
+        case "build":
+            build(byTeam, card);
+            switchTurn(byTeam);
+            break;
+        case "green":
+            green(byTeam, onTeam, card);
+            switchTurn(byTeam);
+            break;
+        case "resource":
+            stockUp(byTeam);
+            break;
     }
 }
 
@@ -203,9 +247,8 @@ function attack(team, card) {
         setTower("ai", card.value);
         $("#ai-tower-effect").find('.build_image1').show().delay(1000).fadeOut();
         $.ionSound.play("blast");
-        if(playerHt <= 0) {
-            //display game over message and stop game
-        }
+
+
     } else {
         cal_red = $("#comp_red_score").text() - parseInt(card.cost.red);
         $("#comp_red_score").text(cal_red);
@@ -214,15 +257,14 @@ function attack(team, card) {
         setTower("player", card.value);
         $("#player-tower-effect").find('.build_image1').show().delay(1000).fadeOut();
         $.ionSound.play("blast");
-        if(aiHt <= 0) {
-            //display game over message and stop game
-        }
+
+
     }
 
 }
 
 function build(team, card) {
-    if(team == "ai") {
+    if (team == "ai") {
         cal_blue = $("#comp_blue_score").text() - parseInt(card.cost.blue);
         $("#comp_blue_score").text(cal_blue);
         setTower("ai", card.value);
@@ -239,36 +281,42 @@ function build(team, card) {
 }
 
 function green(byTeam, onTeam, card) {
-    if(card.cost.red > 0)
+    if (card.cost.red > 0)
         attack(onTeam, card);
     else
         build(byTeam, card);
 }
 
 function stockUp(team, card) {
-    /*resource logic*/
-    getQuestion();
+    if (team == "ai") {
+        getQuestion("ai");
+    } else {
+        getQuestion("player");
+    }
 }
 
 function checkCost(team, card) {
-    if(team == "player") {
+    if (team == "player") {
         cal_red = $("#red_score").text() - card.cost.red;
         cal_blue = $("#blue_score").text() - card.cost.blue;
         cal_green = $("#green_score").text() - card.cost.green;
 
-        if(cal_red < 0 || cal_blue < 0 || cal_green < 0)
-            return false;
-        else
+        if (cal_red > 0 && cal_blue > 0 && cal_green > 0)
             return true;
+
+        else
+
+            return false;
     } else {
         cal_red = $("#comp_red_score").text() - card.cost.red;
         cal_blue = $("#comp_blue_score").text() - card.cost.blue;
         cal_green = $("#comp_green_score").text() - card.cost.green;
 
-        if(cal_red < 0 || cal_blue < 0 || cal_green < 0)
-            return false;
-        else
+        if (cal_red > 0 && cal_blue > 0 && cal_green > 0)
             return true;
+        else
+
+            return false;
     }
 }
 
@@ -276,7 +324,7 @@ function emptyDeck() {
     $(".cards").empty()
 }
 
-function getQuestion() {
+function getQuestion(team) {
     //console.log("card_type in getQuest():- " + card_type);
     //console.log("player_turn in getQuest() :- " + player_turn);
 
@@ -300,47 +348,55 @@ function getQuestion() {
         $('#optbx').html('<div class="answer-bullet" id="bulletB">B</div>' + data.optb);
         $('#optcx').html('<div class="answer-bullet" id="bulletC">C</div>' + data.optc);
         $('#optdx').html('<div class="answer-bullet" id="bulletD">D</div>' + data.optd);
-        bindAnswers();
+        bindAnswers(team);
     }, 1000);
 }
 
-function bindAnswers() {
-    console.log("player turn in bindAnswers :- " + player_turn);
+function bindAnswers(team) {
+    console.log("player turn in bindAnswers :- " + team);
+    if (team == "ai") {
 
         setTimeout(function () {
             var comp_random_ans = Math.floor(Math.random() * 4);
             console.log("comp randomly answered :- " + comp_random_ans);
             var random_ans_li = $('#answerBlock').find('li').eq(comp_random_ans);
-            processAnswers($(random_ans_li).attr("id").split("x")[0]);
+            processAnswers($(random_ans_li).attr("id").split("x")[0], team);
         }, 3000);
 
-
-
+        switchTurn(team);
+    }
 
     $('.answer').unbind('click').on('click', function () {
-        processAnswers($(this).attr("id").split("x")[0]);
+        console.log($(this).attr("id").split("x")[0]);
+        processAnswers($(this).attr("id").split("x")[0], team);
+        switchTurn(team);
     });
 }
 
-function processAnswers(answer) {
+function processAnswers(answer, team) {
     data = getAnswer($('#qid').html(), answer);
     var resultMsg = data.split('||')[1];
     var correctAnswer = data.split('||')[2];
     var answerPayoff = parseInt(data.split('||')[0]);
-    console.log("cal_green", +cal_green);
-    var answer_score = cal_green + answerPayoff;
+    var answer_score_red = cal_red + answerPayoff;
+    var answer_score_blue = cal_blue + answerPayoff;
+    var answer_score_green = cal_red + answerPayoff;
 
 //  var addplay=5;
 //  $('#green').text(addplay)
 
     if (answerPayoff > 1) {
-        $('#green_score').text(answer_score);
-        $('#red_score').text(answer_score);
-        $('#blue_score').text(answer_score);
+        if (team == "ai") {
+            $('#comp_red_score').text(answer_score_red);
+            $('#comp_blue_score').text(answer_score_blue);
+            $('#comp_green_score').text(answer_score_green);
+        } else {
+            $('#red_score').text(answer_score_red);
+            $('#blue_score').text(answer_score_blue);
+            $('#green_score').text(answer_score_green);
+        }
     }
-    else {
-        $('#green_score').text(answer_score);
-    }
+
     $('#answerBlock').hide();
     $('#answerMsg').html("<div class='scribble'>" + resultMsg + "<br/>The correct answer is: <h3 style='color:darkred;margin:0;padding:3px;'>" + correctAnswer + "</h3></div> ").fadeIn();
     setTimeout(function () {
@@ -349,6 +405,7 @@ function processAnswers(answer) {
         $('#qprompt').fadeOut();
         $('#answerMsg').fadeOut();
     }, 3000);
+
 }
 
 $.ionSound({
@@ -361,6 +418,19 @@ $.ionSound({
     volume: "1.0"
 });
 
+function switchTurn(from) {
+    if (from == "ai") {
+        emptyDeck();
+        drawCards();
+        playerTurn();
+
+    } else {
+        setTimeout(emptyDeck, 4000);
+        setTimeout(drawCards, 4000);
+        setTimeout(aiTurn, 4000);
+    }
+
+}
 
 
 /*----------------------------------------------------*/
@@ -461,4 +531,3 @@ $.ionSound({
 //    player_turn=true;
 //
 //}
-
