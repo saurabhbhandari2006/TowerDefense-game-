@@ -66,8 +66,13 @@
       <file leaf-file-name="towerdefense.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.2591623" vertical-offset="2214" max-vertical-offset="9684">
               <caret line="134" column="4" selection-start-line="134" selection-start-column="4" selection-end-line="134" selection-end-column="4" />
+=======
+            <state vertical-scroll-proportion="6.63089" vertical-offset="1108" max-vertical-offset="6570">
+              <caret line="343" column="19" selection-start-line="343" selection-start-column="19" selection-end-line="343" selection-end-column="19" />
+>>>>>>> f410e41a288e7de0db86ffb3e704784ff2d19678
               <folding>
                 <marker date="1411476629390" expanded="true" signature="12172:12207" placeholder="..." />
               </folding>
@@ -778,8 +783,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.2591623" vertical-offset="2214" max-vertical-offset="9684">
           <caret line="134" column="4" selection-start-line="134" selection-start-column="4" selection-end-line="134" selection-end-column="4" />
+=======
+        <state vertical-scroll-proportion="6.63089" vertical-offset="1108" max-vertical-offset="6570">
+          <caret line="343" column="19" selection-start-line="343" selection-start-column="19" selection-end-line="343" selection-end-column="19" />
+>>>>>>> f410e41a288e7de0db86ffb3e704784ff2d19678
           <folding>
             <marker date="1411476629390" expanded="true" signature="12172:12207" placeholder="..." />
           </folding>
