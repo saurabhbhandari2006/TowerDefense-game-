@@ -47,6 +47,7 @@ function initGame() {
     initDeck();
     initTowers();
     $(".ai").css({'opacity': 0.5})
+    $('img.comp-frame-glow').hide();
 //    $(".player").css({'box-shadow': '10px 10px 5px #888'});
     playerTurn();
 }
@@ -57,10 +58,13 @@ function setTower(team, delta) {
     newHt = Math.min(Math.max(parseInt(towerHt) + parseInt(delta), 0), parseInt(game.maxHeight * 10));
     var existingStoreys = Math.floor(towerHt / 10);
     var newStoreys = Math.floor(newHt / 10);
-    var posx = 89;
+//    var posx = 89;
+    var posx = 59;
     var posy = $('#' + team + '-tower .base').height() - 10;
-    var wd = 84;
-    var ht = 55;
+//    var wd = 84;
+//    var ht = 55;
+    var wd = 56;
+    var ht = 40;
     var i;
     teamTower.find('.broken').remove();
     teamTower.find('.cap').remove();
@@ -378,7 +382,9 @@ function switchTurn(from) {
     if (from == "ai") {
         setTimeout(function(){player_turn = true;}, 5000)
         setTimeout(function(){$(".ai").css({'opacity': 0.5});}, 5000);
+        setTimeout(function() {$('img.comp-frame-glow').hide();}, 5000);
         setTimeout(function(){$(".player").css({'opacity': 1});}, 5000);
+        setTimeout(function() {$('img.player-frame-glow').show();}, 5000);
         setTimeout(emptyDeck, 5000);
         setTimeout(drawCards, 5000);
         setTimeout(playerTurn, 5000);
@@ -386,7 +392,9 @@ function switchTurn(from) {
     } else {
         player_turn = false;
         setTimeout(function(){$(".ai").css({'opacity': 1});}, 5000);
+        setTimeout(function() {$('img.comp-frame-glow').show();}, 5000);
         setTimeout(function(){$(".player").css({'opacity': 0.5});}, 5000);
+        setTimeout(function() {$('img.player-frame-glow').hide();}, 5000);
         setTimeout(emptyDeck, 5000);
         setTimeout(drawCards, 5000);
         setTimeout(aiTurn, 5000);

@@ -8,15 +8,6 @@ window.game = {};
 game.startHeight = 50;
 game.maxHeight = 5;
 
-//var myCards = [
-//    {
-//        "card1": {"type": "attack", "id": "1", "red": "6", "blue": "0", "green": "5", "attack": "-4", "build": "0", "image": "img/towerdefense/cardred.png"},
-//        "card2": {"type": "build", "id": "2", "red": "0", "blue": "10", "green": "5", "attack": "0", "build": "10", "image": "img/towerdefense/cardblue.png"},
-//        "card3": {"type": "resource", "id": "3", "red": "10", "blue": "0", "green": "5", "attack": "-12", "build": "0", "image": "img/towerdefense/cardgreen.png"}
-//    }
-//];
-//var theImages = [myCards[0].card1.image, myCards[0].card2.image, myCards[0].card3.image];
-
 var myCards = [
     {name: "Battering Ram", category: "attack", value: "-5", cost: {red: 6, blue: 0, green: 0},"image": "img/towerdefense/cardred.png"},
     {name: "Battering Ram", category: "attack", value: "-5", cost: {red: 6, blue: 0, green: 0},"image": "img/towerdefense/cardred.png"},
