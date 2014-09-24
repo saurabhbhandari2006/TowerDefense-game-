@@ -7,7 +7,7 @@ var gameDeck;
 var draw;
 var flag = 0;
 var newHt;
-var i;
+var player_turn = true;
 
 function scoreData() {
     var red_val = 50;
@@ -46,6 +46,8 @@ function initGame() {
     scoreData();
     initDeck();
     initTowers();
+    $(".ai").css({'opacity': 0.5})
+//    $(".player").css({'box-shadow': '10px 10px 5px #888'});
     playerTurn();
 }
 
@@ -121,12 +123,9 @@ function initTowers() {
 }
 
 function playerTurn() {
-    $(".player").css({'opacity': 1});
-    $(".ai").css({'opacity': 0.5});
-    $(".player").css({'box-shadow': '10px 0px 0px #000000'});
-
     $(".cards").unbind('click').click(function () {
-        switch ($(this).attr("id")) {
+        if(player_turn) {
+            switch ($(this).attr("id")) {
             case "card1":
                 card = draw[0];
                 break;
@@ -137,53 +136,42 @@ function playerTurn() {
                 card = draw[2];
                 break;
         }
+            player_turn = false;
 
-        console.log("Player's Card:");
-        console.log(card);
-        console.log(" ");
-
-        if (checkCost("player", draw[0]) || checkCost("player", draw[1]) || checkCost("player", draw[2])) {
-            if (checkCost("player", card)) {
-                cardClicked(card, "player", "ai");
+            if (checkCost("player", draw[0]) || checkCost("player", draw[1]) || checkCost("player", draw[2])) {
+                if (checkCost("player", card)) {
+                    cardClicked(card, "player", "ai");
+                } else {
+                    $("#message").text("Not enough Resources").fadeIn(1000).fadeOut(1000);
+                    playerTurn();
+                }
             } else {
-                $("#message").text("Not enough Resources").fadeIn(1000).fadeOut(1000);
+                $("#message").text("Re-drawing Cards").fadeIn(1000).fadeOut(1000);
+                emptyDeck();
+                drawCards();
                 playerTurn();
-//display message saying card cannot be selected and select different card and re-call playerTurn()
             }
-        } else {
-            console.log("Cant pick any of the cards from the draw thus re-drawing");
-            $("#message").text("Re-drawing Cards").fadeIn(1000).fadeOut(1000);
-            emptyDeck();
-            drawCards();
-            playerTurn();
-
-//display message saying re-drawing cards and call playerTurn() again
         }
     })
 }
 
 function aiTurn() {
-    /* Randomly pick from one of the active cards*/
-    var random = Math.floor((Math.random() * 3));
-    var card = draw[random];
+    if(player_turn == false) {
+        /* Randomly pick from one of the active cards*/
+        var random = Math.floor((Math.random() * 3));
+        var card = draw[random];
 
-    $(".ai").css({'opacity': 1});
-    $(".player").css({'opacity': 0.5});
-
-    console.log("Computer's Card:");
-    console.log(card);
-    console.log(" ");
-
-    if (checkCost("ai", draw[0]) || checkCost("ai", draw[1]) || checkCost("ai", draw[2])) {
-        if (checkCost("ai", card)) {
-            cardClicked(card, "ai", "player");
+        if (checkCost("ai", draw[0]) || checkCost("ai", draw[1]) || checkCost("ai", draw[2])) {
+            if (checkCost("ai", card)) {
+                cardClicked(card, "ai", "player");
+            } else {
+                aiTurn();
+            }
         } else {
+            emptyDeck();
+            drawCards();
             aiTurn();
         }
-    } else {
-        emptyDeck();
-        drawCards();
-        aiTurn();
     }
 }
 
@@ -192,7 +180,7 @@ function cardClicked(card, byTeam, onTeam) {
         case "attack":
             attack(onTeam, card);
             if (aiHt <= 0) {
-                $("#message").text("You win").fadeIn(2000).fadeOut(2000);
+                $("#message").text("You win").fadeIn(1000).fadeOut(2000);
                 setTimeout(function () {
                     $('.gameTitle').fadeIn(2000);
                     $('.stats-wrapper').fadeOut();
@@ -200,7 +188,7 @@ function cardClicked(card, byTeam, onTeam) {
                 }, 3000);
             }
             if (playerHt <= 0) {
-                $("#message").text("Game Over").fadeIn(2000).fadeOut(2000);
+                $("#message").text("Game Over").fadeIn(1000).fadeOut(2000);
                 setTimeout(function () {
                     $('.gameTitle').fadeIn(2000);
                     $('.stats-wrapper').fadeOut();
@@ -229,6 +217,7 @@ function attack(team, card) {
         $("#red_score").text(cal_red);
         cal_green = $("#green_score").text() - parseInt(card.cost.green);
         $("#green_score").text(cal_green);
+        $("#message").text("You Dealt " + parseInt(card.value *(-1)) + " Damage").css("color","red").fadeIn(1000).fadeOut(1000);
         setTower("ai", card.value);
         $("#ai-tower-effect").find('.build_image1').show().delay(1000).fadeOut();
         $.ionSound.play("blast");
@@ -237,6 +226,7 @@ function attack(team, card) {
         $("#comp_red_score").text(cal_red);
         cal_green = $("#comp_red_score").text() - parseInt(card.cost.green);
         $("#comp_red_score").text(cal_green);
+        $("#message").text("You Took " + parseInt(card.value *(-1)) + " Damage").css("color","red").fadeIn(1000).fadeOut(1000);
         setTower("player", card.value);
         $("#player-tower-effect").find('.build_image1').show().delay(1000).fadeOut();
         $.ionSound.play("blast");
@@ -247,12 +237,18 @@ function build(team, card) {
     if (team == "ai") {
         cal_blue = $("#comp_blue_score").text() - parseInt(card.cost.blue);
         $("#comp_blue_score").text(cal_blue);
+        cal_green = $("#comp_red_score").text() - parseInt(card.cost.green);
+        $("#comp_red_score").text(cal_green);
+        $("#message").text("Opponent Built Tower by " + card.value).css("color","blue").fadeIn(1000).fadeOut(1000);
         setTower("ai", card.value);
         $("#ai-tower-effect").find('.build_image').show().delay(1000).fadeOut();
         $.ionSound.play("build");
     } else {
         cal_blue = $("#blue_score").text() - parseInt(card.cost.blue);
         $("#blue_score").text(cal_blue);
+        cal_green = $("#green_score").text() - parseInt(card.cost.green);
+        $("#green_score").text(cal_green);
+        $("#message").text("You Built Tower by " + card.value).css("color","blue").fadeIn(1000).fadeOut(1000);
         setTower("player", card.value);
         $("#player-tower-effect").find('.build_image').show().delay(1000).fadeOut();
         $.ionSound.play("build");
@@ -299,8 +295,6 @@ function emptyDeck() {
 }
 
 function getQuestion(team) {
-//console.log("card_type in getQuest():- " + card_type);
-//console.log("player_turn in getQuest() :- " + player_turn);
     var list = quiz.questions[Math.floor(Math.random() * 3)];
     var elemlength = list.length;
     var randomnum = Math.floor(Math.random() * elemlength);
@@ -318,22 +312,19 @@ function getQuestion(team) {
         $('#optcx').html('<div class="answer-bullet" id="bulletC">C</div>' + data.optc);
         $('#optdx').html('<div class="answer-bullet" id="bulletD">D</div>' + data.optd);
         bindAnswers(team);
-    }, 1000);
+    }, 250);
 }
 
 function bindAnswers(team) {
-    console.log("player turn in bindAnswers :- " + team);
     if (team == "ai") {
         setTimeout(function () {
             var comp_random_ans = Math.floor(Math.random() * 4);
-            console.log("comp randomly answered :- " + comp_random_ans);
             var random_ans_li = $('#answerBlock').find('li').eq(comp_random_ans);
             processAnswers($(random_ans_li).attr("id").split("x")[0], team);
-        }, 3000);
+        }, 2000);
         switchTurn(team);
     }
     $('.answer').unbind('click').on('click', function () {
-        console.log($(this).attr("id").split("x")[0]);
         processAnswers($(this).attr("id").split("x")[0], team);
         switchTurn(team);
     });
@@ -348,17 +339,6 @@ function processAnswers(answer, team) {
     var answer_score_blue = cal_blue + answerPayoff;
     var answer_score_green = cal_red + answerPayoff;
 
-    if (answerPayoff > 1) {
-        if (team == "ai") {
-            $('#comp_red_score').text(answer_score_red);
-            $('#comp_blue_score').text(answer_score_blue);
-            $('#comp_green_score').text(answer_score_green);
-        } else {
-            $('#red_score').text(answer_score_red);
-            $('#blue_score').text(answer_score_blue);
-            $('#green_score').text(answer_score_green);
-        }
-    }
     $('#answerBlock').hide();
     $('#answerMsg').html("<div class='scribble'>" + resultMsg + "<br/>The correct answer is: <h3 style='color:darkred;margin:0;padding:3px;'>" + correctAnswer + "</h3></div> ").fadeIn();
     setTimeout(function () {
@@ -366,7 +346,22 @@ function processAnswers(answer, team) {
         $('#qquestion').fadeOut();
         $('#qprompt').fadeOut();
         $('#answerMsg').fadeOut();
-    }, 3000);
+    }, 1000);
+    setTimeout(function(){
+        if (answerPayoff > 1) {
+            if (team == "ai") {
+                $("#message").text("Opponent gained " + answerPayoff + " Resources").css("color","black").fadeIn(1000).fadeOut(1000);
+                $('#comp_red_score').text(answer_score_red);
+                $('#comp_blue_score').text(answer_score_blue);
+                $('#comp_green_score').text(answer_score_green);
+            } else {
+                $("#message").text("You gained " + answerPayoff + " Resources").css("color","black").fadeIn(1000).fadeOut(1000);
+                $('#red_score').text(answer_score_red);
+                $('#blue_score').text(answer_score_blue);
+                $('#green_score').text(answer_score_green);
+            }
+        }
+    }, 1000)
 }
 
 $.ionSound({
@@ -381,116 +376,19 @@ $.ionSound({
 
 function switchTurn(from) {
     if (from == "ai") {
-        emptyDeck();
-        drawCards();
-        playerTurn();
-    } else {
-        setTimeout(emptyDeck, 4000);
-        setTimeout(drawCards, 4000);
-        setTimeout(aiTurn, 4000);
-    }
-}
+        setTimeout(function(){player_turn = true;}, 5000)
+        setTimeout(function(){$(".ai").css({'opacity': 0.5});}, 5000);
+        setTimeout(function(){$(".player").css({'opacity': 1});}, 5000);
+        setTimeout(emptyDeck, 5000);
+        setTimeout(drawCards, 5000);
+        setTimeout(playerTurn, 5000);
 
-function disableTurn() {
-    var nodes = document.getElementById("card-container").getElementsByTagName('*');
-    for(i = 0; i < node.length; i++) {
-        node[i].disable = true;
+    } else {
+        player_turn = false;
+        setTimeout(function(){$(".ai").css({'opacity': 1});}, 5000);
+        setTimeout(function(){$(".player").css({'opacity': 0.5});}, 5000);
+        setTimeout(emptyDeck, 5000);
+        setTimeout(drawCards, 5000);
+        setTimeout(aiTurn, 5000);
     }
 }
-/*----------------------------------------------------*/
-//if (player_turn == true) {
-// $(".cards").unbind('click').click(function () {
-// card_click($(this), event);
-// console.log("on .cards click, player_turn :- " + player_turn);
-//// player_turn = false;
-//
-// });
-//}
-//
-//
-//function card_click(thisobj) {
-//
-// card_type = $(thisobj).find('img').attr("data-val-type");
-// console.log("card_type in card_click :- " + card_type);
-//
-// red = $(thisobj).find('img').attr("data-val-red");
-// blue = $(thisobj).find('img').attr("data-val-blue");
-// green = $(thisobj).find('img').attr("data-val-green");
-//
-// attack = $(thisobj).find('img').attr("data-val-attack");
-// build = $(thisobj).find('img').attr("data-val-build");
-// cal_red = $("#red_score").text() - parseInt(red);
-// cal_blue = $("#blue_score").text() - parseInt(blue);
-// cal_green = $("#green_score").text() - parseInt(green);
-// comp_cal_red = $("#comp_red_score").text() - parseInt(red);
-// comp_cal_blue = $("#comp_blue_score").text() - parseInt(blue);
-// comp_cal_green = $("#comp_green_score").text() - parseInt(green);
-//
-//
-// if (player_turn == true) {
-// $("#red_score").text(cal_red);
-// $("#blue_score").text(cal_blue);
-// $("#green_score").text(cal_green);
-// }
-// else {
-// $("#comp_red_score").text(comp_cal_red);
-// $("#comp_blue_score").text(comp_cal_blue);
-// $("#comp_green_score").text(comp_cal_green);
-// }
-//
-// console.log("card_type :- " + card_type);
-// console.log("player_turn :- " + player_turn);
-//
-// switch (card_type) {
-// case "attack":
-// if (player_turn == true) {
-// setTower("ai", attack);
-// $("#ai-tower-effect").find('.build_image1').show().delay(1000).fadeOut();
-// $.ionSound.play("blast");
-//
-// }
-// else {
-// setTower("player", attack);
-// $("#player-tower-effect").find('.build_image1').show().delay(1000).fadeOut();
-// $.ionSound.play("blast");
-// }
-// break;
-// case "build":
-// if (player_turn == true) {
-// setTower("player", build);
-// $("#player-tower-effect").find('.build_image').show().delay(1000).fadeOut();
-// $.ionSound.play("build");
-// }
-// else {
-// setTower("ai", build);
-// $("#ai-tower-effect").find('.build_image').show().delay(1000).fadeOut();
-// $.ionSound.play("build");
-// }
-// break;
-// case "resource":
-// getQuestion();
-// break;
-//
-// }
-// player_turn=false;
-// if (player_turn == false) {
-//// player_turn = true;
-// $(".cards").empty();
-// card_swape();
-//
-// console.log("card type b4 comp_click :- " + card_type);
-// console.log("player_turn b4 comp_click :- " + player_turn);
-//
-// setTimeout(comp_click, 4000);
-// }
-//
-//}
-//
-//function comp_click() {
-// console.log("computer click");
-// random_button = $(".card-container").find(".cards")[Math.floor(3 * Math.random())];
-//// console.log("random_button :- " + $(random_button).attr('class'));
-// card_click($(random_button), 'click');
-// player_turn=true;
-//
-//}

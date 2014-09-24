@@ -56,12 +56,14 @@
 
     <div class="player">
         <img class="player-frame" src="img/towerdefense/player.png"/>
+        <img class="player-frame" src="img/towerdefense/playerglow.png" style="z-index: 3"/>
         <div class="resource-number" id="red_score" style="color: #F8C760; top: 72%; left: 10%;"></div>
         <div class="resource-number" id="blue_score" style="color: #F8C760; top: 81%; left: 9.9%;"></div>
         <div class="resource-number" id="green_score" style="color: #F8C760; top: 88.7%; left: 12.5%;"></div>
     </div>
     <div class="ai">
         <img class="comp-frame" src="img/towerdefense/comp.png"/>
+        <img class="comp-frame" src="img/towerdefense/compglow.png" style="z-index: 3"/>
         <div class="resource-number" id="comp_red_score" style="color: #F8C760; top: 72%; left: 71.2%;"></div>
         <div class="resource-number" id="comp_blue_score" style="color: #F8C760; top: 81%; left: 71.3%;"></div>
         <div class="resource-number" id="comp_green_score" style="color: #F8C760; top: 88.7%; left: 68.7%;"></div>
@@ -85,6 +87,9 @@
         <img class="parallax-layer " src="img/towerdefense/6L.png" alt=""/>
         <img class="parallax-layer " src="img/towerdefense/8L.png" alt=""/>
     </div>
+
+    <div id="message"></div>
+
 <!-- Javascripts go here -->
 <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
 <!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>-->
