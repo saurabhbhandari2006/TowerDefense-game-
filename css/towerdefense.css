@@ -10,12 +10,10 @@
     margin-top: 20%;
     line-height: 64px;
 }
-
-.stats-wrapper {
+.stats-wrapper{
     font-family: 'Crafty Girls', cursive;
     display: none;
 }
-
 #cloud-container{
     width: 100%;
     height: 250px;
@@ -24,8 +22,7 @@
     position: absolute;
     left: 0;
     pointer-events:none;
-    }
-
+}
 @-webkit-keyframes animate_background1 {
     0% {
         background-position: 0 -30px;
@@ -68,7 +65,6 @@
         background-position: 257px -30px;
     }
 }
-
 .background1 {
     position: fixed;
     z-index: 2;
@@ -138,7 +134,6 @@
         background-position: 257px -30px;
     }
 }
-
 .background2 {
     position: fixed;
     z-index: 2;
@@ -171,11 +166,9 @@
     position: relative;
     top: 0%;
 }
-
 .tower-block{
     position: absolute;
 }
-
 #player-tower .base{
     position: absolute;
     bottom:0;
@@ -188,7 +181,6 @@
     position: absolute;
     width: 57%;
 }
-
 #ai-tower .base{
     position: absolute;
     bottom:0;
@@ -209,7 +201,6 @@
     height: 100%;
     position:absolute;
     display:none;
-
 }
 .build_image1
 {
@@ -217,7 +208,6 @@
     height: 100%;
     position:absolute;
     display:none;
-
 }
 #ai-tower-effect{
     height: 16%;
@@ -227,14 +217,12 @@
     width: 9%;
     /*border:2px solid red;*/
 }
-
 #ai-tower .castle{
     bottom: -12%;
     position: absolute;
     right: -1%;
     width: 40%;
 }
-
 /* Game Cards */
 .broken-animation{
     background: url("../img/towerdefense/fire.gif");
@@ -244,6 +232,24 @@
     display: none;
 }
 
+.player-frame{
+
+    height: 30%;
+    width: 15%;
+    position: absolute;
+    top: 66%;
+    left: 15%;
+    z-index: 3;
+}
+.comp-frame{
+
+    height: 30%;
+    width: 15%;
+    position: absolute;
+    top: 66%;
+    left: 66%;
+    z-index: 3;
+}
 
 .card-container{
     position: absolute;
@@ -262,14 +268,12 @@
     /*position: absolute;*/
 }
 .cards{
-   width: 24%;
+    width: 24%;
     height: 90%;
     position: absolute;
     top: 6%;
-
     /*border: 1px solid red;*/
 }
-
 .card-image{
     width: 100%;
     height: 100%;
@@ -277,10 +281,8 @@
     left: 1%;
     position: absolute;
 }
-
 li {
     list-style: none;
-
 }
 .answer
 {
@@ -296,11 +298,10 @@ li {
     -ms-transform:scale(1.10); /* IE 9 */
     -o-transform:scale(1.10); /* Opera */
     transform:scale(1.10);
-       cursor: pointer;
-
+    cursor: pointer;
 }
 #card2{
-   left: 38%;
+    left: 38%;
 }
 #card3{
     left: 63%;
@@ -308,55 +309,64 @@ li {
 #resource-panel{
     width: 10%;
     height: 15%;
-    top: 0%;
-    left: 0%;
-    /*border: 1px solid #000000;*/
+    top: 2%;
+    left: 1%;
+    border: 1px solid white;
+    background-color: black;
     position: absolute;
+    padding-left: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 10px;
+    z-index: 3;
+    background-color: rgba(0,0,0,0.7);
 }
 .resource{
     width: 100%;
-    /*border: 1px solid red;*/
     height: 32%;
     position: relative;
     top: 0%;
-    }
-
+}
 .resource-name{
     width: 49%;
     height: 100%;
-    /*border: 1px solid blue;*/
     left: 0%;
     position: absolute;
     font-size: 1.5em;
-    
 }
 .resource-number{
-    width: 49%;
-    height: 100%;
-    left: 50%;
-    /*border: 1px solid yellow;*/
-    right: 0%;
-position: absolute;
+    font-size: 2em;
+    height: 30%;
+    opacity: 0.75;
+    position: absolute;
+    right: 0;
     text-align: center;
-    font-size: 1.5em;
+    text-shadow: 2px 2px 2px black;
+    width: 15%;
+    z-index: 4;
 }
 #comp_resource-panel{
     width: 10%;
     height: 15%;
-    top: 0%;
-    right: 0%;
-    /*border: 1px solid #000000;*/
+    top: 2%;
+    right: 1%;
+    border: 1px solid white;
+    background-color: black;
     position: absolute;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    border-radius: 10px;
+    z-index: 3;
+    background-color: rgba(0,0,0,0.7);
 }
-
 /* Question Card */
-
 #qcard, #qid{
     display: none;
     width: 80%;
 }
 #quiz-content
-{   width: 41%;
+{ width: 41%;
     height: 35%;
     border: 5px solid white;
     top: 20%;
@@ -366,28 +376,29 @@ position: absolute;
     padding: 2px 4px 3px 2px;
     display: none;
     z-index: 2;
+    /*background-color: black;*/
+    background-color: rgba(0,0,0,0.7);
 }
-
+#qquestion{
+    color: #ffffff;
+    padding: 5px;
+}
 #bulletA {
     background: #a34f32;
 }
-
 #bulletB {
     background: #7255ff;
 }
-
 #bulletC {
     background: #8b9f20;
 }
-
 #bulletD {
     background: #ffcf57;
 }
-
 #answerBlock {
     list-style: none;
+    padding-left: 12%;
 }
-
 #answerMsg {
     display: none;
     color: black;
@@ -397,7 +408,6 @@ position: absolute;
     margin-top: 10px;
     text-align: center;
 }
-
 .answer-bullet {
     width: 20px;
     height: 20px;
@@ -409,13 +419,11 @@ position: absolute;
     text-align: center;
     color: black;
 }
-
 #answerBlock li {
     margin-bottom: 2px;
     margin-left: -39px;
     cursor: pointer;
 }
-
 #answerBlock li:hover {
     font-weight: bold;
 }
@@ -438,6 +446,7 @@ position: absolute;
     opacity: 0.4;
 }
 #message{
+    /*border: 1px solid red;*/
     display: none;
     font-size: 50px;
     height: 144px;
@@ -447,4 +456,13 @@ position: absolute;
     text-align: center;
     top: 23%;
     width: 20%;
+}
+.ai {
+    opacity: 1;
+    box-shadow: 0px 0px 0px #ffffff;
+}
+
+.player {
+    opacity: 1;
+    box-shadow: 0px 0px 0px #ffffff;
 }

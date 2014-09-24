@@ -1,14 +1,13 @@
 var blinkit;
 var playerHt = 0;
 var aiHt = 0;
-var player_turn = true;
 var cal_red, cal_blue, cal_green;
 var player;
 var gameDeck;
 var draw;
 var flag = 0;
-var stop = false;
 var newHt;
+var i;
 
 function scoreData() {
     var red_val = 50;
@@ -122,6 +121,10 @@ function initTowers() {
 }
 
 function playerTurn() {
+    $(".player").css({'opacity': 1});
+    $(".ai").css({'opacity': 0.5});
+    $(".player").css({'box-shadow': '10px 0px 0px #000000'});
+
     $(".cards").unbind('click').click(function () {
         switch ($(this).attr("id")) {
             case "card1":
@@ -163,6 +166,9 @@ function aiTurn() {
     /* Randomly pick from one of the active cards*/
     var random = Math.floor((Math.random() * 3));
     var card = draw[random];
+
+    $(".ai").css({'opacity': 1});
+    $(".player").css({'opacity': 0.5});
 
     console.log("Computer's Card:");
     console.log(card);
@@ -382,6 +388,13 @@ function switchTurn(from) {
         setTimeout(emptyDeck, 4000);
         setTimeout(drawCards, 4000);
         setTimeout(aiTurn, 4000);
+    }
+}
+
+function disableTurn() {
+    var nodes = document.getElementById("card-container").getElementsByTagName('*');
+    for(i = 0; i < node.length; i++) {
+        node[i].disable = true;
     }
 }
 /*----------------------------------------------------*/
