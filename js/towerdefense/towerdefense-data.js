@@ -18,9 +18,9 @@ game.maxHeight = 5;
 //var theImages = [myCards[0].card1.image, myCards[0].card2.image, myCards[0].card3.image];
 
 var myCards = [
-    {name: "Battering Ram", category: "attack", value: "-6", cost: {red: 6, blue: 0, green: 0},"image": "img/towerdefense/cardred.png"},
-    {name: "Battering Ram", category: "attack", value: "-6", cost: {red: 6, blue: 0, green: 0},"image": "img/towerdefense/cardred.png"},
-    {name: "Battering Ram", category: "attack", value: "-6", cost: {red: 6, blue: 0, green: 0},"image": "img/towerdefense/cardred.png"},
+    {name: "Battering Ram", category: "attack", value: "-5", cost: {red: 6, blue: 0, green: 0},"image": "img/towerdefense/cardred.png"},
+    {name: "Battering Ram", category: "attack", value: "-5", cost: {red: 6, blue: 0, green: 0},"image": "img/towerdefense/cardred.png"},
+    {name: "Battering Ram", category: "attack", value: "-5", cost: {red: 6, blue: 0, green: 0},"image": "img/towerdefense/cardred.png"},
 
     {name: "Ballista", category: "attack", value: "-8", cost: {red: 8, blue: 0, green: 0},"image": "img/towerdefense/cardred.png"},
     {name: "Ballista", category: "attack", value: "-8", cost: {red: 8, blue: 0, green: 0},"image": "img/towerdefense/cardred.png"},
@@ -75,39 +75,7 @@ var myCards = [
 
 ]
 
-//var theImages = ["card1", "card2", "card3"];
 function shuffle(o) {
     for (var j, x, i = o.length; i; j =( Math.floor(Math.random() * i)+1), x = o[--i], o[i] = o[j], o[j] = x);
     return o;
 };
-
-
-
-//$(function () {
-//    keyArray = shuffle(theImages);
-//
-//    var red_val, blue_val, green_val, attack_val, build_val, card_type, card_image;
-//    $.each(keyArray, function (index, value) {
-//        red_val = eval("myCards[0]." + value + ".red");
-//        blue_val = eval("myCards[0]." + value + ".blue");
-//        green_val = eval("myCards[0]." + value + ".green");
-//        attack_val = eval("myCards[0]." + value + ".attack");
-//        build_val = eval("myCards[0]." + value + ".build");
-//        card_type = eval("myCards[0]." + value + ".type");
-//        card_image = eval("myCards[0]." + value + ".image");
-//
-////                $('.card-container').find('.cards').eq(index).append('<img data-val-type="' + card_type + '" data-val-green="' + green_val + '" data-val-build="' + build_val + '" data-val-blue="' + blue_val + '" data-val-red="' + red_val + '" src="' + value + '" data-val-attack="' + attack_val + '">');
-//        $('.card-container').find('.cards').eq(index).append('<img data-val-type="' + card_type + '" data-val-green="' + green_val + '"data-val-build="' + build_val + '" data-val-blue="' + blue_val + '" data-val-red="' + red_val + '" data-val-attack="' + attack_val + '" src="' + card_image + '" class="card-image"/>');
-//
-//    });
-//});
-
-
-
-
-
-
-
-
-
-
