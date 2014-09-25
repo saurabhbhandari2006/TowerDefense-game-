@@ -192,11 +192,13 @@ function cardClicked(card, byTeam, onTeam) {
         case "attack":
             attack(onTeam, card);
             if (aiHt <= 0) {
-                $("#message").text("You win").fadeIn(1000).fadeOut(2000);
+                setTimeout(function(){
+                    $("#message").text("You win").fadeIn(1000).fadeOut(2000) ;
+                },3000);
                 setTimeout(function(){
                     $("#message").html("<a href='' style='text-decoration: underline; color: whitesmoke; '>Click Here<a/> to Play Again").fadeIn(1000);
 
-                },3000);
+                },6000);
                 break;
 //                setTimeout(function () {
 //                    $('.gameTitle').fadeIn(2000);

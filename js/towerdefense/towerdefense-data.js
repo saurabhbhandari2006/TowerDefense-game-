@@ -9,9 +9,9 @@ game.startHeight = 50;
 game.maxHeight = 5;
 
 var myCards = [
-    {name: "Battering Ram", category: "attack", value: "-5", cost: {red: 6, blue: 0, green: 0},"image": "img/towerdefense/cardred.png"},
-    {name: "Battering Ram", category: "attack", value: "-5", cost: {red: 6, blue: 0, green: 0},"image": "img/towerdefense/cardred.png"},
-    {name: "Battering Ram", category: "attack", value: "-5", cost: {red: 6, blue: 0, green: 0},"image": "img/towerdefense/cardred.png"},
+    {name: "Battering Ram", category: "attack", value: "-6", cost: {red: 6, blue: 0, green: 0},"image": "img/towerdefense/cardred.png"},
+    {name: "Battering Ram", category: "attack", value: "-6", cost: {red: 6, blue: 0, green: 0},"image": "img/towerdefense/cardred.png"},
+    {name: "Battering Ram", category: "attack", value: "-6", cost: {red: 6, blue: 0, green: 0},"image": "img/towerdefense/cardred.png"},
 
     {name: "Ballista", category: "attack", value: "-8", cost: {red: 8, blue: 0, green: 0},"image": "img/towerdefense/cardred.png"},
     {name: "Ballista", category: "attack", value: "-8", cost: {red: 8, blue: 0, green: 0},"image": "img/towerdefense/cardred.png"},
