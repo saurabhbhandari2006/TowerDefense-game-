@@ -241,31 +241,29 @@
 
 .player-frame{
 
-    height: 87%;
-    left: 5px;
+    height: 90%;
+    left: 0;
     margin-top: 7%;
     position: absolute;
-    width: 94%;
+    width: 100%;
     z-index: 4;
 }
+.player-frame-glow{
 
-
-.player-frame-glow {
-    height: 100%;
-    left: 0;
-    margin-top: 0;
+    height: 142%;
+    left: -45px;
+    margin-top: -24%;
     position: absolute;
-    width: 104%;
+    width: 154%;
     z-index: 3;
 }
-
 .comp-frame{
 
-    height: 87%;
-    left: 5px;
+    height: 90%;
+    left: 0;
     margin-top: 7%;
     position: absolute;
-    width: 94%;
+    width: 100%;
     z-index: 4;
 }
 .comp-frame-glow{
@@ -294,7 +292,7 @@
 }
 .cards{
     width: 24%;
-    height: 88%;
+    height: 90%;
     position: absolute;
     top: 6%;
     /*border: 1px solid red;*/
@@ -522,11 +520,11 @@ li {
 .ai {
     float: right;
     height: 100%;
-    margin-left: 76%;
+    margin-left: 80%;
     opacity: 1;
     position: absolute;
     transform: none;
-    width: 25%;
+    width: 20%;
 }
 
 .player {
@@ -534,7 +532,7 @@ li {
     opacity: 1;
     position: absolute;
     transform: none;
-    width: 25%;
+    width: 20%;
 }
 #stats_and_cards{
     /*border: 1px solid green;*/
@@ -547,46 +545,41 @@ li {
     width: 59%;
     z-index: 2;
 
+}
+@media screen and (min-width: 1500px) and (orientation: landscape)
 
+{
 
-
-
-/*-------------------------------------------css for media query---------------------------------------------*/
+    #stats_and_cards {
+        border: 1px solid green;
+        display: inline-block;
+        height: 30%;
+        left: 28%;
+        position: absolute;
+        text-align: center;
+        top: 65%;
+        width: 50%;
+        z-index: 2;
+    }
 
 }
-/*@media screen and (min-width: 1500px) and (orientation: landscape)*/
+@media screen and (min-width: 1024px)and(min-height: 768px) and (orientation: landscape)
 
-/*{*/
+{
 
-    /*#stats_and_cards {*/
-        /*border: 1px solid green;*/
-        /*display: inline-block;*/
-        /*height: 30%;*/
-        /*left: 28%;*/
-        /*position: absolute;*/
-        /*text-align: center;*/
-        /*top: 65%;*/
-        /*width: 50%;*/
-        /*z-index: 2;*/
-    /*}*/
+    #stats_and_cards {
+        border: 1px solid green;
+        display: inline-block;
+        height: 30%;
+        left: 25%;
+        position: absolute;
+        text-align: center;
+        top: 69%;
+        width: 50%;
+        z-index: 2;
+    }
 
-/*}*/
-/*@media screen and (min-width: 1024px)and(min-height: 768px) and (orientation: landscape)*/
-
-/*{*/
-
-    /*#stats_and_cards {*/
-        /*display: inline-block;*/
-        /*height: 25%;*/
-        /*left: 21%;*/
-        /*position: absolute;*/
-        /*text-align: center;*/
-        /*top: 72%;*/
-        /*width: 63%;*/
-        /*z-index: 2;*/
-    /*}*/
-
-/*}*/
+}
 @media screen and (min-width: 600px)and (max-height: 500px)
 
 {
@@ -595,10 +588,10 @@ li {
         font-family: "Impact",sans-serif;
         font-size: 50px;
         height: 480px;
-        line-height: 46px;
-        margin: 20% auto 0;
+        line-height: 62px;
+        margin: 15% auto 0;
         text-align: center;
-        text-shadow: 0 0 3px #3399ff;
+        text-shadow: 0 0 20px white;
         width: 640px;
     }
 
@@ -614,18 +607,6 @@ li {
         top: 0;
         width: 70%;
     }
-    #stats_and_cards {
-        /*border: 1px solid green;*/
-        display: inline-block;
-        height: 25%;
-        left: 16%;
-        position: absolute;
-        text-align: center;
-        top: 80%;
-        width: 63%;
-        z-index: 2;
-    }
-
     .resource-number {
         font-size: 0.6em;
         height: 16%;
@@ -639,19 +620,19 @@ li {
     }
     #red_score{
         color: #f8c760;
-        left: 8%;
+        left: 6%;
         top: 27.5%;
     }
 
     #blue_score{
         color: #f8c760;
-        left: 8%;
+        left: 6%;
         top: 54%;
     }
     #green_score{
         color: #f8c760;
-        left: 25%;
-        top: 76.7%;
+        left: 23%;
+        top: 77.7%;
     }
 
     #comp_red_score{
@@ -667,8 +648,8 @@ li {
     }
     #comp_green_score{
         color: #f8c760;
-        right: 21%;
-        top: 76.7%;
+        right: 23%;
+        top: 77.7%;
     }
 
 
@@ -707,21 +688,32 @@ li {
         z-index: 2;
         font-size: 14px;
     }
+    #stats_and_cards {
+        /*border: 1px solid green;*/
+        display: inline-block;
+        height: 25%;
+        left: 22%;
+        position: absolute;
+        text-align: center;
+        top: 72%;
+        width: 59%;
+        z-index: 2;
+    }
 
     .player-frame-glow{
-        height: 100%;
-        left: 2px;
-        margin-top: 0;
+        height: 141%;
+        left: -23px;
+        margin-top: -35%;
         position: absolute;
-        width: 100%;
+        width: 165%;
         z-index: 3;
     }
     .comp-frame-glow{
-        height: 95%;
-        left: 3px;
-        margin-top: 3px;
+        height: 141%;
+        left: -25px;
+        margin-top: -35%;
         position: absolute;
-        width: 97%;
+        width: 165%;
         z-index: 3;
     }
     /*#stats_and_cards {*/
@@ -736,22 +728,4 @@ li {
         /*z-index: 2;*/
     /*}*/
 
-}
-.deck{
-    /*border: 2px solid white;*/
-    /*display: none;*/
-    /*font-size: 25px;*/
-    /*height: 144px;*/
-    /*left: 40%;*/
-    position: absolute;
-    /*text-align: center;*/
-    top: 23%;
-    /*max-width: 20%;*/
-    /*border-radius: 10px;*/
-    /*padding: 2% 2% 2% 2%;*/
-    z-index: 2;
-    /*background-color: rgba(0,0,0,0.7);  */
-    width:10%;
-    height:19%;
-    left:50%;
 }
