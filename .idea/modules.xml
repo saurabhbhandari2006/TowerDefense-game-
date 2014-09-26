@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/QuizGameEngine.iml" filepath="$PROJECT_DIR$/.idea/QuizGameEngine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../JarvisAdmin_v_2_0/trial jarvis/.idea/trial jarvis.iml" filepath="$PROJECT_DIR$/../JarvisAdmin_v_2_0/trial jarvis/.idea/trial jarvis.iml" />
     </modules>
   </component>
 </project>
