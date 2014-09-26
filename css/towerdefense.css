@@ -314,7 +314,7 @@ li {
 }
 #card1{
     left: 13%;
-    /*height: 0%;*/
+    /*height:0%;*/
 }
 .cards:hover{
     -webkit-transform:scale(1.10); /* Safari and Chrome */
@@ -326,11 +326,11 @@ li {
 }
 #card2{
     left: 38%;
-    /*height: 0%;*/
+    /*height:0%;*/
 }
 #card3{
     left: 63%;
-    /*height: 0%;*/
+    /*height:0%;*/
 }
 #resource-panel{
     width: 10%;
@@ -500,7 +500,6 @@ li {
     /* -moz-border-radius: 12px; */
     width: 50%;
     height: 60%;
-    z-index: 1;
 }
 .parallax-layer {
     position: absolute;
@@ -550,42 +549,63 @@ li {
     z-index: 2;
 
 }
+#animDeck{
+    /*border: 2px solid white;*/
+    display: none;
+    /*font-size: 25px;*/
+    /*height: 144px;*/
+    /*left: 40%;*/
+    /*position: absolute;*/
+    /*text-align: center;*/
+    /*top: 23%;*/
+    /*max-width: 20%;*/
+    /*border-radius: 10px;*/
+    /*padding: 2% 2% 2% 2%;*/
+    /*z-index: 2;*/
+    /*background-color: rgba(0,0,0,0.7);*/
+    left: 50%;
+    max-width: 20%;
+    position: absolute;
+    top: 23%;
+    z-index: 2;
+}
 /*@media screen and (min-width: 1500px) and (orientation: landscape)*/
 
 /*{*/
 
-    /*#stats_and_cards {*/
-        /*border: 1px solid green;*/
-        /*display: inline-block;*/
-        /*height: 30%;*/
-        /*left: 28%;*/
-        /*position: absolute;*/
-        /*text-align: center;*/
-        /*top: 65%;*/
-        /*width: 50%;*/
-        /*z-index: 2;*/
-    /*}*/
+/*#stats_and_cards {*/
+/*border: 1px solid green;*/
+/*display: inline-block;*/
+/*height: 30%;*/
+/*left: 28%;*/
+/*position: absolute;*/
+/*text-align: center;*/
+/*top: 65%;*/
+/*width: 50%;*/
+/*z-index: 2;*/
+/*}*/
 
 /*}*/
 /*@media screen and (min-width: 1024px)and(min-height: 768px) and (orientation: landscape)*/
 
 /*{*/
 
-    /*#stats_and_cards {*/
-        /*display: inline-block;*/
-        /*height: 30%;*/
-        /*left: 25%;*/
-        /*position: absolute;*/
-        /*text-align: center;*/
-        /*top: 69%;*/
-        /*width: 50%;*/
-        /*z-index: 2;*/
-    /*}*/
+/*#stats_and_cards {*/
+/*border: 1px solid green;*/
+/*display: inline-block;*/
+/*height: 30%;*/
+/*left: 25%;*/
+/*position: absolute;*/
+/*text-align: center;*/
+/*top: 69%;*/
+/*width: 50%;*/
+/*z-index: 2;*/
+/*}*/
 
 /*}*/
-@media screen and (max-width: 700px)and (max-height: 550px)
-
+@media screen and (max-width: 650px)and (max-height: 500px)
 {
+
     .gameTitle {
         color: #333;
         font-family: "Impact",sans-serif;
@@ -720,15 +740,31 @@ li {
         z-index: 3;
     }
     /*#stats_and_cards {*/
-        /*border: 1px solid green;*/
-        /*display: inline-block;*/
-        /*height: 30%;*/
-        /*left: 25%;*/
-        /*position: absolute;*/
-        /*text-align: center;*/
-        /*top: 69%;*/
-        /*width: 50%;*/
-        /*z-index: 2;*/
+    /*border: 1px solid green;*/
+    /*display: inline-block;*/
+    /*height: 30%;*/
+    /*left: 25%;*/
+    /*position: absolute;*/
+    /*text-align: center;*/
+    /*top: 69%;*/
+    /*width: 50%;*/
+    /*z-index: 2;*/
     /*}*/
 
+
+    #animDeck{
+        /*border: 2px solid white;*/
+        display: none;
+        /*font-size: 25px;*/
+        /*height: 144px;*/
+        left: 40%;
+        position: absolute;
+        /*text-align: center;*/
+        top: 23%;
+        max-width: 30%;
+        /*border-radius: 10px;*/
+        /*padding: 2% 2% 2% 2%;*/
+        z-index: 2;
+        /*background-color: rgba(0,0,0,0.7);*/
+    }
 }

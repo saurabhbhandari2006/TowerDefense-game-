@@ -10,6 +10,8 @@ var newHt;
 var player;
 var gameOn;
 var selectCard;
+var animDeck;
+var animCards;
 
 
 
@@ -128,12 +130,13 @@ function showInstructions() {
 }
 
 function getCards() {
-    showDeck();
-    cardsDraw();
-    fadeDrawCards();
+    animCards = [];
     drawCards();
-    showCards();
-    hideDeck();
+    setTimeout(function(){showDeck()},2000);
+    setTimeout(function(){cardsDraw()},4500);
+    setTimeout(function(){showCards()},5500);
+    setTimeout(function(){hideDeck()},6600);
+    setTimeout(function(){emptyAnimDeck()},7000);
 }
 
 function checkFlag() {
@@ -158,12 +161,6 @@ function initDraw() {
     }
 }
 
-function showDeck() {}
-
-function cardsDraw() {}
-
-function fadeDrawCards() {}
-
 function drawCards() {
     $.each(draw, function (index, elm) {
         $('.card-container').find('.cards').eq(index).append('<img id=' + elm.id + '_' + elm.cost.red + '_' + elm.cost.blue + '_' + elm.cost.green + '_' + elm.value + '" src="' + elm.image + '" class="card-image"/>')
@@ -177,9 +174,45 @@ function drawCards() {
 
 }
 
-function showCards() {}
+function showDeck(){
+    $( "#card1" ).animate({opacity: 1,height: "toggle"}, 1);
+    $( "#card2" ).animate({opacity: 1,height: "toggle"}, 1);
+    $( "#card3" ).animate({opacity: 1,height: "toggle"}, 1);
+    animDeck = $("#animDeck").append('<img id="deckImage" style="width: 100%;height: 100%" src="img/towerdefense/cardres.png"/>').css({width: "10%", height: "21%", left: "47.1%"}).fadeIn(5000);
+    var newDiv1 = animDeck.clone().insertAfter(animDeck);
+    var newDiv2 = animDeck.clone().insertAfter(animDeck);
+    var newDiv3 = animDeck.clone().insertAfter(animDeck);
+    animCards = [newDiv3, newDiv2, newDiv1];
+}
 
-function hideDeck() {}
+function cardsDraw(){
+    animCards[0].fadeTo("5000",1);
+    animCards[1].fadeTo("5000",1);
+    animCards[2].fadeTo("5000",1);
+    setTimeout(function(){animCards[2].animate({left:"-=10.47%",top:"+=51.2%"},500)},600);
+    setTimeout(function(){animCards[1].animate({top:"+=51.2%"},500);},1200);
+    setTimeout(function(){animCards[0].animate({left:"+=10.46%",top:"+=51.2%"},500);},1800);
+}
+
+function fadeDrawCards() {
+    animCards[2].animate({opacity: 0.5,height: "toggle"}, 1000);
+    animCards[1].animate({opacity: 1,height: "toggle"}, 1000);
+    animCards[0].animate({opacity: 1,height: "toggle"}, 1000);
+}
+
+function showCards() {
+    $( "#card1" ).animate({opacity: 1,height: "toggle"}, 1000);
+    $( "#card2" ).animate({opacity: 1,height: "toggle"}, 1000);
+    $( "#card3" ).animate({opacity: 1,height: "toggle"}, 1000);
+}
+
+function hideDeck() {
+    animDeck.fadeOut();
+}
+
+function emptyAnimDeck() {
+    $("#animDeck").empty();
+}
 
 function startTurn() {
     //display player's / ai's turn
@@ -221,7 +254,7 @@ function playerTurn() {
             player = false;
 
             if (checkCost("player", card)) {
-                cardClicked(card, "player", "ai");
+                $.when(cardClicked(card, "player", "ai")).done(function(){switchTurn("player");});
             } else {
                 $("#message").text("Not enough Resources").fadeIn(1000).fadeOut(1000);
                 player = true;
@@ -243,7 +276,7 @@ function aiTurn() {
             var card = draw[random];
 
             if (checkCost("ai", card)) {
-                setTimeout(function() {cardClicked(card, "ai", "player");}, 2000);
+                $.when(cardClicked(card, "ai", "player")).done(function(){switchTurn("ai")});
             } else {
                 aiTurn();
             }
@@ -519,27 +552,27 @@ $.ionSound({
 
 function switchTurn(from) {
     if (from == "ai") {
-        animSwitchTurn(from);
-        setTimeout(playerTurn, 5000);
+        setTimeout(function(){animSwitchTurn(from)}, 12000);
+        setTimeout(playerTurn, 12000);
     } else {
         player = false;
-        animSwitchTurn(from);
-        setTimeout(aiTurn, 5000);
+        setTimeout(function(){animSwitchTurn(from)}, 12000);
+        setTimeout(aiTurn, 12000);
     }
 }
 
-function animSwitchTurn(from) {
+function animSwitchTurn(from, out) {
     if (from == "ai") {
-        setTimeout(function(){player = true;}, 5000)
-        setTimeout(function(){$(".ai").css({'opacity': 0.5});}, 5000);
-        setTimeout(function() {$('img.comp-frame-glow').hide();}, 5000);
-        setTimeout(function(){$(".player").css({'opacity': 1});}, 5000);
-        setTimeout(function() {$('img.player-frame-glow').show();}, 5000);
+        setTimeout(function(){player = true;}, out)
+        setTimeout(function(){$(".ai").css({'opacity': 0.5});}, out);
+        setTimeout(function() {$('img.comp-frame-glow').hide();}, out);
+        setTimeout(function(){$(".player").css({'opacity': 1});}, out);
+        setTimeout(function() {$('img.player-frame-glow').show();}, out);
     } else {
-        setTimeout(function(){$(".ai").css({'opacity': 1});}, 5000);
-        setTimeout(function() {$('img.comp-frame-glow').show();}, 5000);
-        setTimeout(function(){$(".player").css({'opacity': 0.5});}, 5000);
-        setTimeout(function() {$('img.player-frame-glow').hide();}, 5000);
+        setTimeout(function(){$(".ai").css({'opacity': 1});}, out);
+        setTimeout(function() {$('img.comp-frame-glow').show();}, out);
+        setTimeout(function(){$(".player").css({'opacity': 0.5});}, out);
+        setTimeout(function() {$('img.player-frame-glow').hide();}, out);
     }
 }
 

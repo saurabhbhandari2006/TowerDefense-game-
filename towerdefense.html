@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/towerdefense.css">
     <link rel="stylesheet" href="css/jquery.parallax.css"/>
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="js/towerdefense/jquery.cycle2.min.js"></script>
 </head>
 <body>
 <!-- Application content go here -->
@@ -29,6 +30,34 @@
             <div id="ai-tower" class="tower">
                 <img class="castle" src="img/towerdefense/aitower/castle.png">
                 <img class="base" src="img/towerdefense/aitower/base.png">
+            </div>
+            <div id="message"></div>
+            <div id="animDeck"></div>
+            <div id="stats_and_cards">
+
+                <div class="player">
+                    <img class="player-frame" src="img/towerdefense/player.png"/>
+                    <img class="player-frame-glow" src="img/towerdefense/playerglow.png" style="z-index: 3"/>
+                    <div class="resource-number" id="red_score"></div>
+                    <div class="resource-number" id="blue_score"></div>
+                    <div class="resource-number" id="green_score"></div>
+                </div>
+                <div class="ai">
+                    <img class="comp-frame" src="img/towerdefense/comp.png"/>
+                    <img class="comp-frame-glow" src="img/towerdefense/compglow.png" style="z-index: 3"/>
+                    <div class="resource-number" id="comp_red_score" ></div>
+                    <div class="resource-number" id="comp_blue_score" ></div>
+                    <div class="resource-number" id="comp_green_score"></div>
+                </div>
+
+                <!--game cards-->
+                <div class="card-container">
+                    <img class="card-frame" src="img/towerdefense/frame.png"/>
+                    <div class="cards" id="card1"></div>
+                    <div class="cards" id="card2"></div>
+                    <div class="cards" id="card3"></div>
+                </div>
+
             </div>
         </div>
         <div id="player-tower-effect" class="effect">
@@ -52,34 +81,10 @@
                 <div id="answerMsg"></div>
             </div>
         </div>
+
     </div>
 
-<div id="stats_and_cards">
 
-    <div class="player">
-        <img class="player-frame" src="img/towerdefense/player.png"/>
-        <img class="player-frame-glow" src="img/towerdefense/playerglow.png" style="z-index: 3"/>
-        <div class="resource-number" id="red_score"></div>
-        <div class="resource-number" id="blue_score"></div>
-        <div class="resource-number" id="green_score"></div>
-    </div>
-    <div class="ai">
-        <img class="comp-frame" src="img/towerdefense/comp.png"/>
-        <img class="comp-frame-glow" src="img/towerdefense/compglow.png" style="z-index: 3"/>
-        <div class="resource-number" id="comp_red_score" ></div>
-        <div class="resource-number" id="comp_blue_score" ></div>
-        <div class="resource-number" id="comp_green_score"></div>
-    </div>
-
-    <!--game cards-->
-    <div class="card-container">
-        <img class="card-frame" src="img/towerdefense/frame.png"/>
-        <div class="cards" id="card1"></div>
-        <div class="cards" id="card2"></div>
-        <div class="cards" id="card3"></div>
-    </div>
-
-</div>
 
     <!--game clouds-->
     <div id="cloud-container">
@@ -93,32 +98,36 @@
         <img class="parallax-layer " src="img/towerdefense/8L.png" alt=""/>
     </div>
 
-    <div id="message"></div>
+
+
+    <!--<div class = "deck" id="deck3"></div>-->
+    <!--<div class = "deck" id="deck4"></div>-->
 </div>
-    <!-- Javascripts go here -->
-    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
-    <!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>-->
-    <script src="js/vendor/jquery-1.10.2.min.js"></script>
-    <script src="js/vendor/jquery.easing.1.3.js"></script>
-    <script src="js/towerdefense/ion.sound.min.js"></script>
-    <script type="text/javascript" src="js/towerdefense/jquery.parallax.js"></script>
-    <script type="text/javascript" src="js/towerdefense/jquery.event.frame.js"></script>
-    <script src="js/towerdefense/towerdefense-data.js"></script>
-    <script src="js/questionbank.js"></script>
-    <script src="js/towerdefense/towerdefense.js"></script>
-    <script src="js/counter.js"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function () {
-            var target1 = jQuery("#target1");
-            target1
-                    .children('img')
-                    .parallax(
-                    { mouseport: target1 },
-                    { xparallax: 0.2, yparallax: 0.2 }, // Blue layer options
-                    { xparallax: 0.6, yparallax: 0.6 }, // Green layer options
-                    {} // Red layer options
-            );
-        });
-    </script>
-    <!-- Game Script-->
+<!-- Javascripts go here -->
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+<!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>-->
+<script src="js/vendor/jquery-1.10.2.min.js"></script>
+<script src="js/vendor/jquery.easing.1.3.js"></script>
+<script src="js/towerdefense/jquery.cycle.all.js"></script>
+<script src="js/towerdefense/ion.sound.min.js"></script>
+<script type="text/javascript" src="js/towerdefense/jquery.parallax.js"></script>
+<script type="text/javascript" src="js/towerdefense/jquery.event.frame.js"></script>
+<script src="js/towerdefense/towerdefense-data.js"></script>
+<script src="js/questionbank.js"></script>
+<script src="js/towerdefense/towerdefense.js"></script>
+<script src="js/counter.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        var target1 = jQuery("#target1");
+        target1
+                .children('img')
+                .parallax(
+                { mouseport: target1 },
+                { xparallax: 0.2, yparallax: 0.2 }, // Blue layer options
+                { xparallax: 0.6, yparallax: 0.6 }, // Green layer options
+                {} // Red layer options
+        );
+    });
+</script>
+<!-- Game Script-->
 </body>
