@@ -218,7 +218,7 @@
 }
 #ai-tower-effect{
     height: 16%;
-    right: 5%;
+    left: 80%;
     position: absolute;
     top: 38%;
     width: 9%;
@@ -550,19 +550,7 @@ li {
 
 }
 #animDeck{
-    /*border: 2px solid white;*/
     display: none;
-    /*font-size: 25px;*/
-    /*height: 144px;*/
-    /*left: 40%;*/
-    /*position: absolute;*/
-    /*text-align: center;*/
-    /*top: 23%;*/
-    /*max-width: 20%;*/
-    /*border-radius: 10px;*/
-    /*padding: 2% 2% 2% 2%;*/
-    /*z-index: 2;*/
-    /*background-color: rgba(0,0,0,0.7);*/
     left: 50%;
     max-width: 20%;
     position: absolute;
@@ -675,7 +663,14 @@ li {
         top: 77.7%;
     }
 
-
+    #ai-tower-effect{
+        height: 16%;
+        left: 54%;
+        position: absolute;
+        top: 38%;
+        width: 9%;
+        /*border:2px solid red;*/
+    }
 
     #message{
         border: 2px solid white;
