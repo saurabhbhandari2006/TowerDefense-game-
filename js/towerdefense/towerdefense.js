@@ -35,7 +35,7 @@ function blinker() {
 
 function initGame() {
     gameOn = true;
-    player = false;
+    player = true;
     selectCard = false;
 
     initTowers();
@@ -43,7 +43,7 @@ function initGame() {
     initDeck();
     $(".ai").css({'opacity': 0.5})
     $('img.comp-frame-glow').hide();
-    playerTurn();
+    startTurn();
 }
 
 function initTowers() {
@@ -130,13 +130,25 @@ function showInstructions() {
 }
 
 function getCards() {
+    console.log("getCards called");
     animCards = [];
     drawCards();
-    setTimeout(function(){showDeck()},2000);
-    setTimeout(function(){cardsDraw()},4500);
-    setTimeout(function(){showCards()},5500);
-    setTimeout(function(){hideDeck()},6600);
-    setTimeout(function(){emptyAnimDeck()},7000);
+    showDeck(function() {
+        cardsDraw(function() {
+            fadeDrawCards(function() {
+                showCards(function() {
+                    hideDeck(function() {
+                        emptyAnim();
+                    });
+                });
+            });
+        });
+    });
+//    setTimeout(function(){showDeck()},2000);
+//    setTimeout(function(){cardsDraw()},4500);
+//    setTimeout(function(){showCards()},5500);
+//    setTimeout(function(){hideDeck()},6600);
+//    setTimeout(function(){emptyAnimDeck()},7000);
 }
 
 function checkFlag() {
@@ -147,14 +159,14 @@ function checkFlag() {
 }
 
 function initDraw() {
-    console.log("checking flag");
+    //console.log("checking flag");
     if (checkFlag()) {
         for (var i = 0; i < 3; i++) {
             draw.push(gameDeck[flag]);
             flag++;
         }
     } else {
-        console.log("Re-shuffling Deck");
+        //console.log("Re-shuffling Deck");
         flag = 0;
         initDeck();
         initDraw();
@@ -165,53 +177,76 @@ function drawCards() {
     $.each(draw, function (index, elm) {
         $('.card-container').find('.cards').eq(index).append('<img id=' + elm.id + '_' + elm.cost.red + '_' + elm.cost.blue + '_' + elm.cost.green + '_' + elm.value + '" src="' + elm.image + '" class="card-image"/>')
     });
-    console.log("gameDeck");
-    console.log(gameDeck);
-    console.log("gameDeck.length");
-    console.log(gameDeck.length);
-    console.log("draw");
-    console.log(draw);
+    //console.log("gameDeck");
+    //console.log(gameDeck);
+    //console.log("gameDeck.length");
+    //console.log(gameDeck.length);
+    //console.log("draw");
+    //console.log(draw);
 
 }
 
-function showDeck(){
+function showDeck(callback){
+    //console.log("showDeck starts");
     $( "#card1" ).animate({opacity: 1,height: "toggle"}, 1);
     $( "#card2" ).animate({opacity: 1,height: "toggle"}, 1);
     $( "#card3" ).animate({opacity: 1,height: "toggle"}, 1);
-    animDeck = $("#animDeck").append('<img id="deckImage" style="width: 100%;height: 100%" src="img/towerdefense/cardres.png"/>').css({width: "10%", height: "21%", left: "47.1%"}).fadeIn(5000);
+    $("#anim").append('<div id="animDeck"></div>');
+    animDeck = $("#animDeck").append('<img id="deckImage" style="width: 100%;height: 100%" src="img/towerdefense/cardres.png"/>').css({width: "10%", height: "21%", left: "47.1%"}).fadeIn(2000, function() {
+        //console.log("showDeck ends");
+        callback();
+    });
     var newDiv1 = animDeck.clone().insertAfter(animDeck);
     var newDiv2 = animDeck.clone().insertAfter(animDeck);
     var newDiv3 = animDeck.clone().insertAfter(animDeck);
     animCards = [newDiv3, newDiv2, newDiv1];
+    //console.log(animCards);
+
 }
 
-function cardsDraw(){
+function cardsDraw(callback){
+    //console.log("cardsDraw starts");
     animCards[0].fadeTo("5000",1);
     animCards[1].fadeTo("5000",1);
     animCards[2].fadeTo("5000",1);
-    setTimeout(function(){animCards[2].animate({left:"-=10.47%",top:"+=51.2%"},500)},600);
-    setTimeout(function(){animCards[1].animate({top:"+=51.2%"},500);},1200);
-    setTimeout(function(){animCards[0].animate({left:"+=10.46%",top:"+=51.2%"},500);},1800);
+    setTimeout(function(){
+        animCards[2].animate({left:"-=10.47%",top:"+=51.2%"},500);
+        setTimeout(function() {animCards[1].animate({top:"+=51.2%"},500);}, 500);
+        setTimeout(function() {animCards[0].animate({left:"+=10.46%",top:"+=51.2%"},500);}, 1000);
+        setTimeout(callback, 1500);
+    },600);
+
 }
 
-function fadeDrawCards() {
+function fadeDrawCards(callback) {
+    //console.log("fadeDrawCards starts");
     animCards[2].animate({opacity: 0.5,height: "toggle"}, 1000);
     animCards[1].animate({opacity: 1,height: "toggle"}, 1000);
     animCards[0].animate({opacity: 1,height: "toggle"}, 1000);
+    //console.log("fadeDrawCards ends");
+    setTimeout(callback, 800);
 }
 
-function showCards() {
+function showCards(callback) {
+    //console.log("showCards starts");
     $( "#card1" ).animate({opacity: 1,height: "toggle"}, 1000);
     $( "#card2" ).animate({opacity: 1,height: "toggle"}, 1000);
     $( "#card3" ).animate({opacity: 1,height: "toggle"}, 1000);
+    //console.log("showCards ends");
+    setTimeout(callback, 1000);
 }
 
-function hideDeck() {
-    animDeck.fadeOut();
+function hideDeck(callback) {
+    //console.log("hideDeck starts");
+    animDeck.fadeOut(2000, function() {
+        //console.log("hideDeck ends");
+        callback();});
 }
 
-function emptyAnimDeck() {
-    $("#animDeck").empty();
+function emptyAnim() {
+    //console.log("emptyAnimDeck starts");
+    $("#anim").empty();
+    //console.log("emptyAnimDeck ends");
 }
 
 function startTurn() {
@@ -221,11 +256,11 @@ function startTurn() {
 }
 
 function playerTurn() {
-    console.log("Player:");
+    //console.log("Player:");
     initDraw();
     if(validateDraw("player")) {
-        console.log("getting Cards");
-        console.log(draw);
+        //console.log("getting Cards");
+        //console.log(draw);
         getCards();
         player = true;
     }
@@ -266,7 +301,7 @@ function playerTurn() {
 
 function aiTurn() {
     if(player == false) {
-        console.log("AI:");
+        //console.log("AI:");
         initDraw();
         if(validateDraw("ai")) {
 
@@ -448,7 +483,7 @@ function stockGreen(byTeam, card) {
 
 function checkCost(team, card) {
     if (team == "player") {
-        console.log("checking card");
+        //console.log("checking card");
         cal_red = $("#red_score").text() - card.cost.red;
         cal_blue = $("#blue_score").text() - card.cost.blue;
         cal_green = $("#green_score").text() - card.cost.green;
@@ -457,7 +492,7 @@ function checkCost(team, card) {
         else
             return false;
     } else {
-        console.log("checking card");
+        //console.log("checking card");
         cal_red = $("#comp_red_score").text() - card.cost.red;
         cal_blue = $("#comp_blue_score").text() - card.cost.blue;
         cal_green = $("#comp_green_score").text() - card.cost.green;
