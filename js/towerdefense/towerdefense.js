@@ -138,35 +138,36 @@ function initTowers() {
 
 function playerTurn() {
     $(".cards").unbind('click').click(function () {
-        if(player_turn) {
-            switch ($(this).attr("id")) {
-                case "card1":
-                    card = draw[0];
-                    break;
-                case "card2":
-                    card = draw[1];
-                    break;
-                case "card3":
-                    card = draw[2];
-                    break;
-            }
-            player_turn = false;
-
-            if (checkCost("player", draw[0]) || checkCost("player", draw[1]) || checkCost("player", draw[2])) {
-                if (checkCost("player", card)) {
-                    cardClicked(card, "player", "ai");
-                } else {
-                    $("#message").text("Not enough Resources").fadeIn(1000).fadeOut(1000);
-                    player_turn = true;
-                    playerTurn();
-                }
-            } else {
-                $("#message").text("Re-drawing Cards").fadeIn(1000).fadeOut(1000);
-                emptyDeck();
-                drawCards();
-                playerTurn();
-            }
-        }
+        cardEnlarge($(this).attr("id"));
+//        if(player_turn) {
+//            switch ($(this).attr("id")) {
+//                case "card1":
+//                    card = draw[0];
+//                    break;
+//                case "card2":
+//                    card = draw[1];
+//                    break;
+//                case "card3":
+//                    card = draw[2];
+//                    break;
+//            }
+//            player_turn = false;
+//
+//            if (checkCost("player", draw[0]) || checkCost("player", draw[1]) || checkCost("player", draw[2])) {
+//                if (checkCost("player", card)) {
+//                    cardClicked(card, "player", "ai");
+//                } else {
+//                    $("#message").text("Not enough Resources").fadeIn(1000).fadeOut(1000);
+//                    player_turn = true;
+//                    playerTurn();
+//                }
+//            } else {
+//                $("#message").text("Re-drawing Cards").fadeIn(1000).fadeOut(1000);
+//                emptyDeck();
+//                drawCards();
+//                playerTurn();
+//            }
+//        }
     })
 }
 
@@ -442,63 +443,200 @@ function switchTurn(from) {
 
 
 function getCards() {
+    console.log("getCards called");
     animCards = [];
-    showDeck();
-    setTimeout(function(){cardsDraw()},2000);
-    setTimeout(function(){fadeout()},4500);
-    setTimeout(function(){showCards()},5500);
-    setTimeout(function(){hideDeck()},6600);
-
+    drawCards();
+    showDeck(function() {
+        cardsDraw(function() {
+            fadeDrawCards(function() {
+                showCards(function() {
+                    $(".cards").unbind('click').click(function () {
+                        cardEnlarge($(this).attr("id"));
+//                        cardsToDeck(function(){hideDeck()});
+    //                    hideDeck(function() {
+                           // emptyAnim();
+    //                    });
+                    });
+                });
+            });
+        });
+    });
+// setTimeout(function(){showDeck()},2000);
+// setTimeout(function(){cardsDraw()},4500);
+// setTimeout(function(){showCards()},5500);
+// setTimeout(function(){hideDeck()},6600);
+// setTimeout(function(){emptyAnimDeck()},7000);
 }
 
-function showDeck(){
-//    $( "#card1" ).animate({opacity: 1,height: "toggle"}, 1);
+function showDeck(callback){
+//console.log("showDeck starts");
+    $( "#card1" ).animate({opacity: 1,height: "toggle"}, 1);
     $( "#card2" ).animate({opacity: 1,height: "toggle"}, 1);
     $( "#card3" ).animate({opacity: 1,height: "toggle"}, 1);
-    animDeck = $("#animDeck").append('<img id="deckImage" style="width: 100%;height: 100%" src="img/towerdefense/cardres.png"/>').css({width: "10%", height: "21%", left: "47.1%"}).fadeIn(5000);
-        var newDiv1 = animDeck.clone().insertAfter(animDeck);
-        var newDiv2 = animDeck.clone().insertAfter(animDeck);
-        var newDiv3 = animDeck.clone().insertAfter(animDeck);
-//    newDiv1.animate({top: "76%", left: "36.5%"}, 3000)
-//    newDiv2.animate({top: "76%", left: "47.5%"}, 3000)
-//    newDiv3.animate({top: "76%", left: "58.5%"}, 3000)
+    $("#anim").append('<div id="animDeck"></div>');
+    animDeck = $("#animDeck").append('<img id="deckImage" style="width: 100%;height: 100%" src="img/towerdefense/cardres.png"/>').css({width: "10%", height: "21%", left: "47.1%",zIndex:"3"}).fadeIn(2000, function() {
+//console.log("showDeck ends");
+        callback();
+    });
+    var newDiv1 = animDeck.clone().insertAfter(animDeck);
+    var newDiv2 = animDeck.clone().insertAfter(animDeck);
+    var newDiv3 = animDeck.clone().insertAfter(animDeck);
     animCards = [newDiv3, newDiv2, newDiv1];
+//console.log(animCards);
 }
-
-function cardsDraw(){
+function cardsDraw(callback){
+//console.log("cardsDraw starts");
     animCards[0].fadeTo("5000",1);
     animCards[1].fadeTo("5000",1);
     animCards[2].fadeTo("5000",1);
-    setTimeout(function(){animCards[0].animate({left:"-=10.47%",top:"+=51.2%"},500)},600);
-    setTimeout(function(){animCards[1].animate({top:"+=51.2%"},500);},1200);
-    setTimeout(function(){animCards[2].animate({left:"+=10.46%",top:"+=51.2%"},500);},1800);
+    setTimeout(function(){
+        animCards[0].animate({left:"-=10.47%",top:"+=51.2%"},500);
+        setTimeout(function() {animCards[1].animate({top:"+=51.2%"},500);}, 500);
+        setTimeout(function() {animCards[2].animate({left:"+=10.46%",top:"+=51.2%"},500);}, 1000);
+        setTimeout(callback, 1500);
+    },600);
 }
-
-function fadeout(){
-//
-//    $("#card1").cycle({
-//        fx:    'curtainX',
-//        sync:  false,
-//        delay: -2000
-//    });
-    animCards[0].animate({opacity: 0.5,height: "toggle"}, 1000);
+function fadeDrawCards(callback) {
+//console.log("fadeDrawCards starts");
+    animCards[0].animate({opacity: 1,height: "toggle"}, 1000);
     animCards[1].animate({opacity: 1,height: "toggle"}, 1000);
     animCards[2].animate({opacity: 1,height: "toggle"}, 1000);
-
-//    $( "#deckCard1" ).animate({opacity: 1,height: "toggle"}, 1000);
-//    $( "#deckCard2" ).animate({opacity: 0.25,height: "toggle"}, 1000);
-//    $( "#deckCard3" ).animate({opacity: 0.25,height: "toggle"}, 1000);
-
+//console.log("fadeDrawCards ends");
+    setTimeout(callback, 800);
 }
-
-function showCards(){
+function showCards(callback) {
+//console.log("showCards starts");
     $( "#card1" ).animate({opacity: 1,height: "toggle"}, 1000);
     $( "#card2" ).animate({opacity: 1,height: "toggle"}, 1000);
     $( "#card3" ).animate({opacity: 1,height: "toggle"}, 1000);
-//    $( "#deckCard2" ).animate({opacity: 0.25,height: "toggle"}, 1000);
-//    $( "#deckCard3" ).animate({opacity: 0.25,height: "toggle"}, 1000);
+//console.log("showCards ends");
+    setTimeout(callback, 1000);
+}
+function hideDeck(callback) {
+//console.log("hideDeck starts");
+    animDeck.fadeOut(2000, function() {
+//console.log("hideDeck ends");
+        callback();});
+}
+function emptyAnim() {
+//console.log("emptyAnimDeck starts");
+    $("#anim").empty();
+//console.log("emptyAnimDeck ends");
 }
 
-function hideDeck(){
-    animDeck.fadeOut();
+function cardsToDeck(callback){
+
+    animCards[0] = animCards[0].css({zIndex:"2"});
+    animCards[1] = animCards[1].css({zIndex:"2"});
+    animCards[2] = animCards[2].css({zIndex:"2"});
+
+    switch(callback) {
+        case "card1":
+            animCards[0] = animCards[0].css({visibility:"hidden"});
+            $( "#card2" ).animate({opacity: 1,height: "toggle"}, 500);
+            $( "#card3" ).animate({opacity: 1,height: "toggle"}, 500);
+            break;
+
+        case "card2":
+
+            $( "#card1" ).animate({opacity: 1,height: "toggle"}, 500);
+            $( "#card3" ).animate({opacity: 1,height: "toggle"}, 500);
+            animCards[1] = animCards[1].css({visibility:"hidden"});
+            break;
+
+        case "card3":
+
+            $( "#card1" ).animate({opacity: 1,height: "toggle"}, 500);
+            $( "#card2" ).animate({opacity: 1,height: "toggle"}, 500);
+            animCards[2] = animCards[2].css({visibility:"hidden"});
+            break;
+    }
+
+
+
+   setTimeout(function(){
+       animCards[0].animate({opacity: 1,height: "toggle"}, 500);
+       animCards[1].animate({opacity: 1,height: "toggle"}, 500);
+       animCards[2].animate({opacity: 1,height: "toggle"}, 500);
+       setTimeout(function(){
+           animCards[0].animate({left:"+=10.47%"},500);
+           animCards[2].animate({left:"-=10.46%"},500);
+   },510);
+       setTimeout(function(){
+           animCards[0].animate({top:"-=51.2%"},500)
+           animCards[1].animate({top:"-=51.2%"},500)
+           animCards[2].animate({top:"-=51.2%"},500)
+       },1100);
+       setTimeout(function(){
+           animCards[0].fadeOut(0);
+           animCards[1].fadeOut(0);
+           animCards[2].fadeOut(0);
+       },1700);
+   },550);
+    setTimeout(callback, 2000);
 }
+
+
+    function cardEnlarge(cardId){
+
+        var img = "#"+cardId;
+        var oldDiv1 = $(img);
+
+        var newDiv1 = oldDiv1.clone().insertAfter(oldDiv1);
+
+        oldDiv1.toggle();
+//    newDiv1.append("#deck1");
+
+        console.log(cardId);
+
+        switch(cardId) {
+            case "card1":
+                newDiv1.animate({top:"-200%",left:"28%",width:"50%",height:"180%"});
+                break;
+
+            case "card2":
+                newDiv1.animate({top:"-200%",left:"28%",width:"50%",height:"180%"});
+                break;
+
+            case "card3":
+                newDiv1.animate({top:"-200%",left:"28%",width:"50%",height:"180%"});
+                break;
+        }
+
+        newDiv1.append('<img id="close" src="img/towerdefense/close.png"style="bottom: 10%;right: 30%;position: absolute" />' +
+            '<img id="btn" src="img/towerdefense/tick.png"style="bottom: 10%;left: 30%;position: absolute" />');
+
+
+        $("#btn").click(function () {
+            newDiv1.animate({top:"-113%",left: "129%",width:"10%",height:"30%"}, 500);
+            setTimeout(function(){cardsToDeck(cardId);},600);
+            $("#btn").hide();
+            $("#close").hide();
+            newDiv1.fadeOut(500);
+//            oldDiv1.toggle();
+        });
+
+        $("#close").click(function () {
+            switch(cardId) {
+                case "card1":
+                    newDiv1.animate({left: "13%", width: "24%", height: "86%",top:"7%"});;
+                    break;
+
+                case "card2":
+                    newDiv1.animate({left: "38%", width: "24%", height: "86%",top:"7%"});
+                    break;
+
+                case "card3":
+                    newDiv1.animate({left: "63%", width: "24%", height: "86%",top:"7%"});
+                    break;
+            }
+
+// setTimeout(function(){newDiv1.animate({opacity:"1",height:"toggle"},0)},1500);
+            $("#btn").hide();
+            $("#close").hide();
+            setTimeout(function(){oldDiv1.animate({opacity:"1",height:"toggle"},0)},1500);
+        });
+
+
+
+    }
