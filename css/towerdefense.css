@@ -757,11 +757,10 @@ li {
 
     .How{
         display: none;
+        position: absolute;
         font-family: "Impact",sans-serif;
         text-align: center;
         text-shadow: 0 0 20px white;
-        left: 10%;
-        bottom: 20%;
     }
 
 }

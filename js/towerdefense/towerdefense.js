@@ -17,25 +17,26 @@ var delay;
 
 $(function () {
     $('body').css('background-image', "url(" + theme.background + ")");
-    blinkit = setInterval(blinker1(), 2000);
+    blinkit = setInterval(blinker, 2000);
     $('#startClicker').on('click', function () {
         $('.gameTitle').fadeOut();
         $('.How').fadeIn();
+        clearInterval(blinkit);
         howTo();
-    })
-})
+    });
+});
 
 function howTo() {
-    blinkit = setInterval(blinker2(), 2000);
+    blinkit = setInterval(blinker2, 2000);
     $('#start').on('click', function () {
         $('.How').fadeOut();
         $('.stats-wrapper').fadeIn();
         clearInterval(blinkit);
-        setTimeout(function () {initGame();}, 1000);
-    })
+        initGame();
+    });
 }
 
-function blinker1() {
+function blinker() {
     $('#startClicker').fadeOut(500, function () {
         $('#startClicker').fadeIn(500);
     });
@@ -56,7 +57,7 @@ function initGame() {
     initDeck();
     $(".ai").css({'opacity': 0.5})
     $('img.comp-frame-glow').hide();
-    playerTurn("new");
+    setTimeout(function () {playerTurn("new");}, 500);
 }
 
 function initTowers() {
