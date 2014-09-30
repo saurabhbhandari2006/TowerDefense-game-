@@ -15,23 +15,34 @@ var cardId;
 var selectedCard;
 var delay;
 
-
-
 $(function () {
     $('body').css('background-image', "url(" + theme.background + ")");
-    blinkit = setInterval(blinker, 2000);
+    blinkit = setInterval(blinker1(), 2000);
     $('#startClicker').on('click', function () {
         $('.gameTitle').fadeOut();
-        $('.stats-wrapper').fadeIn();
-        $("#message").text("You win").hide();
-        clearInterval(blinkit);
-        initGame();
+        $('.How').fadeIn();
+        howTo();
     })
-});
+})
 
-function blinker() {
+function howTo() {
+    blinkit = setInterval(blinker2(), 2000);
+    $('#start').on('click', function () {
+        $('.How').fadeOut();
+        $('.stats-wrapper').fadeIn();
+        clearInterval(blinkit);
+        setTimeout(function () {initGame();}, 1000);
+    })
+}
+
+function blinker1() {
     $('#startClicker').fadeOut(500, function () {
         $('#startClicker').fadeIn(500);
+    });
+}
+function blinker2() {
+    $('#start').fadeOut(500, function () {
+        $('#start').fadeIn(500);
     });
 }
 

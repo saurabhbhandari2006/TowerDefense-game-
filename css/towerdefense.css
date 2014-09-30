@@ -737,17 +737,6 @@ li {
         width: 165%;
         z-index: 3;
     }
-    /*#stats_and_cards {*/
-    /*border: 1px solid green;*/
-    /*display: inline-block;*/
-    /*height: 30%;*/
-    /*left: 25%;*/
-    /*position: absolute;*/
-    /*text-align: center;*/
-    /*top: 69%;*/
-    /*width: 50%;*/
-    /*z-index: 2;*/
-    /*}*/
 
 
     #animDeck{
@@ -765,4 +754,14 @@ li {
         z-index: 2;
         /*background-color: rgba(0,0,0,0.7);*/
     }
+
+    .How{
+        display: none;
+        font-family: "Impact",sans-serif;
+        text-align: center;
+        text-shadow: 0 0 20px white;
+        left: 10%;
+        bottom: 20%;
+    }
+
 }
