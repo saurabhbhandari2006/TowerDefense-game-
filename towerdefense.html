@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/towerdefense.css">
     <link rel="stylesheet" href="css/jquery.parallax.css"/>
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="js/towerdefense/jquery.cycle2.min.js"></script>
 </head>
 <body>
 <!-- Application content go here -->
@@ -18,6 +19,13 @@
     <br/>
     <a href="#" id="startClicker" style="text-decoration: none;font-size:48px;color:black;">Click to Start</a>
 </div>
+
+<!-- How-To Design -->
+<div class="How">
+    <div><img id="inst" src="img/towerdefense/how_to.png" /></div>
+    <div style="left: 74%;bottom: 6%; position: absolute"><a id="start" href="#" style="text-decoration: none;font-size:48px;color:black;">Start</a></div>
+</div>
+
 <!--game wrapper-->
 <div class="stats-wrapper">
     <div class="game-wrapper" style="">
@@ -31,8 +39,9 @@
                 <img class="base" src="img/towerdefense/aitower/base.png">
             </div>
             <div id="message"></div>
-            <div class= "deck" id="deck1"></div>
-            <div class = "deck" id="deck2"></div>
+
+            <div id="anim"></div>
+
             <div id="stats_and_cards">
 
                 <div class="player">
@@ -103,31 +112,33 @@
     <!--<div class = "deck" id="deck3"></div>-->
     <!--<div class = "deck" id="deck4"></div>-->
 </div>
-    <!-- Javascripts go here -->
-    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
-    <!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>-->
-    <script src="js/vendor/jquery-1.10.2.min.js"></script>
-    <script src="js/vendor/jquery.easing.1.3.js"></script>
-    <script src="js/towerdefense/jquery.cycle.all.js"></script>
-    <script src="js/towerdefense/ion.sound.min.js"></script>
-    <script type="text/javascript" src="js/towerdefense/jquery.parallax.js"></script>
-    <script type="text/javascript" src="js/towerdefense/jquery.event.frame.js"></script>
-    <script src="js/towerdefense/towerdefense-data.js"></script>
-    <script src="js/questionbank.js"></script>
-    <script src="js/towerdefense/towerdefense.js"></script>
-    <script src="js/counter.js"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function () {
-            var target1 = jQuery("#target1");
-            target1
-                    .children('img')
-                    .parallax(
-                    { mouseport: target1 },
-                    { xparallax: 0.2, yparallax: 0.2 }, // Blue layer options
-                    { xparallax: 0.6, yparallax: 0.6 }, // Green layer options
-                    {} // Red layer options
-            );
-        });
-    </script>
-    <!-- Game Script-->
+
+
+<!-- Javascripts go here -->
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+<!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>-->
+<script src="js/vendor/jquery-1.10.2.min.js"></script>
+<script src="js/vendor/jquery.easing.1.3.js"></script>
+<script src="js/towerdefense/jquery.cycle.all.js"></script>
+<script src="js/towerdefense/ion.sound.min.js"></script>
+<script type="text/javascript" src="js/towerdefense/jquery.parallax.js"></script>
+<script type="text/javascript" src="js/towerdefense/jquery.event.frame.js"></script>
+<script src="js/towerdefense/towerdefense-data.js"></script>
+<script src="js/questionbank.js"></script>
+<script src="js/towerdefense/towerdefense.js"></script>
+<script src="js/counter.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        var target1 = jQuery("#target1");
+        target1
+                .children('img')
+                .parallax(
+                { mouseport: target1 },
+                { xparallax: 0.2, yparallax: 0.2 }, // Blue layer options
+                { xparallax: 0.6, yparallax: 0.6 }, // Green layer options
+                {} // Red layer options
+        );
+    });
+</script>
+<!-- Game Script-->
 </body>
