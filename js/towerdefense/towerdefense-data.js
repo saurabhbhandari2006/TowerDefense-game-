@@ -9,14 +9,14 @@ game.startHeight = 100;
 game.maxHeight = 5;
 
 var myCards = [
-//    //Attack Cards
-//    {name: "The Ohitsuji", category: "attack", value: "-6", cost: {red: 5, blue: 0, green: 0},"image": "img/towerdefense/attack/ohitsuji.png"},
-//    {name: "The Ohitsuji", category: "attack", value: "-6", cost: {red: 5, blue: 0, green: 0},"image": "img/towerdefense/attack/ohitsuji.png"},
-//    {name: "The Ohitsuji", category: "attack", value: "-6", cost: {red: 5, blue: 0, green: 0},"image": "img/towerdefense/attack/ohitsuji.png"},
-//
-//    {name: "The Ballista", category: "attack", value: "-8", cost: {red: 8, blue: 0, green: 0},"image": "img/towerdefense/attack/ballista.png"},
-//    {name: "The Ballista", category: "attack", value: "-8", cost: {red: 8, blue: 0, green: 0},"image": "img/towerdefense/attack/ballista.png"},
-//    {name: "The Ballista", category: "attack", value: "-8", cost: {red: 8, blue: 0, green: 0},"image": "img/towerdefense/attack/ballista.png"},
+    //Attack Cards
+    {name: "The Ohitsuji", category: "attack", value: "-6", cost: {red: 5, blue: 0, green: 0},"image": "img/towerdefense/attack/ohitsuji.png"},
+    {name: "The Ohitsuji", category: "attack", value: "-6", cost: {red: 5, blue: 0, green: 0},"image": "img/towerdefense/attack/ohitsuji.png"},
+    {name: "The Ohitsuji", category: "attack", value: "-6", cost: {red: 5, blue: 0, green: 0},"image": "img/towerdefense/attack/ohitsuji.png"},
+
+    {name: "The Ballista", category: "attack", value: "-8", cost: {red: 8, blue: 0, green: 0},"image": "img/towerdefense/attack/ballista.png"},
+    {name: "The Ballista", category: "attack", value: "-8", cost: {red: 8, blue: 0, green: 0},"image": "img/towerdefense/attack/ballista.png"},
+    {name: "The Ballista", category: "attack", value: "-8", cost: {red: 8, blue: 0, green: 0},"image": "img/towerdefense/attack/ballista.png"},
 //
 //    {name: "The Catapult", category: "attack", value: "-10", cost: {red: 10, blue: 0, green: 0},"image": "img/towerdefense/attack/catapult.png"},
 //    {name: "The Catapult", category: "attack", value: "-10", cost: {red: 10, blue: 0, green: 0},"image": "img/towerdefense/attack/catapult.png"},
@@ -78,15 +78,15 @@ var myCards = [
 //
 //    {name: "Sapphire Mine", category: "resource", value: "20", cost: {red: 0, blue: -1, green: 0},"image": "img/towerdefense/resource/sapphire_mine.png"},
 //    {name: "Sapphire Mine", category: "resource", value: "20", cost: {red: 0, blue: -1, green: 0},"image": "img/towerdefense/resource/sapphire_mine.png"},
-
-    //Green Resource Cards
-    {name: "Emerald Mine", category: "resource", value: "20", cost: {red: 0, blue: 0, green: -1},"image": "img/towerdefense/resource/emerald_mine.png"},
-    {name: "Emerald Mine", category: "resource", value: "20", cost: {red: 0, blue: 0, green: -1},"image": "img/towerdefense/resource/emerald_mine.png"},
-    {name: "Emerald Mine", category: "resource", value: "20", cost: {red: 0, blue: 0, green: -1},"image": "img/towerdefense/resource/emerald_mine.png"},
-    {name: "Emerald Mine", category: "resource", value: "20", cost: {red: 0, blue: 0, green: -1},"image": "img/towerdefense/resource/emerald_mine.png"},
-    {name: "Emerald Mine", category: "resource", value: "20", cost: {red: 0, blue: 0, green: -1},"image": "img/towerdefense/resource/emerald_mine.png"},
-    {name: "Emerald Mine", category: "resource", value: "20", cost: {red: 0, blue: 0, green: -1},"image": "img/towerdefense/resource/emerald_mine.png"},
-    {name: "Emerald Mine", category: "resource", value: "20", cost: {red: 0, blue: 0, green: -1},"image": "img/towerdefense/resource/emerald_mine.png"}
+//
+//    //Green Resource Cards
+//    {name: "Emerald Mine", category: "resource", value: "20", cost: {red: 0, blue: 0, green: -1},"image": "img/towerdefense/resource/emerald_mine.png"},
+//    {name: "Emerald Mine", category: "resource", value: "20", cost: {red: 0, blue: 0, green: -1},"image": "img/towerdefense/resource/emerald_mine.png"},
+//    {name: "Emerald Mine", category: "resource", value: "20", cost: {red: 0, blue: 0, green: -1},"image": "img/towerdefense/resource/emerald_mine.png"},
+//    {name: "Emerald Mine", category: "resource", value: "20", cost: {red: 0, blue: 0, green: -1},"image": "img/towerdefense/resource/emerald_mine.png"},
+//    {name: "Emerald Mine", category: "resource", value: "20", cost: {red: 0, blue: 0, green: -1},"image": "img/towerdefense/resource/emerald_mine.png"},
+//    {name: "Emerald Mine", category: "resource", value: "20", cost: {red: 0, blue: 0, green: -1},"image": "img/towerdefense/resource/emerald_mine.png"},
+//    {name: "Emerald Mine", category: "resource", value: "20", cost: {red: 0, blue: 0, green: -1},"image": "img/towerdefense/resource/emerald_mine.png"}
 ]
 
 function shuffle(o) {

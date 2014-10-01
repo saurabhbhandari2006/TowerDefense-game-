@@ -41,6 +41,7 @@ function blinker() {
         $('#startClicker').fadeIn(500);
     });
 }
+
 function blinker2() {
     $('#start').fadeOut(500, function () {
         $('#start').fadeIn(500);
@@ -154,12 +155,10 @@ function initDraw() {
             flag++;
         }
     } else {
-        $("#message").text("Re-shuffling Cards").fadeIn(1000).fadeOut(1000);
-        setTimeout(function() {
-            flag = 0;
-            initDeck();
-            initDraw();
-        }, 1000);
+        console.log("reshuffling");
+        flag = 0;
+        initDeck();
+        initDraw();
 
     }
 }
@@ -250,12 +249,7 @@ function emptyAnim() {
     $("#anim").empty();
 }
 
-//function startTurn() {
-//    if(player)
-//        playerTurn("new");
-//    else
-//        aiTurn("new");
-//}
+
 
 function playerTurn(call) {
     if(call == "new") {
@@ -283,7 +277,7 @@ function playerTurn(call) {
                 flag = flag+3;
                 playerTurn();
             }
-        }, 1000);
+        }, 500);
 
         $(".cards").unbind('click').click(function () {
             if(player) {
@@ -359,7 +353,7 @@ function aiTurn(call) {
                     }, 8000)
 
                 } else {aiTurn();}
-            }, 1000);
+            }, 500);
         }
     }, delay);
 
@@ -392,7 +386,24 @@ function cardClicked(card, byTeam, onTeam, callback) {
     }
 }
 
+function checkWin(callback) {
+    $(".cards").eq(3).remove();
+    console.log("checking win");
+    if (aiHt <= 0) {
+        setTimeout(function(){
+            $("#message").html("You Win!! <br /><a href='' style='text-decoration: underline; color: whitesmoke; '>Click Here<a/> to Play Again").css("color","#3399FF").fadeIn(1000);
+        },3000);
+        gameOn = false;
+    }
+    if (playerHt <= 0) {
+        setTimeout(function(){
+            $("#message").html("You Loose!! <br /><a href='' style='text-decoration: underline; color: whitesmoke; '>Click Here<a/> to Play Again").css("color","red").fadeIn(1000);
+        },3000);
+        gameOn = false;
+    }
 
+    setTimeout(callback, 1000);
+}
 
 function attack(byTeam, onTeam, card, callback) {
     console.log("attack called by "+byTeam);
@@ -425,31 +436,6 @@ function attack(byTeam, onTeam, card, callback) {
     }
 
     setTimeout(function() {checkWin(callback);}, 3000);
-}
-
-function checkWin(callback) {
-    $(".cards").eq(3).remove();
-    console.log("checking win");
-    if (aiHt <= 0) {
-        setTimeout(function(){
-            $("#message").text("You win").fadeIn(1000).fadeOut(2000) ;
-        },3000);
-        setTimeout(function(){
-            $("#message").html("<a href='' style='text-decoration: underline; color: whitesmoke; '>Click Here<a/> to Play Again").fadeIn(1000);
-        },6000);
-        gameOn = false;
-    }
-    if (playerHt <= 0) {
-        setTimeout(function(){
-            $("#message").html("You Loose!! <br/> Game Over").fadeIn(1000).fadeOut(2000);
-        },3000);
-        setTimeout(function(){
-            $("#message").html("<a href='' style='text-decoration: underline; color: whitesmoke; '>Click Here<a/> to Play Again").fadeIn(1000);
-        },3000);
-        gameOn = false;
-    }
-
-    setTimeout(callback, 1000);
 }
 
 function build(byTeam, card, callback) {
@@ -898,6 +884,7 @@ function blueResLeft() {
     $("#close").hide();
 
 }
+
 function greenResLeft() {
     selectedCard.css('z-index',4).animate({top: "81.3%", left: "-12%", width: "2%", height: "6%"}, 1000).fadeOut();
     $("#btn").hide();
@@ -905,17 +892,20 @@ function greenResLeft() {
 
 
 }
+
 function redResRight() {
     selectedCard.css('z-index',4).animate({top: "28.3%", left: "114.3%", width: "2%", height: "6%"}, 1000).fadeOut();
     $("#btn").hide();
     $("#close").hide();
 
 }
+
 function blueResRight() {
     selectedCard.css('z-index',4).animate({top: "57.3%", left: "114.3%", width: "2%", height: "6%"}, 1000).fadeOut();
     $("#btn").hide();
     $("#close").hide();
 }
+
 function greenResRight() {
     selectedCard.css('z-index',4).animate({top: "79.3%", left: "109.3%", width: "2%", height: "6%"}, 1000).fadeOut();
     $("#btn").hide();
