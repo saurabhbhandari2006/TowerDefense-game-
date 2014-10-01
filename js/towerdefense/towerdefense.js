@@ -139,10 +139,6 @@ function setTowerTop(team, cap, top, posx, posy, wd) {
     }
 }
 
-function showInstructions() {
-    //onclick start : showDeck(), cardsDraw(), drawCards(); showCards(); hideDeck();
-}
-
 function checkFlag() {
     if (flag+2 < gameDeck.length)
         return true;
@@ -277,16 +273,17 @@ function playerTurn(call) {
         if(call != "resource")
             initDraw();
 
+        setTimeout(function() {
+            if(validateDraw("player")) {
+                player = true;
+                if(call != "resource")
+                    getCards();
 
-        if(validateDraw("player")) {
-            player = true;
-            if(call != "resource")
-                getCards();
-
-        } else {
-            flag = flag+3;
-            playerTurn();
-        }
+            } else {
+                flag = flag+3;
+                playerTurn();
+            }
+        }, 1000);
 
         $(".cards").unbind('click').click(function () {
             if(player) {
@@ -337,30 +334,32 @@ function aiTurn(call) {
             if(call != "resource")
                 initDraw();
 
-            if(validateDraw("ai")) {
+            setTimeout(function() {
+                if(validateDraw("ai")) {
 
-                var random = Math.floor((Math.random() * 3));
-                var card = draw[random];
-                cardId = "card"+(random+1);
+                    var random = Math.floor((Math.random() * 3));
+                    var card = draw[random];
+                    cardId = "card"+(random+1);
 
-                if(checkCost("ai", card)) {
-                    getCards();
-                } else {
-                    aiTurn("resource");
-                }
-
-
-                setTimeout(function() {
-                    if (checkCost("ai", card)) {
-                        cardEnlarge("ai", function() {
-                            cardClicked(card, "ai", "player", function() {
-                                if(gameOn) switchTurn("ai");
-                            });
-                        });
+                    if(checkCost("ai", card)) {
+                        getCards();
+                    } else {
+                        aiTurn("resource");
                     }
-                }, 8000)
 
-            } else {aiTurn();}
+
+                    setTimeout(function() {
+                        if (checkCost("ai", card)) {
+                            cardEnlarge("ai", function() {
+                                cardClicked(card, "ai", "player", function() {
+                                    if(gameOn) switchTurn("ai");
+                                });
+                            });
+                        }
+                    }, 8000)
+
+                } else {aiTurn();}
+            }, 1000);
         }
     }, delay);
 
