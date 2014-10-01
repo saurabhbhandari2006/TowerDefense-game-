@@ -184,10 +184,14 @@ function getCards() {
     });
 }
 
-function toggleCards(op) {
-    $( "#card1" ).animate({opacity: op,height: "toggle"}, 1);
-    $( "#card2" ).animate({opacity: op,height: "toggle"}, 1);
-    $( "#card3" ).animate({opacity: op,height: "toggle"}, 1);
+function toggleCards(op, resource) {
+    if(resource == "resource") {
+        $("#"+cardId).animate({opacity: 1,height: "toggle"}, 1);
+    } else {
+        $( "#card1" ).animate({opacity: op,height: "toggle"}, 1);
+        $( "#card2" ).animate({opacity: op,height: "toggle"}, 1);
+        $( "#card3" ).animate({opacity: op,height: "toggle"}, 1);
+    }
 }
 
 function drawCards() {
@@ -570,7 +574,7 @@ function checkCost(team, card) {
         cal_red = parseInt($("#red_score").text()) - card.cost.red;
         cal_blue = parseInt($("#blue_score").text()) - card.cost.blue;
         cal_green = parseInt($("#green_score").text()) - card.cost.green;
-        if (cal_red > 0 && cal_blue > 0 && cal_green > 0)
+        if (cal_red >= 0 && cal_blue >= 0 && cal_green >= 0)
             return true;
         else
             return false;
@@ -579,7 +583,7 @@ function checkCost(team, card) {
         cal_red = parseInt($("#comp_red_score").text()) - card.cost.red;
         cal_blue = parseInt($("#comp_blue_score").text()) - card.cost.blue;
         cal_green = parseInt($("#comp_green_score").text()) - card.cost.green;
-        if (cal_red > 0 && cal_blue > 0 && cal_green > 0)
+        if (cal_red >= 0 && cal_blue >= 0 && cal_green >= 0)
             return true;
         else
             return false;
@@ -630,10 +634,13 @@ function processAnswers(answer, byTeam, card, callback) {
     data = getAnswer($('#qid').html(), answer);
     var resultMsg = data.split('||')[1];
     var correctAnswer = data.split('||')[2];
-    var answerPayoff = parseInt(card.value);
+    var answerPayoff = 0;
+    if(data.split('||')[0] != 0)
+        answerPayoff = parseInt(card.value);
 
     $('#answerBlock').hide();
     $('#answerMsg').html("<div class='scribble'> <h4 style='color: whitesmoke;'>" + resultMsg + "!! The correct answer is: </h4> <h3 style='color:#3399FF;margin:0;padding:3px;'>" + correctAnswer + "</h3></div> ").fadeIn();
+
     setTimeout(function () {
         $("#quiz-content").hide();
         $('#qquestion').fadeOut();
@@ -642,6 +649,7 @@ function processAnswers(answer, byTeam, card, callback) {
         selectedCard.css({'opacity': 1});
     }, 1500);
     setTimeout(function(){
+        console.log(answerPayoff);
         if (answerPayoff > 0) {
             if (byTeam == "ai") {
                 greenResRight();
@@ -660,10 +668,19 @@ function processAnswers(answer, byTeam, card, callback) {
                 }, 1000);
 
             }
+
+            setTimeout(function() {checkWin(callback);}, 3000);
+
+        } else {
+            console.log("shrinking");
+            cardShrink();
+            setTimeout(function() {
+                toggleCards(1,"resource");
+                $(".cards").eq(3).remove();
+                cardId = "";
+                checkWin(callback);
+            }, 300);
         }
-
-        setTimeout(function() {checkWin(callback);}, 4000);
-
     }, 2000);
 
 }
@@ -745,26 +762,10 @@ function cardEnlarge(chance, callback){
 
     $("#close").unbind('click').click(function () {
         player = true;
-        switch(cardId) {
-            case "card1":
-                selectedCard.animate({left: "13%", width: "24%", height: "86%",top:"7%"});
-                break;
-
-            case "card2":
-                selectedCard.animate({left: "38%", width: "24%", height: "86%",top:"7%"});
-                break;
-
-            case "card3":
-                selectedCard.animate({left: "63%", width: "24%", height: "86%",top:"7%"});
-                break;
-        }
-
-        $("#btn").hide();
-        $("#close").hide();
-        setTimeout(function(){
+        cardShrink();
+        setTimeout(function() {
             $(".cards").eq(3).remove();
-            oldDiv1.animate({opacity:"1",height:"toggle"},0);
-        },400);
+        }, 400);
     })
 
     $("#btn").click(function () {
@@ -778,6 +779,29 @@ function cardEnlarge(chance, callback){
             callback();
         },600);
     }
+}
+
+function cardShrink() {
+    switch(cardId) {
+        case "card1":
+            selectedCard.animate({left: "13%", width: "24%", height: "86%",top:"7%"});
+            break;
+
+        case "card2":
+            selectedCard.animate({left: "38%", width: "24%", height: "86%",top:"7%"});
+            break;
+
+        case "card3":
+            selectedCard.animate({left: "63%", width: "24%", height: "86%",top:"7%"});
+            break;
+    }
+
+    $("#btn").hide();
+    $("#close").hide();
+    setTimeout(function(){
+//        $(".cards").eq(3).remove();
+        $("#"+cardId).animate({opacity:"1",height:"toggle"},0);
+    },400);
 }
 
 function cardsToDeck(callback){
@@ -794,16 +818,21 @@ function cardsToDeck(callback){
             break;
 
         case "card2":
+            animCards[1] = animCards[1].css({visibility:"hidden"});
             $( "#card1" ).animate({opacity: 1,height: "toggle"}, 500);
             $( "#card3" ).animate({opacity: 1,height: "toggle"}, 500);
-            animCards[1] = animCards[1].css({visibility:"hidden"});
             break;
 
         case "card3":
+            animCards[0] = animCards[0].css({visibility:"hidden"});
             $( "#card1" ).animate({opacity: 1,height: "toggle"}, 500);
             $( "#card2" ).animate({opacity: 1,height: "toggle"}, 500);
-            animCards[0] = animCards[0].css({visibility:"hidden"});
             break;
+
+        default:
+            $( "#card1" ).animate({opacity: 1,height: "toggle"}, 500);
+            $( "#card2" ).animate({opacity: 1,height: "toggle"}, 500);
+            $( "#card3" ).animate({opacity: 1,height: "toggle"}, 500);
     }
 
 
