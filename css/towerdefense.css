@@ -181,6 +181,7 @@
     position: absolute;
     left: 0;
     pointer-events:none;
+    z-index: 0;
 }
 @-webkit-keyframes animate_background1 {
     0% {
@@ -602,5 +603,17 @@ li {
         top: 30%;
         width: 960px;
     }
+
+    .How{
+        display: none;
+        position: absolute;
+        font-family: "Impact",sans-serif;
+        text-align: center;
+        text-shadow: 0 0 20px white;
+        position: absolute;
+        top: 20%;
+        left: 30%;
+    }
+
 }
 
