@@ -185,7 +185,7 @@ function getCards() {
 
 function toggleCards(op, resource) {
     if(resource == "resource") {
-        $("#"+cardId).animate({opacity: 1,width: "toggle",marginLeft:"25"}, 1);
+        $("#"+cardId).animate({opacity: 1,width: "toggle"}, 1);
     } else {
         $( "#card1" ).animate({opacity: op,width: "toggle",marginLeft:"25"}, 1);
         $( "#card2" ).animate({opacity: op,width: "toggle",marginLeft:"25"}, 1);
@@ -784,12 +784,12 @@ function cardShrink() {
             selectedCard.animate({left: "63%", width: "24%", height: "86%",top:"7%"});
             break;
     }
-
+//    $("#"+cardId).css({marginLeft: "-=350"});
     $("#btn").hide();
     $("#close").hide();
     setTimeout(function(){
 //        $(".cards").eq(3).remove();
-        $("#"+cardId).animate({opacity:"1",height:"toggle"},0);
+//        $("#"+cardId).animate({opacity:"1",width:"toggle",marginLeft:"-=35"},0);
     },400);
 }
 
