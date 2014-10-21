@@ -789,7 +789,7 @@ function cardShrink() {
     $("#close").hide();
     setTimeout(function(){
 //        $(".cards").eq(3).remove();
-//        $("#"+cardId).animate({opacity:"1",width:"toggle",marginLeft:"-=35"},0);
+        $("#"+cardId).animate({opacity:"1",width:"toggle"},0);
     },400);
 }
 
