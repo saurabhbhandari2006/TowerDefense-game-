@@ -18,13 +18,13 @@ var attackCount = 0;
 $(function () {
     $('body').css('background-image', "url(" + theme.background + ")");
     $('#map-wrapper').css('background-image', "url(" + theme.mapImg + ")");
-    blinkit = setInterval(blinker, 2000);
-    $('#startClicker').on('click', function () {
-        $('.gameTitle').fadeOut();
+//    blinkit = setInterval(blinker, 2000);
+//    $('#startClicker').on('click', function () {
+//        $('.gameTitle').fadeOut();
         $('.game-wrapper').fadeIn();
         clearInterval(blinkit);
         initGame();
-    })
+//    })
 
 
 });
@@ -142,9 +142,9 @@ function attackCountry(countryName, team) {
         hideFace(faceOne, faceTwo);
 
         showAngle();
-        setTimeout(function () {
-            hideAngle();
-        }, 750);
+            setTimeout(function () {
+                hideAngle();
+            }, 750);
         setTimeout(function () {
             var hit = finalRoll();
             var defense = strengths[theme.countries.indexOf(countryName)];

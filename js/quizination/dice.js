@@ -38,8 +38,8 @@ $(document).ready(function(){
 
 	for(var i=0; i<6; ++i){
 		var die = i+1;
-		$("#dieOne").append("<img src='img/quizination/dice/face"+die+".png' id='face"+die+"' />");
-		$("#dieTwo").append("<img src='img/quizination//dice/face"+die+".png' id='face"+die+"' />");
+		$("#dieOne").append("<img src='assets/img/dice/face"+die+".png' id='face"+die+"' />");
+		$("#dieTwo").append("<img src='assets/img/dice/face"+die+".png' id='face"+die+"' />");
 		$("#dieOne #face"+die+"").hide();
 		$("#dieTwo #face"+die+"").hide();
 	}

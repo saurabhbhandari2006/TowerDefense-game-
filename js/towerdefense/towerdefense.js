@@ -20,17 +20,21 @@ $(function () {
     blinkit = setInterval(blinker, 2000);
     $('#startClicker').on('click', function () {
         $('.gameTitle').fadeOut();
-        $('.How').fadeIn();
+        $('.stats-wrapper').fadeIn();
         clearInterval(blinkit);
-        howTo();
+        statsWrapper();
     });
 });
-
+function statsWrapper(){
+    $('.How').fadeIn();
+    howTo();
+}
 function howTo() {
     blinkit = setInterval(blinker2, 2000);
-    $('#start').on('click', function () {
+    $('#start-btn').on('click', function () {
         $('.How').fadeOut();
-        $('.stats-wrapper').fadeIn();
+        $('.game-wrapper').fadeIn();
+        $('#cloud-container').fadeIn();
         clearInterval(blinkit);
         initGame();
     });
@@ -225,11 +229,11 @@ function cardsDraw(callback){
 
 function fadeDrawCards(callback) {
     //console.log("fadeDrawCards starts");
-    animCards[0].animate({opacity: 0.5,height: "toggle"}, 700);
-    animCards[1].animate({opacity: 1,height: "toggle"}, 700);
     animCards[2].animate({opacity: 1,height: "toggle"}, 700);
+    animCards[1].animate({opacity: 1,height: "toggle"}, 700);
+    animCards[0].animate({opacity: 1,height: "toggle"}, 700);
     //console.log("fadeDrawCards ends");
-    setTimeout(callback, 800);
+    setTimeout(callback, 500);
 }
 
 function showCards(callback) {
