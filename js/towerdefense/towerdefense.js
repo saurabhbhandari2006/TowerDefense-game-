@@ -93,15 +93,19 @@ function setTower(team, delta) {
     var existingStoreys = Math.floor(towerHt / 10);
     var newStoreys = Math.floor(newHt / 10);
 
-    if($( window ).width() <= 640) {
-        var posx = 63;
-        var wd = 56;
-        var ht = 40;
-    } else {
-        var posx = 89;
-        var wd = 84;
-        var ht = 55;
-    }
+    var posx = 63;
+    var wd = 56;
+    var ht = 40;
+
+//    if($( window ).width() <= 640) {
+//        var posx = 63;
+//        var wd = 56;
+//        var ht = 40;
+//    } else {
+//        var posx = 89;
+//        var wd = 84;
+//        var ht = 55;
+//    }
 
     var posy = $('#' + team + '-tower .base').height() - 10;
 
@@ -181,11 +185,11 @@ function getCards() {
 
 function toggleCards(op, resource) {
     if(resource == "resource") {
-        $("#"+cardId).animate({opacity: 1,height: "toggle"}, 1);
+        $("#"+cardId).animate({opacity: 1,width: "toggle",marginLeft:"25"}, 1);
     } else {
-        $( "#card1" ).animate({opacity: op,height: "toggle"}, 1);
-        $( "#card2" ).animate({opacity: op,height: "toggle"}, 1);
-        $( "#card3" ).animate({opacity: op,height: "toggle"}, 1);
+        $( "#card1" ).animate({opacity: op,width: "toggle",marginLeft:"25"}, 1);
+        $( "#card2" ).animate({opacity: op,width: "toggle",marginLeft:"25"}, 1);
+        $( "#card3" ).animate({opacity: op,width: "toggle",marginLeft:"25"}, 1);
     }
 }
 
@@ -199,14 +203,14 @@ function showDeck(callback){
     //console.log("showDeck starts");
     toggleCards(1);
     $("#anim").append('<div id="animDeck"></div>');
-    animDeck = $("#animDeck").append('<img id="deckImage" style="width: 100%;height: 100%" src="img/towerdefense/card_back.png"/>').css({width: "10%", height: "21%", left: "47.1%", zIndex:"3"}).fadeIn(2000);
+    animDeck = $("#animDeck").append('<img id="deckImage" style="width: 100%;height: 100%" src="img/towerdefense/card_back.png"/>').css({width: "10%", height: "21%", left: "47.1%", zIndex:"3"}).fadeIn(500);
     setTimeout(function() {
         var newDiv1 = animDeck.clone().insertAfter(animDeck);
         var newDiv2 = animDeck.clone().insertAfter(animDeck);
         var newDiv3 = animDeck.clone().insertAfter(animDeck);
         animCards = [newDiv3, newDiv2, newDiv1];
         callback();
-    }, 1500);
+    }, 750);
 }
 
 function cardsDraw(callback){
@@ -215,34 +219,34 @@ function cardsDraw(callback){
     animCards[1].fadeTo("5000",1);
     animCards[2].fadeTo("5000",1);
     setTimeout(function(){
-        animCards[2].animate({left:"-=10.47%",top:"+=51.2%"},300);
-        setTimeout(function() {animCards[1].animate({top:"+=51.2%"},300);}, 300);
-        setTimeout(function() {animCards[0].animate({left:"+=10.46%",top:"+=51.2%"},300);}, 600);
-        setTimeout(callback, 900);
-    },600);
+        animCards[2].animate({left:"-=10.47%",top:"+=51.2%"},200);
+        setTimeout(function() {animCards[1].animate({top:"+=51.2%"},200);}, 200);
+        setTimeout(function() {animCards[0].animate({left:"+=10.46%",top:"+=51.2%"},200);}, 400);
+        setTimeout(callback, 600);
+    },400);
 
 }
 
 function fadeDrawCards(callback) {
     //console.log("fadeDrawCards starts");
-    animCards[0].animate({opacity: 0.5,height: "toggle"}, 700);
-    animCards[1].animate({opacity: 1,height: "toggle"}, 700);
-    animCards[2].animate({opacity: 1,height: "toggle"}, 700);
+    animCards[0].animate({opacity: 1,width:"toggle",marginLeft:"+=35"}, 350);
+    animCards[1].animate({opacity: 1,width:"toggle",marginLeft:"+=35"}, 350);
+    animCards[2].animate({opacity: 1,width:"toggle",marginLeft:"+=35"}, 350);
     //console.log("fadeDrawCards ends");
-    setTimeout(callback, 800);
+    setTimeout(callback, 400);
 }
 
 function showCards(callback) {
     //console.log("showCards starts");
-    $( "#card1" ).animate({opacity: 1,height: "toggle"}, 700);
-    $( "#card2" ).animate({opacity: 1,height: "toggle"}, 700);
-    $( "#card3" ).animate({opacity: 1,height: "toggle"}, 700);
+    $( "#card1" ).animate({opacity: 1,width: "toggle",marginLeft:"-=25"}, 350);
+    $( "#card2" ).animate({opacity: 1,width: "toggle",marginLeft:"-=25"}, 350);
+    $( "#card3" ).animate({opacity: 1,width: "toggle",marginLeft:"-=25"}, 350);
     //console.log("showCards ends");
-    setTimeout(callback, 1000);
+    setTimeout(callback, 500);
 }
 
 function hideDeck() {
-    animDeck.fadeOut(1000);
+    animDeck.fadeOut(500);
 }
 
 function emptyAnim() {
@@ -255,7 +259,7 @@ function playerTurn(call) {
     if(call == "new") {
         delay = 3000;
         setTimeout(function() {
-                $("#message").text("Player's Turn").css("color","white").fadeIn(1000).fadeOut(2000);
+            $("#message").text("Player's Turn").css("color","white").fadeIn(1000).fadeOut(2000);
         }, 500);
     } else {
         delay = 0;
@@ -740,10 +744,10 @@ function cardEnlarge(chance, callback){
 //    console.log(selectedCard.attr("id"));
     oldDiv1.toggle();
     console.log(cardId);
-    selectedCard.animate({top:"-200%",left:"28%",width:"50%",height:"180%"});
+    selectedCard.animate({top:"-280%",left:"-8%",width:"114%",height:"400%"}).css({'z-index': "5"});
 
-    selectedCard.append('<img class="buttons" id="close" src="img/towerdefense/close.png"style="bottom: 6%;right: 30%;position: absolute" />' +
-        '<img class="buttons" id="btn" src="img/towerdefense/tick.png"style="bottom: 6%;left: 30%;position: absolute" />');
+    selectedCard.append('<img class="buttons" id="close" src="img/towerdefense/close.png"style="bottom: 6%;right: 34%;height: 6%;position: absolute" />' +
+        '<img class="buttons" id="btn" src="img/towerdefense/tick.png"style="bottom: 5%;left: 35%;height: 7%;position: absolute" />');
 
     $("#close").unbind('click').click(function () {
         player = true;
@@ -798,51 +802,51 @@ function cardsToDeck(callback){
     switch(cardId) {
         case "card1":
             animCards[2] = animCards[2].css({visibility:"hidden"});
-            $( "#card2" ).animate({opacity: 1,height: "toggle"}, 500);
-            $( "#card3" ).animate({opacity: 1,height: "toggle"}, 500);
+            $( "#card2" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 350);
+            $( "#card3" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 350);
             break;
 
         case "card2":
             animCards[1] = animCards[1].css({visibility:"hidden"});
-            $( "#card1" ).animate({opacity: 1,height: "toggle"}, 500);
-            $( "#card3" ).animate({opacity: 1,height: "toggle"}, 500);
+            $( "#card1" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 350);
+            $( "#card3" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 350);
             break;
 
         case "card3":
             animCards[0] = animCards[0].css({visibility:"hidden"});
-            $( "#card1" ).animate({opacity: 1,height: "toggle"}, 500);
-            $( "#card2" ).animate({opacity: 1,height: "toggle"}, 500);
+            $( "#card1" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 350);
+            $( "#card2" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 350);
             break;
 
         default:
-            $( "#card1" ).animate({opacity: 1,height: "toggle"}, 500);
-            $( "#card2" ).animate({opacity: 1,height: "toggle"}, 500);
-            $( "#card3" ).animate({opacity: 1,height: "toggle"}, 500);
+            $( "#card1" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 350);
+            $( "#card2" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 350);
+            $( "#card3" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 350);
     }
 
 
 
     setTimeout(function(){
-        animCards[2].animate({opacity: 1,height: "toggle"}, 500);
-        animCards[1].animate({opacity: 1,height: "toggle"}, 500);
-        animCards[0].animate({opacity: 1,height: "toggle"}, 500);
+        animCards[2].animate({opacity: 1,width: "toggle",marginLeft:"-=35"}, 350);
+        animCards[1].animate({opacity: 1,width: "toggle",marginLeft:"-=35"}, 350);
+        animCards[0].animate({opacity: 1,width: "toggle",marginLeft:"-=35"}, 350);
         setTimeout(function(){
-            animCards[2].animate({left:"+=10.47%"},500);
-            animCards[0].animate({left:"-=10.46%"},500);
-        },510);
+            animCards[2].animate({left:"+=10.47%"},350);
+            animCards[0].animate({left:"-=10.46%"},350);
+        },350);
         setTimeout(function(){
-            animCards[2].animate({top:"-=51.2%"},500)
-            animCards[1].animate({top:"-=51.2%"},500)
-            animCards[0].animate({top:"-=51.2%"},500)
-        },1100);
+            animCards[2].animate({top:"-=51.2%"},350)
+            animCards[1].animate({top:"-=51.2%"},350)
+            animCards[0].animate({top:"-=51.2%"},350)
+        },700);
         setTimeout(function(){
             animCards[2].fadeOut(0);
             animCards[1].fadeOut(0);
             animCards[0].fadeOut(0);
             toggleCards(0);
             callback();
-        },1700);
-    },550);
+        },1400);
+    },500);
 }
 
 function deckFadeIn(callback) {
@@ -911,4 +915,31 @@ function greenResRight() {
     $("#btn").hide();
     $("#close").hide();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

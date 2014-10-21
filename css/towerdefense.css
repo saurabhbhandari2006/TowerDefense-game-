@@ -557,40 +557,7 @@ li {
     top: 23%;
     z-index: 2;
 }
-/*@media screen and (min-width: 1500px) and (orientation: landscape)*/
 
-/*{*/
-
-/*#stats_and_cards {*/
-/*border: 1px solid green;*/
-/*display: inline-block;*/
-/*height: 30%;*/
-/*left: 28%;*/
-/*position: absolute;*/
-/*text-align: center;*/
-/*top: 65%;*/
-/*width: 50%;*/
-/*z-index: 2;*/
-/*}*/
-
-/*}*/
-/*@media screen and (min-width: 1024px)and(min-height: 768px) and (orientation: landscape)*/
-
-/*{*/
-
-/*#stats_and_cards {*/
-/*border: 1px solid green;*/
-/*display: inline-block;*/
-/*height: 30%;*/
-/*left: 25%;*/
-/*position: absolute;*/
-/*text-align: center;*/
-/*top: 69%;*/
-/*width: 50%;*/
-/*z-index: 2;*/
-/*}*/
-
-/*}*/
 @media screen and (max-width: 650px)and (max-height: 500px)
 {
     .gameTitle {
