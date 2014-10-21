@@ -84,19 +84,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="game.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/game.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="22" selection-start="322" selection-end="330" vertical-scroll-proportion="0.38050735" vertical-offset="0" max-vertical-offset="749">
+            <state line="22" column="1" selection-start="172" selection-end="371" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="towerdefense.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="towerdefense.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/towerdefense.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="559" column="0" selection-start="10491" selection-end="10491" vertical-scroll-proportion="0.0" vertical-offset="8235" max-vertical-offset="11085">
+            <state line="593" column="56" selection-start="11090" selection-end="11090" vertical-scroll-proportion="0.6013986" vertical-offset="8465" max-vertical-offset="9180">
               <folding />
             </state>
           </provider>
@@ -114,7 +114,7 @@
       <file leaf-file-name="towerdefense.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/towerdefense.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="16" selection-start="940" selection-end="980" vertical-scroll-proportion="9.125" vertical-offset="594" max-vertical-offset="2235">
+            <state line="26" column="6" selection-start="1102" selection-end="1102" vertical-scroll-proportion="-12.125" vertical-offset="99" max-vertical-offset="2235">
               <folding />
             </state>
           </provider>
@@ -131,11 +131,11 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/css/jquery.parallax.css" />
-        <option value="$PROJECT_DIR$/towerdefense.html" />
         <option value="$PROJECT_DIR$/js/towerdefense/towerdefense-data.js" />
         <option value="$PROJECT_DIR$/js/towerdefense/towerdefense.js" />
-        <option value="$PROJECT_DIR$/css/towerdefense.css" />
         <option value="$PROJECT_DIR$/css/game.css" />
+        <option value="$PROJECT_DIR$/towerdefense.html" />
+        <option value="$PROJECT_DIR$/css/towerdefense.css" />
       </list>
     </option>
   </component>
@@ -1033,23 +1033,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/towerdefense.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="559" column="0" selection-start="10491" selection-end="10491" vertical-scroll-proportion="0.0" vertical-offset="8235" max-vertical-offset="11085">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/towerdefense.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="16" selection-start="940" selection-end="980" vertical-scroll-proportion="9.125" vertical-offset="594" max-vertical-offset="2235">
+        <state line="26" column="6" selection-start="1102" selection-end="1102" vertical-scroll-proportion="-12.125" vertical-offset="99" max-vertical-offset="2235">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/game.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="22" selection-start="322" selection-end="330" vertical-scroll-proportion="0.38050735" vertical-offset="0" max-vertical-offset="749">
+        <state line="22" column="1" selection-start="172" selection-end="371" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/towerdefense.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="593" column="56" selection-start="11090" selection-end="11090" vertical-scroll-proportion="0.6013986" vertical-offset="8465" max-vertical-offset="9180">
           <folding />
         </state>
       </provider>
