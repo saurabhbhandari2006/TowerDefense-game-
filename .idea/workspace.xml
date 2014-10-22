@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="towerdefense.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="towerdefense.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="791" column="57" selection-start="25508" selection-end="25508" vertical-scroll-proportion="0.5925926" vertical-offset="2389" max-vertical-offset="3660">
+            <state line="616" column="15" selection-start="20134" selection-end="20134" vertical-scroll-proportion="0.0" vertical-offset="1598" max-vertical-offset="3735">
               <folding>
                 <element signature="e#258#544#0" expanded="false" />
                 <element signature="n#!!block;n#howTo#0" expanded="false" />
@@ -41,6 +41,7 @@
                 <element signature="n#!!block;n#checkFlag#0" expanded="false" />
                 <element signature="n#!!block;n#initDraw#0" expanded="false" />
                 <element signature="n#!!block;n#getCards#0" expanded="false" />
+                <element signature="n#!!block;n#toggleCards#0" expanded="false" />
                 <element signature="n#!!block;n#drawCards#0" expanded="false" />
                 <element signature="n#!!block;n#showDeck#0" expanded="false" />
                 <element signature="n#!!block;n#cardsDraw#0" expanded="false" />
@@ -50,7 +51,6 @@
                 <element signature="n#!!block;n#emptyAnim#0" expanded="false" />
                 <element signature="n#!!block;n#playerTurn#0" expanded="false" />
                 <element signature="n#!!block;n#aiTurn#0" expanded="false" />
-                <element signature="e#9949#10734#0" expanded="false" />
                 <element signature="n#!!block;n#validateDraw#0" expanded="false" />
                 <element signature="n#!!block;n#cardClicked#0" expanded="false" />
                 <element signature="n#!!block;n#checkWin#0" expanded="false" />
@@ -63,13 +63,12 @@
                 <element signature="n#!!block;n#stockGreen#0" expanded="false" />
                 <element signature="n#!!block;n#checkCost#0" expanded="false" />
                 <element signature="n#!!block;n#emptyDraw#0" expanded="false" />
-                <element signature="n#!!block;n#getQuestion#0" expanded="false" />
-                <element signature="n#!!block;n#bindAnswers#0" expanded="false" />
-                <element signature="e#22286#22412#0" expanded="false" />
+                <element signature="e#22436#22562#0" expanded="false" />
                 <element signature="n#!!block;n#switchTurn#0" expanded="false" />
                 <element signature="n#!!block;n#animSwitchTurn#0" expanded="false" />
                 <element signature="n#!!block;n#playerAnimOff#0" expanded="false" />
                 <element signature="n#!!block;n#cardEnlarge#0" expanded="false" />
+                <element signature="n#!!block;n#cardShrink#0" expanded="false" />
                 <element signature="n#!!block;n#cardsToDeck#0" expanded="false" />
                 <element signature="n#!!block;n#deckFadeIn#0" expanded="false" />
                 <element signature="n#!!block;n#cardMoveRight#0" expanded="false" />
@@ -80,14 +79,13 @@
                 <element signature="n#!!block;n#redResRight#0" expanded="false" />
                 <element signature="n#!!block;n#blueResRight#0" expanded="false" />
                 <element signature="n#!!block;n#greenResRight#0" expanded="false" />
-                <marker date="1413894236471" expanded="true" signature="5794:5818" placeholder="..." />
-                <marker date="1413894236471" expanded="true" signature="11789:11836" placeholder="..." />
-                <marker date="1413894236471" expanded="true" signature="12077:12124" placeholder="..." />
-                <marker date="1413894236471" expanded="true" signature="20585:20603" placeholder="..." />
-                <marker date="1413894236471" expanded="true" signature="20665:20700" placeholder="..." />
-                <marker date="1413894236471" expanded="true" signature="24251:24302" placeholder="..." />
-                <marker date="1413894236471" expanded="true" signature="24387:24437" placeholder="..." />
-                <marker date="1413894236471" expanded="true" signature="24417:24437" placeholder="..." />
+                <marker date="1413959621629" expanded="false" signature="5832:5856" placeholder="..." />
+                <marker date="1413959621629" expanded="false" signature="11853:11900" placeholder="..." />
+                <marker date="1413959621629" expanded="false" signature="12141:12188" placeholder="..." />
+                <marker date="1413959621629" expanded="false" signature="20717:20735" placeholder="..." />
+                <marker date="1413959621629" expanded="false" signature="20797:20832" placeholder="..." />
+                <marker date="1413959621629" expanded="false" signature="24404:24455" placeholder="..." />
+                <marker date="1413959621629" expanded="false" signature="24540:24590" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -96,7 +94,7 @@
       <file leaf-file-name="game.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/game.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="1" selection-start="172" selection-end="371" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+            <state line="22" column="1" selection-start="172" selection-end="371" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="420">
               <folding />
             </state>
           </provider>
@@ -105,16 +103,16 @@
       <file leaf-file-name="towerdefense.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/towerdefense.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="613" column="15" selection-start="11558" selection-end="11558" vertical-scroll-proportion="-19.705883" vertical-offset="8525" max-vertical-offset="9375">
+            <state line="613" column="15" selection-start="11558" selection-end="11558" vertical-scroll-proportion="0.0" vertical-offset="8525" max-vertical-offset="9375">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="towerdefense-data.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="towerdefense-data.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense-data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="21" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1500">
+            <state line="81" column="16" selection-start="205" selection-end="7154" vertical-scroll-proportion="0.6942935" vertical-offset="704" max-vertical-offset="1500">
               <folding />
             </state>
           </provider>
@@ -123,10 +121,9 @@
       <file leaf-file-name="towerdefense.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/towerdefense.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="20" selection-start="4116" selection-end="4116" vertical-scroll-proportion="-17.333334" vertical-offset="4" max-vertical-offset="1185">
+            <state line="27" column="0" selection-start="1110" selection-end="1110" vertical-scroll-proportion="2.5" vertical-offset="405" max-vertical-offset="1230">
               <folding>
                 <element signature="tag#div#0;tag#body#0" expanded="false" />
-                <element signature="tag#div#1;tag#body#0" expanded="false" />
                 <element signature="tag#div#0;tag#div#2;tag#body#0" expanded="false" />
               </folding>
             </state>
@@ -145,10 +142,10 @@
       <list>
         <option value="$PROJECT_DIR$/css/jquery.parallax.css" />
         <option value="$PROJECT_DIR$/css/game.css" />
-        <option value="$PROJECT_DIR$/towerdefense.html" />
         <option value="$PROJECT_DIR$/css/towerdefense.css" />
-        <option value="$PROJECT_DIR$/js/towerdefense/towerdefense-data.js" />
+        <option value="$PROJECT_DIR$/towerdefense.html" />
         <option value="$PROJECT_DIR$/js/towerdefense/towerdefense.js" />
+        <option value="$PROJECT_DIR$/js/towerdefense/towerdefense-data.js" />
       </list>
     </option>
   </component>
@@ -228,6 +225,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="towerdefense" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QuizGameEngine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TowerDefense-game-" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QuizGameEngine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TowerDefense-game-" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -340,7 +369,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28056628" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24388674" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -348,11 +377,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -376,6 +405,103 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="708" column="0" selection-start="22996" selection-end="22996" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="14265">
+          <folding>
+            <element signature="e#258#544#0" expanded="false" />
+            <element signature="n#!!block;n#howTo#0" expanded="false" />
+            <element signature="n#!!block;n#blinker#0" expanded="false" />
+            <element signature="n#!!block;n#blinker2#0" expanded="false" />
+            <element signature="n#!!block;n#initGame#0" expanded="false" />
+            <element signature="n#!!block;n#initTowers#0" expanded="false" />
+            <element signature="n#!!block;n#scoreData#0" expanded="false" />
+            <element signature="n#!!block;n#initDeck#0" expanded="false" />
+            <element signature="n#!!block;n#setTower#0" expanded="false" />
+            <element signature="n#!!block;n#setTowerTop#0" expanded="false" />
+            <element signature="n#!!block;n#checkFlag#0" expanded="false" />
+            <element signature="n#!!block;n#initDraw#0" expanded="false" />
+            <element signature="n#!!block;n#getCards#0" expanded="false" />
+            <element signature="n#!!block;n#toggleCards#0" expanded="false" />
+            <element signature="n#!!block;n#drawCards#0" expanded="false" />
+            <element signature="n#!!block;n#showDeck#0" expanded="false" />
+            <element signature="n#!!block;n#cardsDraw#0" expanded="false" />
+            <element signature="n#!!block;n#fadeDrawCards#0" expanded="false" />
+            <element signature="n#!!block;n#showCards#0" expanded="false" />
+            <element signature="n#!!block;n#hideDeck#0" expanded="false" />
+            <element signature="n#!!block;n#emptyAnim#0" expanded="false" />
+            <element signature="n#!!block;n#playerTurn#0" expanded="false" />
+            <element signature="n#!!block;n#aiTurn#0" expanded="false" />
+            <element signature="n#!!block;n#validateDraw#0" expanded="false" />
+            <element signature="n#!!block;n#cardClicked#0" expanded="false" />
+            <element signature="n#!!block;n#checkWin#0" expanded="false" />
+            <element signature="n#!!block;n#attack#0" expanded="false" />
+            <element signature="n#!!block;n#build#0" expanded="false" />
+            <element signature="n#!!block;n#bonus#0" expanded="false" />
+            <element signature="n#!!block;n#stockUp#0" expanded="false" />
+            <element signature="n#!!block;n#stockRed#0" expanded="false" />
+            <element signature="n#!!block;n#stockBlue#0" expanded="false" />
+            <element signature="n#!!block;n#stockGreen#0" expanded="false" />
+            <element signature="n#!!block;n#checkCost#0" expanded="false" />
+            <element signature="n#!!block;n#emptyDraw#0" expanded="false" />
+            <element signature="e#22436#22562#0" expanded="false" />
+            <element signature="n#!!block;n#switchTurn#0" expanded="false" />
+            <element signature="n#!!block;n#animSwitchTurn#0" expanded="false" />
+            <element signature="n#!!block;n#playerAnimOff#0" expanded="false" />
+            <element signature="n#!!block;n#cardEnlarge#0" expanded="false" />
+            <element signature="n#!!block;n#cardShrink#0" expanded="false" />
+            <element signature="n#!!block;n#cardsToDeck#0" expanded="false" />
+            <element signature="n#!!block;n#deckFadeIn#0" expanded="false" />
+            <element signature="n#!!block;n#cardMoveRight#0" expanded="false" />
+            <element signature="n#!!block;n#cardMoveLeft#0" expanded="false" />
+            <element signature="n#!!block;n#redResLeft#0" expanded="false" />
+            <element signature="n#!!block;n#blueResLeft#0" expanded="false" />
+            <element signature="n#!!block;n#greenResLeft#0" expanded="false" />
+            <element signature="n#!!block;n#redResRight#0" expanded="false" />
+            <element signature="n#!!block;n#blueResRight#0" expanded="false" />
+            <element signature="n#!!block;n#greenResRight#0" expanded="false" />
+            <marker date="1413959621629" expanded="false" signature="5832:5856" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="11853:11900" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="12141:12188" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="20717:20735" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="20797:20832" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="24404:24455" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="24540:24590" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/game.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="1" selection-start="172" selection-end="371" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/towerdefense.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="613" column="15" selection-start="11558" selection-end="11558" vertical-scroll-proportion="0.0" vertical-offset="8525" max-vertical-offset="9375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense-data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="21" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1500">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/towerdefense.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1230">
+          <folding>
+            <element signature="tag#div#0;tag#body#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#2;tag#body#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="253" column="0" selection-start="7397" selection-end="7397" vertical-scroll-proportion="0.0" vertical-offset="2925" max-vertical-offset="2925">
           <folding>
             <element signature="e#258#544#0" expanded="false" />
@@ -391,6 +517,7 @@
             <element signature="n#!!block;n#checkFlag#0" expanded="false" />
             <element signature="n#!!block;n#initDraw#0" expanded="false" />
             <element signature="n#!!block;n#getCards#0" expanded="false" />
+            <element signature="n#!!block;n#toggleCards#0" expanded="false" />
             <element signature="n#!!block;n#drawCards#0" expanded="false" />
             <element signature="n#!!block;n#showDeck#0" expanded="false" />
             <element signature="n#!!block;n#cardsDraw#0" expanded="false" />
@@ -400,7 +527,6 @@
             <element signature="n#!!block;n#emptyAnim#0" expanded="false" />
             <element signature="n#!!block;n#playerTurn#0" expanded="false" />
             <element signature="n#!!block;n#aiTurn#0" expanded="false" />
-            <element signature="e#9949#10734#0" expanded="false" />
             <element signature="n#!!block;n#validateDraw#0" expanded="false" />
             <element signature="n#!!block;n#cardClicked#0" expanded="false" />
             <element signature="n#!!block;n#checkWin#0" expanded="false" />
@@ -413,13 +539,12 @@
             <element signature="n#!!block;n#stockGreen#0" expanded="false" />
             <element signature="n#!!block;n#checkCost#0" expanded="false" />
             <element signature="n#!!block;n#emptyDraw#0" expanded="false" />
-            <element signature="n#!!block;n#getQuestion#0" expanded="false" />
-            <element signature="n#!!block;n#bindAnswers#0" expanded="false" />
-            <element signature="e#22286#22412#0" expanded="false" />
+            <element signature="e#22436#22562#0" expanded="false" />
             <element signature="n#!!block;n#switchTurn#0" expanded="false" />
             <element signature="n#!!block;n#animSwitchTurn#0" expanded="false" />
             <element signature="n#!!block;n#playerAnimOff#0" expanded="false" />
             <element signature="n#!!block;n#cardEnlarge#0" expanded="false" />
+            <element signature="n#!!block;n#cardShrink#0" expanded="false" />
             <element signature="n#!!block;n#cardsToDeck#0" expanded="false" />
             <element signature="n#!!block;n#deckFadeIn#0" expanded="false" />
             <element signature="n#!!block;n#cardMoveRight#0" expanded="false" />
@@ -430,14 +555,13 @@
             <element signature="n#!!block;n#redResRight#0" expanded="false" />
             <element signature="n#!!block;n#blueResRight#0" expanded="false" />
             <element signature="n#!!block;n#greenResRight#0" expanded="false" />
-            <marker date="1413894236471" expanded="true" signature="5794:5818" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="11789:11836" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="12077:12124" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="20585:20603" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="20665:20700" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24251:24302" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24387:24437" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24417:24437" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="5832:5856" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="11853:11900" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="12141:12188" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="20717:20735" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="20797:20832" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="24404:24455" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="24540:24590" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -473,6 +597,7 @@
             <element signature="n#!!block;n#checkFlag#0" expanded="false" />
             <element signature="n#!!block;n#initDraw#0" expanded="false" />
             <element signature="n#!!block;n#getCards#0" expanded="false" />
+            <element signature="n#!!block;n#toggleCards#0" expanded="false" />
             <element signature="n#!!block;n#drawCards#0" expanded="false" />
             <element signature="n#!!block;n#showDeck#0" expanded="false" />
             <element signature="n#!!block;n#cardsDraw#0" expanded="false" />
@@ -482,7 +607,6 @@
             <element signature="n#!!block;n#emptyAnim#0" expanded="false" />
             <element signature="n#!!block;n#playerTurn#0" expanded="false" />
             <element signature="n#!!block;n#aiTurn#0" expanded="false" />
-            <element signature="e#9949#10734#0" expanded="false" />
             <element signature="n#!!block;n#validateDraw#0" expanded="false" />
             <element signature="n#!!block;n#cardClicked#0" expanded="false" />
             <element signature="n#!!block;n#checkWin#0" expanded="false" />
@@ -495,13 +619,12 @@
             <element signature="n#!!block;n#stockGreen#0" expanded="false" />
             <element signature="n#!!block;n#checkCost#0" expanded="false" />
             <element signature="n#!!block;n#emptyDraw#0" expanded="false" />
-            <element signature="n#!!block;n#getQuestion#0" expanded="false" />
-            <element signature="n#!!block;n#bindAnswers#0" expanded="false" />
-            <element signature="e#22286#22412#0" expanded="false" />
+            <element signature="e#22436#22562#0" expanded="false" />
             <element signature="n#!!block;n#switchTurn#0" expanded="false" />
             <element signature="n#!!block;n#animSwitchTurn#0" expanded="false" />
             <element signature="n#!!block;n#playerAnimOff#0" expanded="false" />
             <element signature="n#!!block;n#cardEnlarge#0" expanded="false" />
+            <element signature="n#!!block;n#cardShrink#0" expanded="false" />
             <element signature="n#!!block;n#cardsToDeck#0" expanded="false" />
             <element signature="n#!!block;n#deckFadeIn#0" expanded="false" />
             <element signature="n#!!block;n#cardMoveRight#0" expanded="false" />
@@ -512,14 +635,13 @@
             <element signature="n#!!block;n#redResRight#0" expanded="false" />
             <element signature="n#!!block;n#blueResRight#0" expanded="false" />
             <element signature="n#!!block;n#greenResRight#0" expanded="false" />
-            <marker date="1413894236471" expanded="true" signature="5794:5818" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="11789:11836" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="12077:12124" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="20585:20603" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="20665:20700" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24251:24302" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24387:24437" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24417:24437" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="5832:5856" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="11853:11900" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="12141:12188" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="20717:20735" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="20797:20832" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="24404:24455" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="24540:24590" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -541,6 +663,7 @@
             <element signature="n#!!block;n#checkFlag#0" expanded="false" />
             <element signature="n#!!block;n#initDraw#0" expanded="false" />
             <element signature="n#!!block;n#getCards#0" expanded="false" />
+            <element signature="n#!!block;n#toggleCards#0" expanded="false" />
             <element signature="n#!!block;n#drawCards#0" expanded="false" />
             <element signature="n#!!block;n#showDeck#0" expanded="false" />
             <element signature="n#!!block;n#cardsDraw#0" expanded="false" />
@@ -550,7 +673,6 @@
             <element signature="n#!!block;n#emptyAnim#0" expanded="false" />
             <element signature="n#!!block;n#playerTurn#0" expanded="false" />
             <element signature="n#!!block;n#aiTurn#0" expanded="false" />
-            <element signature="e#9949#10734#0" expanded="false" />
             <element signature="n#!!block;n#validateDraw#0" expanded="false" />
             <element signature="n#!!block;n#cardClicked#0" expanded="false" />
             <element signature="n#!!block;n#checkWin#0" expanded="false" />
@@ -563,13 +685,12 @@
             <element signature="n#!!block;n#stockGreen#0" expanded="false" />
             <element signature="n#!!block;n#checkCost#0" expanded="false" />
             <element signature="n#!!block;n#emptyDraw#0" expanded="false" />
-            <element signature="n#!!block;n#getQuestion#0" expanded="false" />
-            <element signature="n#!!block;n#bindAnswers#0" expanded="false" />
-            <element signature="e#22286#22412#0" expanded="false" />
+            <element signature="e#22436#22562#0" expanded="false" />
             <element signature="n#!!block;n#switchTurn#0" expanded="false" />
             <element signature="n#!!block;n#animSwitchTurn#0" expanded="false" />
             <element signature="n#!!block;n#playerAnimOff#0" expanded="false" />
             <element signature="n#!!block;n#cardEnlarge#0" expanded="false" />
+            <element signature="n#!!block;n#cardShrink#0" expanded="false" />
             <element signature="n#!!block;n#cardsToDeck#0" expanded="false" />
             <element signature="n#!!block;n#deckFadeIn#0" expanded="false" />
             <element signature="n#!!block;n#cardMoveRight#0" expanded="false" />
@@ -580,14 +701,13 @@
             <element signature="n#!!block;n#redResRight#0" expanded="false" />
             <element signature="n#!!block;n#blueResRight#0" expanded="false" />
             <element signature="n#!!block;n#greenResRight#0" expanded="false" />
-            <marker date="1413894236471" expanded="true" signature="5794:5818" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="11789:11836" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="12077:12124" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="20585:20603" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="20665:20700" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24251:24302" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24387:24437" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24417:24437" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="5832:5856" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="11853:11900" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="12141:12188" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="20717:20735" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="20797:20832" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="24404:24455" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="24540:24590" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -597,7 +717,6 @@
         <state line="25" column="16" selection-start="940" selection-end="980" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="2235">
           <folding>
             <element signature="tag#div#0;tag#body#0" expanded="false" />
-            <element signature="tag#div#1;tag#body#0" expanded="false" />
             <element signature="tag#div#0;tag#div#2;tag#body#0" expanded="false" />
           </folding>
         </state>
@@ -620,6 +739,7 @@
             <element signature="n#!!block;n#checkFlag#0" expanded="false" />
             <element signature="n#!!block;n#initDraw#0" expanded="false" />
             <element signature="n#!!block;n#getCards#0" expanded="false" />
+            <element signature="n#!!block;n#toggleCards#0" expanded="false" />
             <element signature="n#!!block;n#drawCards#0" expanded="false" />
             <element signature="n#!!block;n#showDeck#0" expanded="false" />
             <element signature="n#!!block;n#cardsDraw#0" expanded="false" />
@@ -629,7 +749,6 @@
             <element signature="n#!!block;n#emptyAnim#0" expanded="false" />
             <element signature="n#!!block;n#playerTurn#0" expanded="false" />
             <element signature="n#!!block;n#aiTurn#0" expanded="false" />
-            <element signature="e#9949#10734#0" expanded="false" />
             <element signature="n#!!block;n#validateDraw#0" expanded="false" />
             <element signature="n#!!block;n#cardClicked#0" expanded="false" />
             <element signature="n#!!block;n#checkWin#0" expanded="false" />
@@ -642,13 +761,12 @@
             <element signature="n#!!block;n#stockGreen#0" expanded="false" />
             <element signature="n#!!block;n#checkCost#0" expanded="false" />
             <element signature="n#!!block;n#emptyDraw#0" expanded="false" />
-            <element signature="n#!!block;n#getQuestion#0" expanded="false" />
-            <element signature="n#!!block;n#bindAnswers#0" expanded="false" />
-            <element signature="e#22286#22412#0" expanded="false" />
+            <element signature="e#22436#22562#0" expanded="false" />
             <element signature="n#!!block;n#switchTurn#0" expanded="false" />
             <element signature="n#!!block;n#animSwitchTurn#0" expanded="false" />
             <element signature="n#!!block;n#playerAnimOff#0" expanded="false" />
             <element signature="n#!!block;n#cardEnlarge#0" expanded="false" />
+            <element signature="n#!!block;n#cardShrink#0" expanded="false" />
             <element signature="n#!!block;n#cardsToDeck#0" expanded="false" />
             <element signature="n#!!block;n#deckFadeIn#0" expanded="false" />
             <element signature="n#!!block;n#cardMoveRight#0" expanded="false" />
@@ -659,14 +777,13 @@
             <element signature="n#!!block;n#redResRight#0" expanded="false" />
             <element signature="n#!!block;n#blueResRight#0" expanded="false" />
             <element signature="n#!!block;n#greenResRight#0" expanded="false" />
-            <marker date="1413894236471" expanded="true" signature="5794:5818" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="11789:11836" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="12077:12124" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="20585:20603" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="20665:20700" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24251:24302" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24387:24437" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24417:24437" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="5832:5856" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="11853:11900" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="12141:12188" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="20717:20735" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="20797:20832" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="24404:24455" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="24540:24590" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -691,7 +808,6 @@
         <state line="100" column="10" selection-start="3933" selection-end="4233" vertical-scroll-proportion="0.0" vertical-offset="1035" max-vertical-offset="2100">
           <folding>
             <element signature="tag#div#0;tag#body#0" expanded="false" />
-            <element signature="tag#div#1;tag#body#0" expanded="false" />
             <element signature="tag#div#0;tag#div#2;tag#body#0" expanded="false" />
           </folding>
         </state>
@@ -719,6 +835,7 @@
             <element signature="n#!!block;n#checkFlag#0" expanded="false" />
             <element signature="n#!!block;n#initDraw#0" expanded="false" />
             <element signature="n#!!block;n#getCards#0" expanded="false" />
+            <element signature="n#!!block;n#toggleCards#0" expanded="false" />
             <element signature="n#!!block;n#drawCards#0" expanded="false" />
             <element signature="n#!!block;n#showDeck#0" expanded="false" />
             <element signature="n#!!block;n#cardsDraw#0" expanded="false" />
@@ -728,7 +845,6 @@
             <element signature="n#!!block;n#emptyAnim#0" expanded="false" />
             <element signature="n#!!block;n#playerTurn#0" expanded="false" />
             <element signature="n#!!block;n#aiTurn#0" expanded="false" />
-            <element signature="e#9949#10734#0" expanded="false" />
             <element signature="n#!!block;n#validateDraw#0" expanded="false" />
             <element signature="n#!!block;n#cardClicked#0" expanded="false" />
             <element signature="n#!!block;n#checkWin#0" expanded="false" />
@@ -741,13 +857,12 @@
             <element signature="n#!!block;n#stockGreen#0" expanded="false" />
             <element signature="n#!!block;n#checkCost#0" expanded="false" />
             <element signature="n#!!block;n#emptyDraw#0" expanded="false" />
-            <element signature="n#!!block;n#getQuestion#0" expanded="false" />
-            <element signature="n#!!block;n#bindAnswers#0" expanded="false" />
-            <element signature="e#22286#22412#0" expanded="false" />
+            <element signature="e#22436#22562#0" expanded="false" />
             <element signature="n#!!block;n#switchTurn#0" expanded="false" />
             <element signature="n#!!block;n#animSwitchTurn#0" expanded="false" />
             <element signature="n#!!block;n#playerAnimOff#0" expanded="false" />
             <element signature="n#!!block;n#cardEnlarge#0" expanded="false" />
+            <element signature="n#!!block;n#cardShrink#0" expanded="false" />
             <element signature="n#!!block;n#cardsToDeck#0" expanded="false" />
             <element signature="n#!!block;n#deckFadeIn#0" expanded="false" />
             <element signature="n#!!block;n#cardMoveRight#0" expanded="false" />
@@ -758,14 +873,13 @@
             <element signature="n#!!block;n#redResRight#0" expanded="false" />
             <element signature="n#!!block;n#blueResRight#0" expanded="false" />
             <element signature="n#!!block;n#greenResRight#0" expanded="false" />
-            <marker date="1413894236471" expanded="true" signature="5794:5818" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="11789:11836" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="12077:12124" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="20585:20603" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="20665:20700" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24251:24302" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24387:24437" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24417:24437" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="5832:5856" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="11853:11900" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="12141:12188" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="20717:20735" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="20797:20832" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="24404:24455" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="24540:24590" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -785,7 +899,6 @@
         <state line="35" column="24" selection-start="1450" selection-end="1450" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2100">
           <folding>
             <element signature="tag#div#0;tag#body#0" expanded="false" />
-            <element signature="tag#div#1;tag#body#0" expanded="false" />
             <element signature="tag#div#0;tag#div#2;tag#body#0" expanded="false" />
           </folding>
         </state>
@@ -813,6 +926,7 @@
             <element signature="n#!!block;n#checkFlag#0" expanded="false" />
             <element signature="n#!!block;n#initDraw#0" expanded="false" />
             <element signature="n#!!block;n#getCards#0" expanded="false" />
+            <element signature="n#!!block;n#toggleCards#0" expanded="false" />
             <element signature="n#!!block;n#drawCards#0" expanded="false" />
             <element signature="n#!!block;n#showDeck#0" expanded="false" />
             <element signature="n#!!block;n#cardsDraw#0" expanded="false" />
@@ -822,7 +936,6 @@
             <element signature="n#!!block;n#emptyAnim#0" expanded="false" />
             <element signature="n#!!block;n#playerTurn#0" expanded="false" />
             <element signature="n#!!block;n#aiTurn#0" expanded="false" />
-            <element signature="e#9949#10734#0" expanded="false" />
             <element signature="n#!!block;n#validateDraw#0" expanded="false" />
             <element signature="n#!!block;n#cardClicked#0" expanded="false" />
             <element signature="n#!!block;n#checkWin#0" expanded="false" />
@@ -835,13 +948,12 @@
             <element signature="n#!!block;n#stockGreen#0" expanded="false" />
             <element signature="n#!!block;n#checkCost#0" expanded="false" />
             <element signature="n#!!block;n#emptyDraw#0" expanded="false" />
-            <element signature="n#!!block;n#getQuestion#0" expanded="false" />
-            <element signature="n#!!block;n#bindAnswers#0" expanded="false" />
-            <element signature="e#22286#22412#0" expanded="false" />
+            <element signature="e#22436#22562#0" expanded="false" />
             <element signature="n#!!block;n#switchTurn#0" expanded="false" />
             <element signature="n#!!block;n#animSwitchTurn#0" expanded="false" />
             <element signature="n#!!block;n#playerAnimOff#0" expanded="false" />
             <element signature="n#!!block;n#cardEnlarge#0" expanded="false" />
+            <element signature="n#!!block;n#cardShrink#0" expanded="false" />
             <element signature="n#!!block;n#cardsToDeck#0" expanded="false" />
             <element signature="n#!!block;n#deckFadeIn#0" expanded="false" />
             <element signature="n#!!block;n#cardMoveRight#0" expanded="false" />
@@ -852,14 +964,13 @@
             <element signature="n#!!block;n#redResRight#0" expanded="false" />
             <element signature="n#!!block;n#blueResRight#0" expanded="false" />
             <element signature="n#!!block;n#greenResRight#0" expanded="false" />
-            <marker date="1413894236471" expanded="true" signature="5794:5818" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="11789:11836" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="12077:12124" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="20585:20603" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="20665:20700" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24251:24302" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24387:24437" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24417:24437" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="5832:5856" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="11853:11900" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="12141:12188" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="20717:20735" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="20797:20832" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="24404:24455" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="24540:24590" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -879,7 +990,6 @@
         <state line="132" column="7" selection-start="5647" selection-end="5647" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2070">
           <folding>
             <element signature="tag#div#0;tag#body#0" expanded="false" />
-            <element signature="tag#div#1;tag#body#0" expanded="false" />
             <element signature="tag#div#0;tag#div#2;tag#body#0" expanded="false" />
           </folding>
         </state>
@@ -907,6 +1017,7 @@
             <element signature="n#!!block;n#checkFlag#0" expanded="false" />
             <element signature="n#!!block;n#initDraw#0" expanded="false" />
             <element signature="n#!!block;n#getCards#0" expanded="false" />
+            <element signature="n#!!block;n#toggleCards#0" expanded="false" />
             <element signature="n#!!block;n#drawCards#0" expanded="false" />
             <element signature="n#!!block;n#showDeck#0" expanded="false" />
             <element signature="n#!!block;n#cardsDraw#0" expanded="false" />
@@ -916,7 +1027,6 @@
             <element signature="n#!!block;n#emptyAnim#0" expanded="false" />
             <element signature="n#!!block;n#playerTurn#0" expanded="false" />
             <element signature="n#!!block;n#aiTurn#0" expanded="false" />
-            <element signature="e#9949#10734#0" expanded="false" />
             <element signature="n#!!block;n#validateDraw#0" expanded="false" />
             <element signature="n#!!block;n#cardClicked#0" expanded="false" />
             <element signature="n#!!block;n#checkWin#0" expanded="false" />
@@ -929,13 +1039,12 @@
             <element signature="n#!!block;n#stockGreen#0" expanded="false" />
             <element signature="n#!!block;n#checkCost#0" expanded="false" />
             <element signature="n#!!block;n#emptyDraw#0" expanded="false" />
-            <element signature="n#!!block;n#getQuestion#0" expanded="false" />
-            <element signature="n#!!block;n#bindAnswers#0" expanded="false" />
-            <element signature="e#22286#22412#0" expanded="false" />
+            <element signature="e#22436#22562#0" expanded="false" />
             <element signature="n#!!block;n#switchTurn#0" expanded="false" />
             <element signature="n#!!block;n#animSwitchTurn#0" expanded="false" />
             <element signature="n#!!block;n#playerAnimOff#0" expanded="false" />
             <element signature="n#!!block;n#cardEnlarge#0" expanded="false" />
+            <element signature="n#!!block;n#cardShrink#0" expanded="false" />
             <element signature="n#!!block;n#cardsToDeck#0" expanded="false" />
             <element signature="n#!!block;n#deckFadeIn#0" expanded="false" />
             <element signature="n#!!block;n#cardMoveRight#0" expanded="false" />
@@ -946,14 +1055,13 @@
             <element signature="n#!!block;n#redResRight#0" expanded="false" />
             <element signature="n#!!block;n#blueResRight#0" expanded="false" />
             <element signature="n#!!block;n#greenResRight#0" expanded="false" />
-            <marker date="1413894236471" expanded="true" signature="5794:5818" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="11789:11836" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="12077:12124" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="20585:20603" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="20665:20700" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24251:24302" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24387:24437" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24417:24437" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="5832:5856" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="11853:11900" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="12141:12188" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="20717:20735" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="20797:20832" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="24404:24455" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="24540:24590" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -973,7 +1081,6 @@
         <state line="57" column="0" selection-start="2316" selection-end="2316" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1935">
           <folding>
             <element signature="tag#div#0;tag#body#0" expanded="false" />
-            <element signature="tag#div#1;tag#body#0" expanded="false" />
             <element signature="tag#div#0;tag#div#2;tag#body#0" expanded="false" />
           </folding>
         </state>
@@ -1001,6 +1108,7 @@
             <element signature="n#!!block;n#checkFlag#0" expanded="false" />
             <element signature="n#!!block;n#initDraw#0" expanded="false" />
             <element signature="n#!!block;n#getCards#0" expanded="false" />
+            <element signature="n#!!block;n#toggleCards#0" expanded="false" />
             <element signature="n#!!block;n#drawCards#0" expanded="false" />
             <element signature="n#!!block;n#showDeck#0" expanded="false" />
             <element signature="n#!!block;n#cardsDraw#0" expanded="false" />
@@ -1010,7 +1118,6 @@
             <element signature="n#!!block;n#emptyAnim#0" expanded="false" />
             <element signature="n#!!block;n#playerTurn#0" expanded="false" />
             <element signature="n#!!block;n#aiTurn#0" expanded="false" />
-            <element signature="e#9949#10734#0" expanded="false" />
             <element signature="n#!!block;n#validateDraw#0" expanded="false" />
             <element signature="n#!!block;n#cardClicked#0" expanded="false" />
             <element signature="n#!!block;n#checkWin#0" expanded="false" />
@@ -1023,13 +1130,12 @@
             <element signature="n#!!block;n#stockGreen#0" expanded="false" />
             <element signature="n#!!block;n#checkCost#0" expanded="false" />
             <element signature="n#!!block;n#emptyDraw#0" expanded="false" />
-            <element signature="n#!!block;n#getQuestion#0" expanded="false" />
-            <element signature="n#!!block;n#bindAnswers#0" expanded="false" />
-            <element signature="e#22286#22412#0" expanded="false" />
+            <element signature="e#22436#22562#0" expanded="false" />
             <element signature="n#!!block;n#switchTurn#0" expanded="false" />
             <element signature="n#!!block;n#animSwitchTurn#0" expanded="false" />
             <element signature="n#!!block;n#playerAnimOff#0" expanded="false" />
             <element signature="n#!!block;n#cardEnlarge#0" expanded="false" />
+            <element signature="n#!!block;n#cardShrink#0" expanded="false" />
             <element signature="n#!!block;n#cardsToDeck#0" expanded="false" />
             <element signature="n#!!block;n#deckFadeIn#0" expanded="false" />
             <element signature="n#!!block;n#cardMoveRight#0" expanded="false" />
@@ -1040,14 +1146,13 @@
             <element signature="n#!!block;n#redResRight#0" expanded="false" />
             <element signature="n#!!block;n#blueResRight#0" expanded="false" />
             <element signature="n#!!block;n#greenResRight#0" expanded="false" />
-            <marker date="1413894236471" expanded="true" signature="5794:5818" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="11789:11836" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="12077:12124" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="20585:20603" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="20665:20700" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24251:24302" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24387:24437" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24417:24437" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="5832:5856" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="11853:11900" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="12141:12188" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="20717:20735" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="20797:20832" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="24404:24455" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="24540:24590" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1072,14 +1177,10 @@
         <state line="30" column="21" selection-start="1261" selection-end="1262" vertical-scroll-proportion="0.61141306" vertical-offset="0" max-vertical-offset="736" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/towerdefense.html">
+    <entry file="file://$PROJECT_DIR$/css/towerdefense.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="20" selection-start="4116" selection-end="4116" vertical-scroll-proportion="-17.333334" vertical-offset="4" max-vertical-offset="1185">
-          <folding>
-            <element signature="tag#div#0;tag#body#0" expanded="false" />
-            <element signature="tag#div#1;tag#body#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#2;tag#body#0" expanded="false" />
-          </folding>
+        <state line="613" column="15" selection-start="11558" selection-end="11558" vertical-scroll-proportion="0.0" vertical-offset="8525" max-vertical-offset="9375">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1090,23 +1191,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/towerdefense.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="613" column="15" selection-start="11558" selection-end="11558" vertical-scroll-proportion="-19.705883" vertical-offset="8525" max-vertical-offset="9375">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/img/towerdefense/instructions.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense-data.js">
+    <entry file="file://$PROJECT_DIR$/towerdefense.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="21" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1500">
-          <folding />
+        <state line="27" column="0" selection-start="1110" selection-end="1110" vertical-scroll-proportion="2.5" vertical-offset="405" max-vertical-offset="1230">
+          <folding>
+            <element signature="tag#div#0;tag#body#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#2;tag#body#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="791" column="57" selection-start="25508" selection-end="25508" vertical-scroll-proportion="0.5925926" vertical-offset="2389" max-vertical-offset="3660">
+        <state line="616" column="15" selection-start="20134" selection-end="20134" vertical-scroll-proportion="0.0" vertical-offset="1598" max-vertical-offset="3735">
           <folding>
             <element signature="e#258#544#0" expanded="false" />
             <element signature="n#!!block;n#howTo#0" expanded="false" />
@@ -1121,6 +1223,7 @@
             <element signature="n#!!block;n#checkFlag#0" expanded="false" />
             <element signature="n#!!block;n#initDraw#0" expanded="false" />
             <element signature="n#!!block;n#getCards#0" expanded="false" />
+            <element signature="n#!!block;n#toggleCards#0" expanded="false" />
             <element signature="n#!!block;n#drawCards#0" expanded="false" />
             <element signature="n#!!block;n#showDeck#0" expanded="false" />
             <element signature="n#!!block;n#cardsDraw#0" expanded="false" />
@@ -1130,7 +1233,6 @@
             <element signature="n#!!block;n#emptyAnim#0" expanded="false" />
             <element signature="n#!!block;n#playerTurn#0" expanded="false" />
             <element signature="n#!!block;n#aiTurn#0" expanded="false" />
-            <element signature="e#9949#10734#0" expanded="false" />
             <element signature="n#!!block;n#validateDraw#0" expanded="false" />
             <element signature="n#!!block;n#cardClicked#0" expanded="false" />
             <element signature="n#!!block;n#checkWin#0" expanded="false" />
@@ -1143,13 +1245,12 @@
             <element signature="n#!!block;n#stockGreen#0" expanded="false" />
             <element signature="n#!!block;n#checkCost#0" expanded="false" />
             <element signature="n#!!block;n#emptyDraw#0" expanded="false" />
-            <element signature="n#!!block;n#getQuestion#0" expanded="false" />
-            <element signature="n#!!block;n#bindAnswers#0" expanded="false" />
-            <element signature="e#22286#22412#0" expanded="false" />
+            <element signature="e#22436#22562#0" expanded="false" />
             <element signature="n#!!block;n#switchTurn#0" expanded="false" />
             <element signature="n#!!block;n#animSwitchTurn#0" expanded="false" />
             <element signature="n#!!block;n#playerAnimOff#0" expanded="false" />
             <element signature="n#!!block;n#cardEnlarge#0" expanded="false" />
+            <element signature="n#!!block;n#cardShrink#0" expanded="false" />
             <element signature="n#!!block;n#cardsToDeck#0" expanded="false" />
             <element signature="n#!!block;n#deckFadeIn#0" expanded="false" />
             <element signature="n#!!block;n#cardMoveRight#0" expanded="false" />
@@ -1160,15 +1261,21 @@
             <element signature="n#!!block;n#redResRight#0" expanded="false" />
             <element signature="n#!!block;n#blueResRight#0" expanded="false" />
             <element signature="n#!!block;n#greenResRight#0" expanded="false" />
-            <marker date="1413894236471" expanded="true" signature="5794:5818" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="11789:11836" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="12077:12124" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="20585:20603" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="20665:20700" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24251:24302" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24387:24437" placeholder="..." />
-            <marker date="1413894236471" expanded="true" signature="24417:24437" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="5832:5856" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="11853:11900" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="12141:12188" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="20717:20735" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="20797:20832" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="24404:24455" placeholder="..." />
+            <marker date="1413959621629" expanded="false" signature="24540:24590" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense-data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="16" selection-start="205" selection-end="7154" vertical-scroll-proportion="0.6942935" vertical-offset="704" max-vertical-offset="1500">
+          <folding />
         </state>
       </provider>
     </entry>

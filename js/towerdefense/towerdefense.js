@@ -50,7 +50,7 @@ function blinker2() {
 
 function initGame() {
     gameOn = true;
-    player = true;
+    player = false;
     selectCard = false;
 
     initTowers();
@@ -58,7 +58,10 @@ function initGame() {
     initDeck();
     $(".ai").css({'opacity': 0.5})
     $('img.comp-frame-glow').hide();
-    setTimeout(function () {playerTurn("new");}, 500);
+    setTimeout(function () {
+        player = true;
+        playerTurn("new");
+    }, 500);
 }
 
 function initTowers() {
@@ -222,27 +225,27 @@ function cardsDraw(callback){
         animCards[2].animate({left:"-=10.47%",top:"+=51.2%"},200);
         setTimeout(function() {animCards[1].animate({top:"+=51.2%"},200);}, 200);
         setTimeout(function() {animCards[0].animate({left:"+=10.46%",top:"+=51.2%"},200);}, 400);
-        setTimeout(callback, 600);
+        setTimeout(callback, 700);
     },400);
 
 }
 
 function fadeDrawCards(callback) {
     //console.log("fadeDrawCards starts");
-    animCards[0].animate({opacity: 1,width:"toggle",marginLeft:"+=35"}, 350);
-    animCards[1].animate({opacity: 1,width:"toggle",marginLeft:"+=35"}, 350);
-    animCards[2].animate({opacity: 1,width:"toggle",marginLeft:"+=35"}, 350);
+    animCards[0].animate({opacity: 1,width:"toggle",marginLeft:"+=35"}, 200);
+    animCards[1].animate({opacity: 1,width:"toggle",marginLeft:"+=35"}, 200);
+    animCards[2].animate({opacity: 1,width:"toggle",marginLeft:"+=35"}, 200);
     //console.log("fadeDrawCards ends");
-    setTimeout(callback, 400);
+    setTimeout(callback, 150);
 }
 
 function showCards(callback) {
     //console.log("showCards starts");
-    $( "#card1" ).animate({opacity: 1,width: "toggle",marginLeft:"-=25"}, 350);
-    $( "#card2" ).animate({opacity: 1,width: "toggle",marginLeft:"-=25"}, 350);
-    $( "#card3" ).animate({opacity: 1,width: "toggle",marginLeft:"-=25"}, 350);
+    $( "#card1" ).animate({opacity: 1,width: "toggle",marginLeft:"-=25"}, 200);
+    $( "#card2" ).animate({opacity: 1,width: "toggle",marginLeft:"-=25"}, 200);
+    $( "#card3" ).animate({opacity: 1,width: "toggle",marginLeft:"-=25"}, 200);
     //console.log("showCards ends");
-    setTimeout(callback, 500);
+    setTimeout(callback, 350);
 }
 
 function hideDeck() {
@@ -257,9 +260,9 @@ function emptyAnim() {
 
 function playerTurn(call) {
     if(call == "new") {
-        delay = 3000;
+        delay = 1500;
         setTimeout(function() {
-            $("#message").text("Player's Turn").css("color","white").fadeIn(1000).fadeOut(2000);
+            $("#message").text("Player's Turn").css("color","white").fadeIn(500).delay(500).fadeOut(500);
         }, 500);
     } else {
         delay = 0;
@@ -307,9 +310,9 @@ function playerTurn(call) {
                     });
 //                $.when(cardClicked(card, "player", "ai")).done(function(){switchTurn("player");});
                 } else {
-                    $("#message").text("Not enough Resources").fadeIn(1000).fadeOut(1000);
+                    $("#message").text("Not enough Resources").fadeIn(500).delay(500).fadeOut(500);
                     player = true;
-                    setTimeout(function() {playerTurn("resource");}, 1000);
+                    setTimeout(function() {playerTurn("resource");}, 500);
                 }
             }
         })
@@ -319,9 +322,9 @@ function playerTurn(call) {
 
 function aiTurn(call) {
     if(call == "new") {
-        delay = 3000;
+        delay = 1500;
         setTimeout(function() {
-            $("#message").text("Opponent's Turn").css("color","white").fadeIn(1000).fadeOut(2000);
+            $("#message").text("Opponent's Turn").css("color","white").fadeIn(500).delay(500).fadeOut(500);
         }, 500);
     } else {delay = 0;}
 
@@ -354,7 +357,7 @@ function aiTurn(call) {
                                 });
                             });
                         }
-                    }, 8000)
+                    }, 4000)
 
                 } else {aiTurn();}
             }, 500);
@@ -418,9 +421,9 @@ function attack(byTeam, onTeam, card, callback) {
             $("#red_score").text(cal_red);
             cal_green = $("#green_score").text() - parseInt(card.cost.green);
             $("#green_score").text(cal_green);
-            $("#message").text("You Dealt " + parseInt(card.value *(-1)) + " Damage").css("color","red").fadeIn(1000).fadeOut(2000);
+            $("#message").text("You Dealt " + parseInt(card.value *(-1)) + " Damage").css("color","red").fadeIn(500).delay(500).fadeOut(500);
             setTower("ai", card.value);
-            $("#ai-tower-effect").find('.build_image1').show().delay(1000).fadeOut();
+            $("#ai-tower-effect").find('.build_image1').show().delay(500).fadeOut();
             $.ionSound.play("blast");
         }, 1000);
 
@@ -431,15 +434,15 @@ function attack(byTeam, onTeam, card, callback) {
             $("#comp_red_score").text(cal_red);
             cal_green = $("#comp_green_score").text() - parseInt(card.cost.green);
             $("#comp_green_score").text(cal_green);
-            $("#message").text("You Took " + parseInt(card.value *(-1)) + " Damage").css("color","red").fadeIn(1000).fadeOut(2000);
+            $("#message").text("You Took " + parseInt(card.value *(-1)) + " Damage").css("color","red").fadeIn(500).delay(500).fadeOut(500);
             setTower("player", card.value);
-            $("#player-tower-effect").find('.build_image1').show().delay(1000).fadeOut();
+            $("#player-tower-effect").find('.build_image1').show().delay(500).fadeOut();
             $.ionSound.play("blast");
         }, 1000);
 
     }
 
-    setTimeout(function() {checkWin(callback);}, 3000);
+    setTimeout(function() {checkWin(callback);}, 2000);
 }
 
 function build(byTeam, card, callback) {
@@ -451,9 +454,9 @@ function build(byTeam, card, callback) {
             $("#comp_blue_score").text(cal_blue);
             cal_green = $("#comp_green_score").text() - parseInt(card.cost.green);
             $("#comp_green_score").text(cal_green);
-            $("#message").text("Opponent Built Tower by " + card.value).css("color","#3399FF").fadeIn(1000).fadeOut(2000);
+            $("#message").text("Opponent Built Tower by " + card.value).css("color","#3399FF").fadeIn(500).delay(500).fadeOut(500);
             setTower("ai", card.value);
-            $("#ai-tower-effect").find('.build_image').show().delay(1000).fadeOut();
+            $("#ai-tower-effect").find('.build_image').show().delay(500).fadeOut();
             $.ionSound.play("build");
         }, 1000);
 
@@ -464,15 +467,15 @@ function build(byTeam, card, callback) {
             $("#blue_score").text(cal_blue);
             cal_green = $("#green_score").text() - parseInt(card.cost.green);
             $("#green_score").text(cal_green);
-            $("#message").text("You Built Tower by " + card.value).css("color","#3399FF").fadeIn(1000).fadeOut(2000);
+            $("#message").text("You Built Tower by " + card.value).css("color","#3399FF").fadeIn(500).delay(500).fadeOut(500);
             setTower("player", card.value);
-            $("#player-tower-effect").find('.build_image').show().delay(1000).fadeOut();
+            $("#player-tower-effect").find('.build_image').show().delay(500).fadeOut();
             $.ionSound.play("build");
         }, 1000);
 
     }
 
-    setTimeout(function() {checkWin(callback);}, 3000);
+    setTimeout(function() {checkWin(callback);}, 2000);
 }
 
 function bonus(byTeam, onTeam, card, callback) {
@@ -504,7 +507,7 @@ function stockRed(byTeam, card, callback) {
         setTimeout(function() {
             cal_red = parseInt($("#comp_red_score").text()) + parseInt(card.value);
             $("#comp_red_score").text(cal_red);
-            $("#message").text("Opponent gained  " + card.value + " Rubies").css("color","red").fadeIn(1000).fadeOut(2000);
+            $("#message").text("Opponent gained  " + card.value + " Rubies").css("color","red").fadeIn(500).delay(500).fadeOut(500);
         }, 1000);
 
     } else {
@@ -512,12 +515,12 @@ function stockRed(byTeam, card, callback) {
         setTimeout(function() {
             cal_red =  parseInt($("#red_score").text()) + parseInt(card.value);
             $("#red_score").text(cal_red);
-            $("#message").text("You gained  " + card.value + " Rubies").css("color","red").fadeIn(1000).fadeOut(2000);
+            $("#message").text("You gained  " + card.value + " Rubies").css("color","red").fadeIn(500).delay(500).fadeOut(500);
         }, 1000);
 
     }
 
-    setTimeout(function() {checkWin(callback);}, 4000);
+    setTimeout(function() {checkWin(callback);}, 2000);
 }
 
 function stockBlue(byTeam, card, callback) {
@@ -527,7 +530,7 @@ function stockBlue(byTeam, card, callback) {
         setTimeout(function() {
             cal_blue = parseInt($("#comp_blue_score").text()) + parseInt(card.value);
             $("#comp_blue_score").text(cal_blue);
-            $("#message").text("Opponent gained  " + card.value + " Sapphires").css("color","#3399FF").fadeIn(1000).fadeOut(2000);
+            $("#message").text("Opponent gained  " + card.value + " Sapphires").css("color","#3399FF").fadeIn(500).delay(500).fadeOut(500);
         }, 1000);
 
     } else {
@@ -535,12 +538,12 @@ function stockBlue(byTeam, card, callback) {
         setTimeout(function() {
             cal_blue =  parseInt($("#blue_score").text()) + parseInt(card.value);
             $("#blue_score").text(cal_blue);
-            $("#message").text("You gained  " + card.value + " Sapphires").css("color","#3399FF").fadeIn(1000).fadeOut(2000);
+            $("#message").text("You gained  " + card.value + " Sapphires").css("color","#3399FF").fadeIn(500).delay(500).fadeOut(500);
         }, 1000);
 
     }
 
-    setTimeout(function() {checkWin(callback);}, 4000);
+    setTimeout(function() {checkWin(callback);}, 2000);
 }
 
 function stockGreen(byTeam, card, callback) {
@@ -611,7 +614,7 @@ function bindAnswers(byTeam, card, chance, callback) {
             var comp_random_ans = Math.floor(Math.random() * 4);
             var random_ans_li = $('#answerBlock').find('li').eq(comp_random_ans);
             processAnswers($(random_ans_li).attr("id").split("x")[0], byTeam, card, callback);
-        }, 2000);
+        }, 1000);
     }
     $('.answer').unbind('click').on('click', function () {
         if(chance == "player")
@@ -643,7 +646,7 @@ function processAnswers(answer, byTeam, card, callback) {
             if (byTeam == "ai") {
                 greenResRight();
                 setTimeout(function() {
-                    $("#message").text("Opponent gained  " + card.value + " Emeralds").css("color","#009933").fadeIn(1000).fadeOut(2000);
+                    $("#message").text("Opponent gained  " + card.value + " Emeralds").css("color","#009933").fadeIn(500).delay(500).fadeOut(500);
                     cal_green = parseInt($("#comp_green_score").text()) + answerPayoff;
                     $("#comp_green_score").text(cal_green);
                 }, 1000);
@@ -651,14 +654,14 @@ function processAnswers(answer, byTeam, card, callback) {
             } else {
                 greenResLeft();
                 setTimeout(function() {
-                    $("#message").text("You gained  " + card.value + " Emeralds").css("color","#009933").fadeIn(1000).fadeOut(2000);
+                    $("#message").text("You gained  " + card.value + " Emeralds").css("color","#009933").fadeIn(500).delay(500).fadeOut(500);
                     cal_green = parseInt($("#green_score").text()) + answerPayoff;
                     $("#green_score").text(cal_green);
                 }, 1000);
 
             }
 
-            setTimeout(function() {checkWin(callback);}, 3000);
+            setTimeout(function() {checkWin(callback);}, 2000);
 
         } else {
             console.log("shrinking");
@@ -704,7 +707,7 @@ function switchTurn(from) {
                 playerTurn("new");
             });
         }
-    }, 4000);
+    }, 2500);
 }
 
 function animSwitchTurn(from, callback) {
@@ -733,6 +736,9 @@ function playerAnimOff() {
     $(".player").css({'opacity': 0.5});
     $('img.player-frame-glow').hide();
 }
+
+
+
 
 function cardEnlarge(chance, callback){
     var img = "#"+cardId;
@@ -802,95 +808,95 @@ function cardsToDeck(callback){
     switch(cardId) {
         case "card1":
             animCards[2] = animCards[2].css({visibility:"hidden"});
-            $( "#card2" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 350);
-            $( "#card3" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 350);
+            $( "#card2" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 200);
+            $( "#card3" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 200);
             break;
 
         case "card2":
             animCards[1] = animCards[1].css({visibility:"hidden"});
-            $( "#card1" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 350);
-            $( "#card3" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 350);
+            $( "#card1" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 200);
+            $( "#card3" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 200);
             break;
 
         case "card3":
             animCards[0] = animCards[0].css({visibility:"hidden"});
-            $( "#card1" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 350);
-            $( "#card2" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 350);
+            $( "#card1" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 200);
+            $( "#card2" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 200);
             break;
 
         default:
-            $( "#card1" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 350);
-            $( "#card2" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 350);
-            $( "#card3" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 350);
+            $( "#card1" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 200);
+            $( "#card2" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 200);
+            $( "#card3" ).animate({opacity: 1,width: "toggle",marginLeft:"+=25"}, 200);
     }
 
 
 
     setTimeout(function(){
-        animCards[2].animate({opacity: 1,width: "toggle",marginLeft:"-=35"}, 350);
-        animCards[1].animate({opacity: 1,width: "toggle",marginLeft:"-=35"}, 350);
-        animCards[0].animate({opacity: 1,width: "toggle",marginLeft:"-=35"}, 350);
+        animCards[2].animate({opacity: 1,width: "toggle",marginLeft:"-=35"}, 200);
+        animCards[1].animate({opacity: 1,width: "toggle",marginLeft:"-=35"}, 200);
+        animCards[0].animate({opacity: 1,width: "toggle",marginLeft:"-=35"}, 200);
         setTimeout(function(){
-            animCards[2].animate({left:"+=10.47%"},350);
-            animCards[0].animate({left:"-=10.46%"},350);
-        },350);
+            animCards[2].animate({left:"+=10.47%"},200);
+            animCards[0].animate({left:"-=10.46%"},200);
+        },300);
         setTimeout(function(){
-            animCards[2].animate({top:"-=51.2%"},350)
-            animCards[1].animate({top:"-=51.2%"},350)
-            animCards[0].animate({top:"-=51.2%"},350)
-        },700);
+            animCards[2].animate({top:"-=51.2%"},200)
+            animCards[1].animate({top:"-=51.2%"},200)
+            animCards[0].animate({top:"-=51.2%"},200)
+        },600);
         setTimeout(function(){
             animCards[2].fadeOut(0);
             animCards[1].fadeOut(0);
             animCards[0].fadeOut(0);
             toggleCards(0);
             callback();
-        },1400);
-    },500);
+        },800);
+    },150);
 }
 
 function deckFadeIn(callback) {
-    animDeck.fadeIn(1000);
-    setTimeout(callback, 1000);
+    animDeck.fadeIn(500);
+    setTimeout(callback, 500);
 }
 
 function cardMoveRight() {
     console.log("moving right");
     $("#btn").hide();
     $("#close").hide();
-    selectedCard.animate({top: "-113%", left: "129%", width: "10%", height: "30%"}, 500);
-    selectedCard.fadeOut(500);
+    selectedCard.animate({top: "-113%", left: "129%", width: "10%", height: "30%"}, 250);
+    selectedCard.fadeOut(250);
     setTimeout(function () {
         $(".cards").eq(3).remove();
-    }, 1000);
+    }, 500);
 }
 
 function cardMoveLeft() {
     console.log("moving left");
     $("#btn").hide();
     $("#close").hide();
-    selectedCard.animate({top: "-113%", left: "-48%", width: "10%", height: "30%"}, 500);
-    selectedCard.fadeOut(500);
+    selectedCard.animate({top: "-113%", left: "-48%", width: "10%", height: "30%"}, 250);
+    selectedCard.fadeOut(250);
     setTimeout(function () {
         $(".cards").eq(3).remove();
-    }, 1000);
+    }, 500);
 }
 
 function redResLeft() {
-    selectedCard.css('z-index',4).animate({top: "28.3%", left: "-17.3%", width: "2%", height: "6%"}, 1000).fadeOut();
+    selectedCard.css('z-index',4).animate({top: "28.3%", left: "-17.3%", width: "2%", height: "6%"}, 500).fadeOut();
     $("#btn").hide();
     $("#close").hide();
 }
 
 function blueResLeft() {
-    selectedCard.css('z-index',4).animate({top: "56.3%", left: "-17.3%", width: "2%", height: "6%"}, 1000).fadeOut();
+    selectedCard.css('z-index',4).animate({top: "56.3%", left: "-17.3%", width: "2%", height: "6%"}, 500).fadeOut();
     $("#btn").hide();
     $("#close").hide();
 
 }
 
 function greenResLeft() {
-    selectedCard.css('z-index',4).animate({top: "81.3%", left: "-12%", width: "2%", height: "6%"}, 1000).fadeOut();
+    selectedCard.css('z-index',4).animate({top: "81.3%", left: "-12%", width: "2%", height: "6%"}, 500).fadeOut();
     $("#btn").hide();
     $("#close").hide();
 
@@ -898,20 +904,20 @@ function greenResLeft() {
 }
 
 function redResRight() {
-    selectedCard.css('z-index',4).animate({top: "28.3%", left: "114.3%", width: "2%", height: "6%"}, 1000).fadeOut();
+    selectedCard.css('z-index',4).animate({top: "28.3%", left: "114.3%", width: "2%", height: "6%"}, 500).fadeOut();
     $("#btn").hide();
     $("#close").hide();
 
 }
 
 function blueResRight() {
-    selectedCard.css('z-index',4).animate({top: "57.3%", left: "114.3%", width: "2%", height: "6%"}, 1000).fadeOut();
+    selectedCard.css('z-index',4).animate({top: "57.3%", left: "114.3%", width: "2%", height: "6%"}, 500).fadeOut();
     $("#btn").hide();
     $("#close").hide();
 }
 
 function greenResRight() {
-    selectedCard.css('z-index',4).animate({top: "79.3%", left: "109.3%", width: "2%", height: "6%"}, 1000).fadeOut();
+    selectedCard.css('z-index',4).animate({top: "79.3%", left: "109.3%", width: "2%", height: "6%"}, 500).fadeOut();
     $("#btn").hide();
     $("#close").hide();
 }
