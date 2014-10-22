@@ -23,52 +23,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="towerdefense-data.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense-data.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="4" selection-start="199" selection-end="4136" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1155">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="towerdefense.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="towerdefense.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="605" column="45" selection-start="20808" selection-end="20808" vertical-scroll-proportion="0.72527474" vertical-offset="4104" max-vertical-offset="5145">
+            <state line="49" column="0" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="13560">
               <folding>
+                <element signature="e#258#544#0" expanded="false" />
+                <element signature="n#!!block;n#howTo#0" expanded="false" />
                 <element signature="n#!!block;n#blinker#0" expanded="false" />
-                <element signature="n#!!block;n#setTower#0" expanded="false" />
-                <element signature="n#!!block;n#setTowerTop#0" expanded="false" />
-                <element signature="n#!!block;n#initDeck#0" expanded="false" />
-                <element signature="n#!!block;n#drawCards#0" expanded="false" />
-                <element signature="n#!!block;n#initTowers#0" expanded="false" />
-                <element signature="n#!!block;n#aiTurn#0" expanded="false" />
-                <element signature="n#!!block;n#attack#0" expanded="false" />
-                <element signature="e#7900#8412#0" expanded="false" />
-                <element signature="n#!!block;n#build#0" expanded="false" />
-                <element signature="n#!!block;n#green#0" expanded="false" />
-                <element signature="n#!!block;n#stockUp#0" expanded="false" />
-                <element signature="n#!!block;n#checkCost#0" expanded="false" />
-                <element signature="n#!!block;n#emptyDeck#0" expanded="false" />
-                <element signature="n#!!block;n#getQuestion#0" expanded="false" />
-                <element signature="n#!!block;n#bindAnswers#0" expanded="false" />
-                <element signature="n#!!block;n#processAnswers#0" expanded="false" />
-                <element signature="e#14098#14224#0" expanded="false" />
-                <element signature="n#!!block;n#switchTurn#0" expanded="false" />
-                <element signature="n#!!block;n#showDeck#0" expanded="false" />
-                <element signature="n#!!block;n#cardsDraw#0" expanded="false" />
-                <element signature="n#!!block;n#fadeDrawCards#0" expanded="false" />
-                <element signature="n#!!block;n#showCards#0" expanded="false" />
-                <element signature="n#!!block;n#hideDeck#0" expanded="false" />
-                <element signature="n#!!block;n#emptyAnim#0" expanded="false" />
-                <marker date="1411979858311" expanded="false" signature="6412:6459" placeholder="..." />
-                <marker date="1411979858311" expanded="false" signature="7003:7050" placeholder="..." />
-                <marker date="1411979858311" expanded="false" signature="12961:12979" placeholder="..." />
-                <marker date="1411979858311" expanded="false" signature="13041:13076" placeholder="..." />
-                <marker date="1411979858311" expanded="true" signature="16422:16446" placeholder="..." />
-                <marker date="1411979858311" expanded="true" signature="20842:20883" placeholder="..." />
-                <marker date="1411979858311" expanded="true" signature="20956:20996" placeholder="..." />
+                <element signature="n#!!block;n#blinker2#0" expanded="false" />
+                <marker date="1413962233520" expanded="false" signature="6095:6119" placeholder="..." />
+                <marker date="1413962233520" expanded="false" signature="12087:12134" placeholder="..." />
+                <marker date="1413962233520" expanded="false" signature="12375:12422" placeholder="..." />
+                <marker date="1413962233520" expanded="false" signature="20883:20901" placeholder="..." />
+                <marker date="1413962233520" expanded="false" signature="20963:20998" placeholder="..." />
+                <marker date="1413962233520" expanded="false" signature="24547:24598" placeholder="..." />
+                <marker date="1413962233520" expanded="false" signature="24683:24733" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -77,17 +47,28 @@
       <file leaf-file-name="towerdefense.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/towerdefense.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="218" column="12" selection-start="4827" selection-end="4838" vertical-scroll-proportion="-5.470588" vertical-offset="3084" max-vertical-offset="11745">
+            <state line="594" column="57" selection-start="11107" selection-end="11107" vertical-scroll-proportion="0.0" vertical-offset="8767" max-vertical-offset="9360">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="towerdefense.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="game.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/game.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="29" selection-start="268" selection-end="271" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="420">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="towerdefense.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/towerdefense.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="25" selection-start="1450" selection-end="1450" vertical-scroll-proportion="-13.75" vertical-offset="180" max-vertical-offset="2070">
-              <folding />
+            <state line="118" column="56" selection-start="5104" selection-end="5104" vertical-scroll-proportion="0.43165466" vertical-offset="1530" max-vertical-offset="2175">
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,13 +85,14 @@
       <list>
         <option value="$PROJECT_DIR$/css/game.css" />
         <option value="$PROJECT_DIR$/js/towerdefense/towerdefense-data.js" />
-        <option value="$PROJECT_DIR$/towerdefense.html" />
-        <option value="$PROJECT_DIR$/js/towerdefense/towerdefense.js" />
         <option value="$PROJECT_DIR$/css/towerdefense.css" />
+        <option value="$PROJECT_DIR$/js/towerdefense/towerdefense.js" />
+        <option value="$PROJECT_DIR$/towerdefense.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="-1366" />
     <option name="y" value="24" />
     <option name="width" value="1366" />
     <option name="height" value="744" />
@@ -202,20 +184,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="QuizGameEngine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefense-game-" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -226,6 +194,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -243,15 +213,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1366" height="744" extended-state="6" />
+    <frame x="-1366" y="24" width="1366" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329582" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25757575" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35454544" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -281,9 +251,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25378788" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -300,52 +270,285 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense-data.js">
+    <entry file="file://$PROJECT_DIR$/towerdefense.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="4" selection-start="199" selection-end="4136" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1155">
+        <state line="111" column="6" selection-start="4628" selection-end="4628" vertical-scroll-proportion="0.0" vertical-offset="1491" max-vertical-offset="2175">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/towerdefense/how_to.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="777" column="24" selection-start="24851" selection-end="24851" vertical-scroll-proportion="0.0" vertical-offset="10875" max-vertical-offset="10875">
+          <folding>
+            <element signature="e#258#544#0" expanded="false" />
+            <element signature="n#!!block;n#howTo#0" expanded="false" />
+            <element signature="n#!!block;n#blinker#0" expanded="false" />
+            <element signature="n#!!block;n#blinker2#0" expanded="false" />
+            <marker date="1413962233520" expanded="false" signature="6095:6119" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="12087:12134" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="12375:12422" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="20883:20901" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="20963:20998" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="24547:24598" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="24683:24733" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/towerdefense.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="766" column="0" selection-start="14738" selection-end="14738" vertical-scroll-proportion="0.0" vertical-offset="10961" max-vertical-offset="11580">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/towerdefense.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="29" selection-start="886" selection-end="886" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2235">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/towerdefense/how_to.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="579" column="9" selection-start="18208" selection-end="18208" vertical-scroll-proportion="0.0" vertical-offset="8685" max-vertical-offset="10875">
+          <folding>
+            <element signature="e#258#544#0" expanded="false" />
+            <element signature="n#!!block;n#howTo#0" expanded="false" />
+            <element signature="n#!!block;n#blinker#0" expanded="false" />
+            <element signature="n#!!block;n#blinker2#0" expanded="false" />
+            <marker date="1413962233520" expanded="false" signature="6095:6119" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="12087:12134" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="12375:12422" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="20883:20901" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="20963:20998" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="24547:24598" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="24683:24733" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/towerdefense.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="766" column="0" selection-start="14738" selection-end="14738" vertical-scroll-proportion="0.0" vertical-offset="10961" max-vertical-offset="11580">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/towerdefense.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="29" selection-start="886" selection-end="886" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2235">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/towerdefense/how_to.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="579" column="9" selection-start="18208" selection-end="18208" vertical-scroll-proportion="0.0" vertical-offset="8685" max-vertical-offset="10875">
+          <folding>
+            <element signature="e#258#544#0" expanded="false" />
+            <element signature="n#!!block;n#howTo#0" expanded="false" />
+            <element signature="n#!!block;n#blinker#0" expanded="false" />
+            <element signature="n#!!block;n#blinker2#0" expanded="false" />
+            <marker date="1413962233520" expanded="false" signature="6095:6119" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="12087:12134" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="12375:12422" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="20883:20901" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="20963:20998" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="24547:24598" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="24683:24733" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/towerdefense.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="766" column="0" selection-start="14738" selection-end="14738" vertical-scroll-proportion="0.0" vertical-offset="10961" max-vertical-offset="11580">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/towerdefense.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="29" selection-start="886" selection-end="886" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2235">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/towerdefense/how_to.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="344" column="26" selection-start="10061" selection-end="10067" vertical-scroll-proportion="0.0" vertical-offset="3840" max-vertical-offset="10875">
+          <folding>
+            <element signature="e#258#544#0" expanded="false" />
+            <element signature="n#!!block;n#howTo#0" expanded="false" />
+            <element signature="n#!!block;n#blinker#0" expanded="false" />
+            <element signature="n#!!block;n#blinker2#0" expanded="false" />
+            <marker date="1413962233520" expanded="false" signature="6095:6119" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="12087:12134" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="12375:12422" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="20883:20901" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="20963:20998" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="24547:24598" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="24683:24733" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/towerdefense.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="766" column="0" selection-start="14738" selection-end="14738" vertical-scroll-proportion="0.0" vertical-offset="10961" max-vertical-offset="11580">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/towerdefense.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="29" selection-start="886" selection-end="886" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="2235">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/towerdefense/how_to.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense-data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="2" selection-start="7764" selection-end="7764" vertical-scroll-proportion="0.0" vertical-offset="485" max-vertical-offset="1485" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="20" selection-start="1502" selection-end="1502" vertical-scroll-proportion="0.0" vertical-offset="1035" max-vertical-offset="6900">
+          <folding>
+            <element signature="e#258#544#0" expanded="false" />
+            <element signature="n#!!block;n#howTo#0" expanded="false" />
+            <element signature="n#!!block;n#blinker#0" expanded="false" />
+            <element signature="n#!!block;n#blinker2#0" expanded="false" />
+            <marker date="1413962233520" expanded="false" signature="6095:6119" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="12087:12134" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="12375:12422" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="20883:20901" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="20963:20998" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="24547:24598" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="24683:24733" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/towerdefense.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="764" column="0" selection-start="14691" selection-end="14691" vertical-scroll-proportion="0.0" vertical-offset="11460" max-vertical-offset="11550">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/towerdefense.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="40" selection-start="2226" selection-end="2226" vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="2145">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense-data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="2" selection-start="7880" selection-end="7880" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1485" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="728" column="20" selection-start="23459" selection-end="23470" vertical-scroll-proportion="0.0" vertical-offset="10920" max-vertical-offset="12090">
+          <folding>
+            <element signature="e#258#544#0" expanded="false" />
+            <element signature="n#!!block;n#howTo#0" expanded="false" />
+            <element signature="n#!!block;n#blinker#0" expanded="false" />
+            <element signature="n#!!block;n#blinker2#0" expanded="false" />
+            <marker date="1413962233520" expanded="false" signature="6095:6119" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="12087:12134" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="12375:12422" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="20883:20901" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="20963:20998" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="24547:24598" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="24683:24733" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/towerdefense.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="775" column="28" selection-start="14988" selection-end="14988" vertical-scroll-proportion="0.0" vertical-offset="11276" max-vertical-offset="11850">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/towerdefense.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="110" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1110">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense-data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="4" selection-start="199" selection-end="4136" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1155" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="456" column="19" selection-start="15482" selection-end="15482" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3975">
           <folding>
+            <element signature="e#258#544#0" expanded="false" />
+            <element signature="n#!!block;n#howTo#0" expanded="false" />
             <element signature="n#!!block;n#blinker#0" expanded="false" />
-            <element signature="n#!!block;n#setTower#0" expanded="false" />
-            <element signature="n#!!block;n#setTowerTop#0" expanded="false" />
-            <element signature="n#!!block;n#initDeck#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0" expanded="false" />
-            <element signature="n#!!block;n#initTowers#0" expanded="false" />
-            <element signature="n#!!block;n#aiTurn#0" expanded="false" />
-            <element signature="n#!!block;n#attack#0" expanded="false" />
-            <element signature="e#7900#8412#0" expanded="false" />
-            <element signature="n#!!block;n#build#0" expanded="false" />
-            <element signature="n#!!block;n#green#0" expanded="false" />
-            <element signature="n#!!block;n#stockUp#0" expanded="false" />
-            <element signature="n#!!block;n#checkCost#0" expanded="false" />
-            <element signature="n#!!block;n#emptyDeck#0" expanded="false" />
-            <element signature="n#!!block;n#getQuestion#0" expanded="false" />
-            <element signature="n#!!block;n#bindAnswers#0" expanded="false" />
-            <element signature="n#!!block;n#processAnswers#0" expanded="false" />
-            <element signature="e#14098#14224#0" expanded="false" />
-            <element signature="n#!!block;n#switchTurn#0" expanded="false" />
-            <element signature="n#!!block;n#showDeck#0" expanded="false" />
-            <element signature="n#!!block;n#cardsDraw#0" expanded="false" />
-            <element signature="n#!!block;n#fadeDrawCards#0" expanded="false" />
-            <element signature="n#!!block;n#showCards#0" expanded="false" />
-            <element signature="n#!!block;n#hideDeck#0" expanded="false" />
-            <element signature="n#!!block;n#emptyAnim#0" expanded="false" />
-            <marker date="1411979858311" expanded="false" signature="6412:6459" placeholder="..." />
-            <marker date="1411979858311" expanded="false" signature="7003:7050" placeholder="..." />
-            <marker date="1411979858311" expanded="false" signature="12961:12979" placeholder="..." />
-            <marker date="1411979858311" expanded="false" signature="13041:13076" placeholder="..." />
-            <marker date="1411979858311" expanded="true" signature="16422:16446" placeholder="..." />
-            <marker date="1411979858311" expanded="true" signature="20842:20883" placeholder="..." />
-            <marker date="1411979858311" expanded="true" signature="20956:20996" placeholder="..." />
+            <element signature="n#!!block;n#blinker2#0" expanded="false" />
+            <marker date="1413962233520" expanded="false" signature="6095:6119" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="12087:12134" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="12375:12422" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="20883:20901" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="20963:20998" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="24547:24598" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="24683:24733" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -360,53 +563,32 @@
     <entry file="file://$PROJECT_DIR$/towerdefense.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="64" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="2070">
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense-data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="2" selection-start="6070" selection-end="6070" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1155">
-          <folding />
-        </state>
+        <state line="71" column="2" selection-start="6070" selection-end="6070" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1155" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="361" column="16" selection-start="12531" selection-end="12531" vertical-scroll-proportion="0.0" vertical-offset="5415" max-vertical-offset="6405">
           <folding>
+            <element signature="e#258#544#0" expanded="false" />
+            <element signature="n#!!block;n#howTo#0" expanded="false" />
             <element signature="n#!!block;n#blinker#0" expanded="false" />
-            <element signature="n#!!block;n#setTower#0" expanded="false" />
-            <element signature="n#!!block;n#setTowerTop#0" expanded="false" />
-            <element signature="n#!!block;n#initDeck#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0" expanded="false" />
-            <element signature="n#!!block;n#initTowers#0" expanded="false" />
-            <element signature="n#!!block;n#aiTurn#0" expanded="false" />
-            <element signature="n#!!block;n#attack#0" expanded="false" />
-            <element signature="e#7900#8412#0" expanded="false" />
-            <element signature="n#!!block;n#build#0" expanded="false" />
-            <element signature="n#!!block;n#green#0" expanded="false" />
-            <element signature="n#!!block;n#stockUp#0" expanded="false" />
-            <element signature="n#!!block;n#checkCost#0" expanded="false" />
-            <element signature="n#!!block;n#emptyDeck#0" expanded="false" />
-            <element signature="n#!!block;n#getQuestion#0" expanded="false" />
-            <element signature="n#!!block;n#bindAnswers#0" expanded="false" />
-            <element signature="n#!!block;n#processAnswers#0" expanded="false" />
-            <element signature="e#14098#14224#0" expanded="false" />
-            <element signature="n#!!block;n#switchTurn#0" expanded="false" />
-            <element signature="n#!!block;n#showDeck#0" expanded="false" />
-            <element signature="n#!!block;n#cardsDraw#0" expanded="false" />
-            <element signature="n#!!block;n#fadeDrawCards#0" expanded="false" />
-            <element signature="n#!!block;n#showCards#0" expanded="false" />
-            <element signature="n#!!block;n#hideDeck#0" expanded="false" />
-            <element signature="n#!!block;n#emptyAnim#0" expanded="false" />
-            <marker date="1411979858311" expanded="false" signature="6412:6459" placeholder="..." />
-            <marker date="1411979858311" expanded="false" signature="7003:7050" placeholder="..." />
-            <marker date="1411979858311" expanded="false" signature="12961:12979" placeholder="..." />
-            <marker date="1411979858311" expanded="false" signature="13041:13076" placeholder="..." />
-            <marker date="1411979858311" expanded="true" signature="16422:16446" placeholder="..." />
-            <marker date="1411979858311" expanded="true" signature="20842:20883" placeholder="..." />
-            <marker date="1411979858311" expanded="true" signature="20956:20996" placeholder="..." />
+            <element signature="n#!!block;n#blinker2#0" expanded="false" />
+            <marker date="1413962233520" expanded="false" signature="6095:6119" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="12087:12134" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="12375:12422" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="20883:20901" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="20963:20998" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="24547:24598" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="24683:24733" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -421,7 +603,9 @@
     <entry file="file://$PROJECT_DIR$/towerdefense.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="123" column="7" selection-start="5202" selection-end="5202" vertical-scroll-proportion="0.0" vertical-offset="241" max-vertical-offset="1935">
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -430,21 +614,9 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="568" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/game.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="1" selection-start="370" selection-end="370" vertical-scroll-proportion="0.5311973" vertical-offset="0" max-vertical-offset="593">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/vendor/jquery.easing.1.3.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.5307558" vertical-offset="1440" max-vertical-offset="3150" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/towerdefense/blankcard.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/img/towerdefense/tick.png">
@@ -452,63 +624,91 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/img/towerdefense/how_to.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/treasureroad.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.16917293" vertical-offset="90" max-vertical-offset="1770" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quizspin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3990" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quizination.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2115" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/counter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/questionbank.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/quizination/quizination.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6585" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/quizination/quizination-data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.1438849" vertical-offset="80" max-vertical-offset="885" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/game.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="29" selection-start="268" selection-end="271" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense-data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="4" selection-start="199" selection-end="4136" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1155">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/towerdefense.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="25" selection-start="1450" selection-end="1450" vertical-scroll-proportion="-13.75" vertical-offset="180" max-vertical-offset="2070">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/towerdefense.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="218" column="12" selection-start="4827" selection-end="4838" vertical-scroll-proportion="-5.470588" vertical-offset="3084" max-vertical-offset="11745">
+        <state line="11" column="18" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1500">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="605" column="45" selection-start="20808" selection-end="20808" vertical-scroll-proportion="0.72527474" vertical-offset="4104" max-vertical-offset="5145">
+        <state line="49" column="0" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="13560">
           <folding>
+            <element signature="e#258#544#0" expanded="false" />
+            <element signature="n#!!block;n#howTo#0" expanded="false" />
             <element signature="n#!!block;n#blinker#0" expanded="false" />
-            <element signature="n#!!block;n#setTower#0" expanded="false" />
-            <element signature="n#!!block;n#setTowerTop#0" expanded="false" />
-            <element signature="n#!!block;n#initDeck#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0" expanded="false" />
-            <element signature="n#!!block;n#initTowers#0" expanded="false" />
-            <element signature="n#!!block;n#aiTurn#0" expanded="false" />
-            <element signature="n#!!block;n#attack#0" expanded="false" />
-            <element signature="e#7900#8412#0" expanded="false" />
-            <element signature="n#!!block;n#build#0" expanded="false" />
-            <element signature="n#!!block;n#green#0" expanded="false" />
-            <element signature="n#!!block;n#stockUp#0" expanded="false" />
-            <element signature="n#!!block;n#checkCost#0" expanded="false" />
-            <element signature="n#!!block;n#emptyDeck#0" expanded="false" />
-            <element signature="n#!!block;n#getQuestion#0" expanded="false" />
-            <element signature="n#!!block;n#bindAnswers#0" expanded="false" />
-            <element signature="n#!!block;n#processAnswers#0" expanded="false" />
-            <element signature="e#14098#14224#0" expanded="false" />
-            <element signature="n#!!block;n#switchTurn#0" expanded="false" />
-            <element signature="n#!!block;n#showDeck#0" expanded="false" />
-            <element signature="n#!!block;n#cardsDraw#0" expanded="false" />
-            <element signature="n#!!block;n#fadeDrawCards#0" expanded="false" />
-            <element signature="n#!!block;n#showCards#0" expanded="false" />
-            <element signature="n#!!block;n#hideDeck#0" expanded="false" />
-            <element signature="n#!!block;n#emptyAnim#0" expanded="false" />
-            <marker date="1411979858311" expanded="false" signature="6412:6459" placeholder="..." />
-            <marker date="1411979858311" expanded="false" signature="7003:7050" placeholder="..." />
-            <marker date="1411979858311" expanded="false" signature="12961:12979" placeholder="..." />
-            <marker date="1411979858311" expanded="false" signature="13041:13076" placeholder="..." />
-            <marker date="1411979858311" expanded="true" signature="16422:16446" placeholder="..." />
-            <marker date="1411979858311" expanded="true" signature="20842:20883" placeholder="..." />
-            <marker date="1411979858311" expanded="true" signature="20956:20996" placeholder="..." />
+            <element signature="n#!!block;n#blinker2#0" expanded="false" />
+            <marker date="1413962233520" expanded="false" signature="6095:6119" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="12087:12134" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="12375:12422" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="20883:20901" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="20963:20998" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="24547:24598" placeholder="..." />
+            <marker date="1413962233520" expanded="false" signature="24683:24733" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/towerdefense.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="594" column="57" selection-start="11107" selection-end="11107" vertical-scroll-proportion="0.0" vertical-offset="8767" max-vertical-offset="9360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/towerdefense.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="56" selection-start="5104" selection-end="5104" vertical-scroll-proportion="0.43165466" vertical-offset="1530" max-vertical-offset="2175">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
