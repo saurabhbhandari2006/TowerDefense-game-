@@ -597,6 +597,31 @@ li {
         background-repeat: no-repeat;
         background-size: 100% 100%;
         height: 640px;
+        left: 26%;
+        margin: 0 auto;
+        position: absolute;
+        top: 18%;
+        width: 960px;
+    }
+
+    .How{
+        display: none;
+        position: absolute;
+        font-family: "Impact",sans-serif;
+        text-align: center;
+        text-shadow: 0 0 20px white;
+        position: absolute;
+        top: 15%;
+        left: 28%;
+    }
+
+}
+
+@media screen and (min-width: 1370px) and (min-height: 770px) {
+    .game-wrapper{
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 640px;
         left: 30%;
         margin: 0 auto;
         position: absolute;

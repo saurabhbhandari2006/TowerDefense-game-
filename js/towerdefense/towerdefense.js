@@ -213,7 +213,7 @@ function showDeck(callback){
         var newDiv3 = animDeck.clone().insertAfter(animDeck);
         animCards = [newDiv3, newDiv2, newDiv1];
         callback();
-    }, 750);
+    }, 500);
 }
 
 function cardsDraw(callback){
