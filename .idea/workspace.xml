@@ -23,12 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="towerdefense.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="towerdefense.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="215" column="10" selection-start="6267" selection-end="6267" vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="5025">
+            <state line="39" column="51" selection-start="1414" selection-end="1414" vertical-scroll-proportion="0.6929348" vertical-offset="75" max-vertical-offset="5520">
               <folding>
-                <element signature="e#258#544#0" expanded="false" />
                 <element signature="n#!!block;n#howTo#0" expanded="false" />
                 <element signature="n#!!block;n#blinker#0" expanded="false" />
                 <element signature="n#!!block;n#blinker2#0" expanded="false" />
@@ -60,7 +59,7 @@
                 <element signature="n#!!block;n#stockGreen#0" expanded="false" />
                 <element signature="n#!!block;n#checkCost#0" expanded="false" />
                 <element signature="n#!!block;n#emptyDraw#0" expanded="false" />
-                <element signature="e#22436#22562#0" expanded="false" />
+                <element signature="e#23600#23726#0" expanded="false" />
                 <element signature="n#!!block;n#switchTurn#0" expanded="false" />
                 <element signature="n#!!block;n#animSwitchTurn#0" expanded="false" />
                 <element signature="n#!!block;n#playerAnimOff#0" expanded="false" />
@@ -76,13 +75,24 @@
                 <element signature="n#!!block;n#redResRight#0" expanded="false" />
                 <element signature="n#!!block;n#blueResRight#0" expanded="false" />
                 <element signature="n#!!block;n#greenResRight#0" expanded="false" />
-                <marker date="1413959959597" expanded="false" signature="5832:5856" placeholder="..." />
-                <marker date="1413959959597" expanded="false" signature="11853:11900" placeholder="..." />
-                <marker date="1413959959597" expanded="false" signature="12141:12188" placeholder="..." />
-                <marker date="1413959959597" expanded="false" signature="20717:20735" placeholder="..." />
-                <marker date="1413959959597" expanded="false" signature="20797:20832" placeholder="..." />
-                <marker date="1413959959597" expanded="false" signature="24404:24455" placeholder="..." />
-                <marker date="1413959959597" expanded="false" signature="24540:24590" placeholder="..." />
+                <marker date="1413972704553" expanded="false" signature="6996:7020" placeholder="..." />
+                <marker date="1413972704553" expanded="false" signature="13017:13064" placeholder="..." />
+                <marker date="1413972704553" expanded="false" signature="13305:13352" placeholder="..." />
+                <marker date="1413972704553" expanded="false" signature="21881:21899" placeholder="..." />
+                <marker date="1413972704553" expanded="false" signature="21961:21996" placeholder="..." />
+                <marker date="1413972704553" expanded="false" signature="25568:25619" placeholder="..." />
+                <marker date="1413972704553" expanded="false" signature="25704:25754" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.preload.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/towerdefense/preload/jquery.preload.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="25" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,16 +101,16 @@
       <file leaf-file-name="game.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/game.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="1" selection-start="172" selection-end="371" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="420">
+            <state line="22" column="1" selection-start="172" selection-end="371" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="towerdefense.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="towerdefense.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/towerdefense.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="613" column="15" selection-start="11558" selection-end="11558" vertical-scroll-proportion="0.259012" vertical-offset="9001" max-vertical-offset="9750">
+            <state line="613" column="15" selection-start="11558" selection-end="11558" vertical-scroll-proportion="0.0" vertical-offset="9001" max-vertical-offset="9750">
               <folding />
             </state>
           </provider>
@@ -109,7 +119,7 @@
       <file leaf-file-name="towerdefense-data.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense-data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="58" selection-start="4622" selection-end="4624" vertical-scroll-proportion="0.0" vertical-offset="704" max-vertical-offset="1500">
+            <state line="82" column="149" selection-start="7272" selection-end="7314" vertical-scroll-proportion="0.0" vertical-offset="764" max-vertical-offset="1500">
               <folding />
             </state>
           </provider>
@@ -118,10 +128,9 @@
       <file leaf-file-name="towerdefense.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/towerdefense.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="1110" selection-end="1110" vertical-scroll-proportion="2.5" vertical-offset="405" max-vertical-offset="1230">
+            <state line="117" column="64" selection-start="4740" selection-end="4740" vertical-scroll-proportion="-9.375" vertical-offset="1530" max-vertical-offset="2340">
               <folding>
-                <element signature="tag#div#0;tag#body#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#2;tag#body#0" expanded="false" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,10 +148,11 @@
       <list>
         <option value="$PROJECT_DIR$/css/jquery.parallax.css" />
         <option value="$PROJECT_DIR$/css/game.css" />
+        <option value="$PROJECT_DIR$/css/towerdefense.css" />
+        <option value="$PROJECT_DIR$/js/towerdefense/preload/jquery.preload.js" />
         <option value="$PROJECT_DIR$/towerdefense.html" />
         <option value="$PROJECT_DIR$/js/towerdefense/towerdefense-data.js" />
         <option value="$PROJECT_DIR$/js/towerdefense/towerdefense.js" />
-        <option value="$PROJECT_DIR$/css/towerdefense.css" />
       </list>
     </option>
   </component>
@@ -207,71 +217,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="QuizGameEngine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefense-game-" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="towerdefense" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="QuizGameEngine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefense-game-" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="QuizGameEngine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefense-game-" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="towerdefense" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="QuizGameEngine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefense-game-" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -404,7 +350,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="708" column="0" selection-start="22996" selection-end="22996" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="14265">
           <folding>
-            <element signature="e#258#544#0" expanded="false" />
             <element signature="n#!!block;n#howTo#0" expanded="false" />
             <element signature="n#!!block;n#blinker#0" expanded="false" />
             <element signature="n#!!block;n#blinker2#0" expanded="false" />
@@ -436,7 +381,7 @@
             <element signature="n#!!block;n#stockGreen#0" expanded="false" />
             <element signature="n#!!block;n#checkCost#0" expanded="false" />
             <element signature="n#!!block;n#emptyDraw#0" expanded="false" />
-            <element signature="e#22436#22562#0" expanded="false" />
+            <element signature="e#23600#23726#0" expanded="false" />
             <element signature="n#!!block;n#switchTurn#0" expanded="false" />
             <element signature="n#!!block;n#animSwitchTurn#0" expanded="false" />
             <element signature="n#!!block;n#playerAnimOff#0" expanded="false" />
@@ -452,13 +397,13 @@
             <element signature="n#!!block;n#redResRight#0" expanded="false" />
             <element signature="n#!!block;n#blueResRight#0" expanded="false" />
             <element signature="n#!!block;n#greenResRight#0" expanded="false" />
-            <marker date="1413959959597" expanded="false" signature="5832:5856" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="11853:11900" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="12141:12188" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="20717:20735" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="20797:20832" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="24404:24455" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="24540:24590" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="6996:7020" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="13017:13064" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="13305:13352" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="21881:21899" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="21961:21996" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="25568:25619" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="25704:25754" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -488,8 +433,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="0" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1230">
           <folding>
-            <element signature="tag#div#0;tag#body#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#2;tag#body#0" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -498,7 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="253" column="0" selection-start="7397" selection-end="7397" vertical-scroll-proportion="0.0" vertical-offset="2925" max-vertical-offset="2925">
           <folding>
-            <element signature="e#258#544#0" expanded="false" />
             <element signature="n#!!block;n#howTo#0" expanded="false" />
             <element signature="n#!!block;n#blinker#0" expanded="false" />
             <element signature="n#!!block;n#blinker2#0" expanded="false" />
@@ -530,7 +473,7 @@
             <element signature="n#!!block;n#stockGreen#0" expanded="false" />
             <element signature="n#!!block;n#checkCost#0" expanded="false" />
             <element signature="n#!!block;n#emptyDraw#0" expanded="false" />
-            <element signature="e#22436#22562#0" expanded="false" />
+            <element signature="e#23600#23726#0" expanded="false" />
             <element signature="n#!!block;n#switchTurn#0" expanded="false" />
             <element signature="n#!!block;n#animSwitchTurn#0" expanded="false" />
             <element signature="n#!!block;n#playerAnimOff#0" expanded="false" />
@@ -546,13 +489,13 @@
             <element signature="n#!!block;n#redResRight#0" expanded="false" />
             <element signature="n#!!block;n#blueResRight#0" expanded="false" />
             <element signature="n#!!block;n#greenResRight#0" expanded="false" />
-            <marker date="1413959959597" expanded="false" signature="5832:5856" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="11853:11900" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="12141:12188" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="20717:20735" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="20797:20832" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="24404:24455" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="24540:24590" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="6996:7020" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="13017:13064" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="13305:13352" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="21881:21899" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="21961:21996" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="25568:25619" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="25704:25754" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -575,7 +518,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="253" column="0" selection-start="7397" selection-end="7397" vertical-scroll-proportion="0.0" vertical-offset="2925" max-vertical-offset="2925">
           <folding>
-            <element signature="e#258#544#0" expanded="false" />
             <element signature="n#!!block;n#howTo#0" expanded="false" />
             <element signature="n#!!block;n#blinker#0" expanded="false" />
             <element signature="n#!!block;n#blinker2#0" expanded="false" />
@@ -607,7 +549,7 @@
             <element signature="n#!!block;n#stockGreen#0" expanded="false" />
             <element signature="n#!!block;n#checkCost#0" expanded="false" />
             <element signature="n#!!block;n#emptyDraw#0" expanded="false" />
-            <element signature="e#22436#22562#0" expanded="false" />
+            <element signature="e#23600#23726#0" expanded="false" />
             <element signature="n#!!block;n#switchTurn#0" expanded="false" />
             <element signature="n#!!block;n#animSwitchTurn#0" expanded="false" />
             <element signature="n#!!block;n#playerAnimOff#0" expanded="false" />
@@ -623,13 +565,13 @@
             <element signature="n#!!block;n#redResRight#0" expanded="false" />
             <element signature="n#!!block;n#blueResRight#0" expanded="false" />
             <element signature="n#!!block;n#greenResRight#0" expanded="false" />
-            <marker date="1413959959597" expanded="false" signature="5832:5856" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="11853:11900" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="12141:12188" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="20717:20735" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="20797:20832" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="24404:24455" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="24540:24590" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="6996:7020" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="13017:13064" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="13305:13352" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="21881:21899" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="21961:21996" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="25568:25619" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="25704:25754" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -638,7 +580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="253" column="0" selection-start="7397" selection-end="7397" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2925">
           <folding>
-            <element signature="e#258#544#0" expanded="false" />
             <element signature="n#!!block;n#howTo#0" expanded="false" />
             <element signature="n#!!block;n#blinker#0" expanded="false" />
             <element signature="n#!!block;n#blinker2#0" expanded="false" />
@@ -670,7 +611,7 @@
             <element signature="n#!!block;n#stockGreen#0" expanded="false" />
             <element signature="n#!!block;n#checkCost#0" expanded="false" />
             <element signature="n#!!block;n#emptyDraw#0" expanded="false" />
-            <element signature="e#22436#22562#0" expanded="false" />
+            <element signature="e#23600#23726#0" expanded="false" />
             <element signature="n#!!block;n#switchTurn#0" expanded="false" />
             <element signature="n#!!block;n#animSwitchTurn#0" expanded="false" />
             <element signature="n#!!block;n#playerAnimOff#0" expanded="false" />
@@ -686,13 +627,13 @@
             <element signature="n#!!block;n#redResRight#0" expanded="false" />
             <element signature="n#!!block;n#blueResRight#0" expanded="false" />
             <element signature="n#!!block;n#greenResRight#0" expanded="false" />
-            <marker date="1413959959597" expanded="false" signature="5832:5856" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="11853:11900" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="12141:12188" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="20717:20735" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="20797:20832" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="24404:24455" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="24540:24590" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="6996:7020" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="13017:13064" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="13305:13352" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="21881:21899" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="21961:21996" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="25568:25619" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="25704:25754" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -701,8 +642,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="16" selection-start="940" selection-end="980" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="2235">
           <folding>
-            <element signature="tag#div#0;tag#body#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#2;tag#body#0" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -711,7 +651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="680" column="16" selection-start="22301" selection-end="22301" vertical-scroll-proportion="0.0" vertical-offset="7530" max-vertical-offset="7530">
           <folding>
-            <element signature="e#258#544#0" expanded="false" />
             <element signature="n#!!block;n#howTo#0" expanded="false" />
             <element signature="n#!!block;n#blinker#0" expanded="false" />
             <element signature="n#!!block;n#blinker2#0" expanded="false" />
@@ -743,7 +682,7 @@
             <element signature="n#!!block;n#stockGreen#0" expanded="false" />
             <element signature="n#!!block;n#checkCost#0" expanded="false" />
             <element signature="n#!!block;n#emptyDraw#0" expanded="false" />
-            <element signature="e#22436#22562#0" expanded="false" />
+            <element signature="e#23600#23726#0" expanded="false" />
             <element signature="n#!!block;n#switchTurn#0" expanded="false" />
             <element signature="n#!!block;n#animSwitchTurn#0" expanded="false" />
             <element signature="n#!!block;n#playerAnimOff#0" expanded="false" />
@@ -759,13 +698,13 @@
             <element signature="n#!!block;n#redResRight#0" expanded="false" />
             <element signature="n#!!block;n#blueResRight#0" expanded="false" />
             <element signature="n#!!block;n#greenResRight#0" expanded="false" />
-            <marker date="1413959959597" expanded="false" signature="5832:5856" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="11853:11900" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="12141:12188" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="20717:20735" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="20797:20832" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="24404:24455" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="24540:24590" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="6996:7020" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="13017:13064" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="13305:13352" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="21881:21899" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="21961:21996" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="25568:25619" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="25704:25754" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -789,8 +728,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="100" column="10" selection-start="3933" selection-end="4233" vertical-scroll-proportion="0.0" vertical-offset="1035" max-vertical-offset="2100">
           <folding>
-            <element signature="tag#div#0;tag#body#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#2;tag#body#0" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -804,7 +742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="845" column="67" selection-start="27226" selection-end="27226" vertical-scroll-proportion="0.0" vertical-offset="12675" max-vertical-offset="13110">
           <folding>
-            <element signature="e#258#544#0" expanded="false" />
             <element signature="n#!!block;n#howTo#0" expanded="false" />
             <element signature="n#!!block;n#blinker#0" expanded="false" />
             <element signature="n#!!block;n#blinker2#0" expanded="false" />
@@ -836,7 +773,7 @@
             <element signature="n#!!block;n#stockGreen#0" expanded="false" />
             <element signature="n#!!block;n#checkCost#0" expanded="false" />
             <element signature="n#!!block;n#emptyDraw#0" expanded="false" />
-            <element signature="e#22436#22562#0" expanded="false" />
+            <element signature="e#23600#23726#0" expanded="false" />
             <element signature="n#!!block;n#switchTurn#0" expanded="false" />
             <element signature="n#!!block;n#animSwitchTurn#0" expanded="false" />
             <element signature="n#!!block;n#playerAnimOff#0" expanded="false" />
@@ -852,13 +789,13 @@
             <element signature="n#!!block;n#redResRight#0" expanded="false" />
             <element signature="n#!!block;n#blueResRight#0" expanded="false" />
             <element signature="n#!!block;n#greenResRight#0" expanded="false" />
-            <marker date="1413959959597" expanded="false" signature="5832:5856" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="11853:11900" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="12141:12188" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="20717:20735" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="20797:20832" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="24404:24455" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="24540:24590" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="6996:7020" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="13017:13064" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="13305:13352" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="21881:21899" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="21961:21996" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="25568:25619" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="25704:25754" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -877,8 +814,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="24" selection-start="1450" selection-end="1450" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2100">
           <folding>
-            <element signature="tag#div#0;tag#body#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#2;tag#body#0" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -892,7 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="684" column="89" selection-start="22085" selection-end="22085" vertical-scroll-proportion="0.0" vertical-offset="10260" max-vertical-offset="11985">
           <folding>
-            <element signature="e#258#544#0" expanded="false" />
             <element signature="n#!!block;n#howTo#0" expanded="false" />
             <element signature="n#!!block;n#blinker#0" expanded="false" />
             <element signature="n#!!block;n#blinker2#0" expanded="false" />
@@ -924,7 +859,7 @@
             <element signature="n#!!block;n#stockGreen#0" expanded="false" />
             <element signature="n#!!block;n#checkCost#0" expanded="false" />
             <element signature="n#!!block;n#emptyDraw#0" expanded="false" />
-            <element signature="e#22436#22562#0" expanded="false" />
+            <element signature="e#23600#23726#0" expanded="false" />
             <element signature="n#!!block;n#switchTurn#0" expanded="false" />
             <element signature="n#!!block;n#animSwitchTurn#0" expanded="false" />
             <element signature="n#!!block;n#playerAnimOff#0" expanded="false" />
@@ -940,13 +875,13 @@
             <element signature="n#!!block;n#redResRight#0" expanded="false" />
             <element signature="n#!!block;n#blueResRight#0" expanded="false" />
             <element signature="n#!!block;n#greenResRight#0" expanded="false" />
-            <marker date="1413959959597" expanded="false" signature="5832:5856" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="11853:11900" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="12141:12188" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="20717:20735" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="20797:20832" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="24404:24455" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="24540:24590" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="6996:7020" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="13017:13064" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="13305:13352" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="21881:21899" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="21961:21996" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="25568:25619" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="25704:25754" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -965,8 +900,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="132" column="7" selection-start="5647" selection-end="5647" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2070">
           <folding>
-            <element signature="tag#div#0;tag#body#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#2;tag#body#0" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -980,7 +914,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="135" column="37" selection-start="3999" selection-end="3999" vertical-scroll-proportion="0.0" vertical-offset="2025" max-vertical-offset="4095">
           <folding>
-            <element signature="e#258#544#0" expanded="false" />
             <element signature="n#!!block;n#howTo#0" expanded="false" />
             <element signature="n#!!block;n#blinker#0" expanded="false" />
             <element signature="n#!!block;n#blinker2#0" expanded="false" />
@@ -1012,7 +945,7 @@
             <element signature="n#!!block;n#stockGreen#0" expanded="false" />
             <element signature="n#!!block;n#checkCost#0" expanded="false" />
             <element signature="n#!!block;n#emptyDraw#0" expanded="false" />
-            <element signature="e#22436#22562#0" expanded="false" />
+            <element signature="e#23600#23726#0" expanded="false" />
             <element signature="n#!!block;n#switchTurn#0" expanded="false" />
             <element signature="n#!!block;n#animSwitchTurn#0" expanded="false" />
             <element signature="n#!!block;n#playerAnimOff#0" expanded="false" />
@@ -1028,13 +961,13 @@
             <element signature="n#!!block;n#redResRight#0" expanded="false" />
             <element signature="n#!!block;n#blueResRight#0" expanded="false" />
             <element signature="n#!!block;n#greenResRight#0" expanded="false" />
-            <marker date="1413959959597" expanded="false" signature="5832:5856" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="11853:11900" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="12141:12188" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="20717:20735" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="20797:20832" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="24404:24455" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="24540:24590" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="6996:7020" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="13017:13064" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="13305:13352" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="21881:21899" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="21961:21996" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="25568:25619" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="25704:25754" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1053,8 +986,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="0" selection-start="2316" selection-end="2316" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1935">
           <folding>
-            <element signature="tag#div#0;tag#body#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#2;tag#body#0" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1068,7 +1000,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="158" column="0" selection-start="4582" selection-end="4582" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1215">
           <folding>
-            <element signature="e#258#544#0" expanded="false" />
             <element signature="n#!!block;n#howTo#0" expanded="false" />
             <element signature="n#!!block;n#blinker#0" expanded="false" />
             <element signature="n#!!block;n#blinker2#0" expanded="false" />
@@ -1100,7 +1031,7 @@
             <element signature="n#!!block;n#stockGreen#0" expanded="false" />
             <element signature="n#!!block;n#checkCost#0" expanded="false" />
             <element signature="n#!!block;n#emptyDraw#0" expanded="false" />
-            <element signature="e#22436#22562#0" expanded="false" />
+            <element signature="e#23600#23726#0" expanded="false" />
             <element signature="n#!!block;n#switchTurn#0" expanded="false" />
             <element signature="n#!!block;n#animSwitchTurn#0" expanded="false" />
             <element signature="n#!!block;n#playerAnimOff#0" expanded="false" />
@@ -1116,13 +1047,13 @@
             <element signature="n#!!block;n#redResRight#0" expanded="false" />
             <element signature="n#!!block;n#blueResRight#0" expanded="false" />
             <element signature="n#!!block;n#greenResRight#0" expanded="false" />
-            <marker date="1413959959597" expanded="false" signature="5832:5856" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="11853:11900" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="12141:12188" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="20717:20735" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="20797:20832" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="24404:24455" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="24540:24590" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="6996:7020" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="13017:13064" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="13305:13352" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="21881:21899" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="21961:21996" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="25568:25619" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="25704:25754" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1147,6 +1078,21 @@
         <state line="30" column="21" selection-start="1261" selection-end="1262" vertical-scroll-proportion="0.61141306" vertical-offset="0" max-vertical-offset="736" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/img/towerdefense/instructions.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/towerdefense/blankcard.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/towerdefense/card_back.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/game.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="1" selection-start="172" selection-end="371" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
@@ -1154,33 +1100,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/towerdefense/instructions.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/js/towerdefense/preload/jquery.preload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="25" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/towerdefense.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="613" column="15" selection-start="11558" selection-end="11558" vertical-scroll-proportion="0.0" vertical-offset="9001" max-vertical-offset="9750">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/towerdefense.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="1110" selection-end="1110" vertical-scroll-proportion="2.5" vertical-offset="405" max-vertical-offset="1230">
+        <state line="117" column="64" selection-start="4740" selection-end="4740" vertical-scroll-proportion="-9.375" vertical-offset="1530" max-vertical-offset="2340">
           <folding>
-            <element signature="tag#div#0;tag#body#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#2;tag#body#0" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense-data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="58" selection-start="4622" selection-end="4624" vertical-scroll-proportion="0.0" vertical-offset="704" max-vertical-offset="1500">
+        <state line="82" column="149" selection-start="7272" selection-end="7314" vertical-scroll-proportion="0.0" vertical-offset="764" max-vertical-offset="1500">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/towerdefense/towerdefense.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="215" column="10" selection-start="6267" selection-end="6267" vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="5025">
+        <state line="39" column="51" selection-start="1414" selection-end="1414" vertical-scroll-proportion="0.6929348" vertical-offset="75" max-vertical-offset="5520">
           <folding>
-            <element signature="e#258#544#0" expanded="false" />
             <element signature="n#!!block;n#howTo#0" expanded="false" />
             <element signature="n#!!block;n#blinker#0" expanded="false" />
             <element signature="n#!!block;n#blinker2#0" expanded="false" />
@@ -1212,7 +1167,7 @@
             <element signature="n#!!block;n#stockGreen#0" expanded="false" />
             <element signature="n#!!block;n#checkCost#0" expanded="false" />
             <element signature="n#!!block;n#emptyDraw#0" expanded="false" />
-            <element signature="e#22436#22562#0" expanded="false" />
+            <element signature="e#23600#23726#0" expanded="false" />
             <element signature="n#!!block;n#switchTurn#0" expanded="false" />
             <element signature="n#!!block;n#animSwitchTurn#0" expanded="false" />
             <element signature="n#!!block;n#playerAnimOff#0" expanded="false" />
@@ -1228,21 +1183,14 @@
             <element signature="n#!!block;n#redResRight#0" expanded="false" />
             <element signature="n#!!block;n#blueResRight#0" expanded="false" />
             <element signature="n#!!block;n#greenResRight#0" expanded="false" />
-            <marker date="1413959959597" expanded="false" signature="5832:5856" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="11853:11900" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="12141:12188" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="20717:20735" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="20797:20832" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="24404:24455" placeholder="..." />
-            <marker date="1413959959597" expanded="false" signature="24540:24590" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="6996:7020" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="13017:13064" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="13305:13352" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="21881:21899" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="21961:21996" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="25568:25619" placeholder="..." />
+            <marker date="1413972704553" expanded="false" signature="25704:25754" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/towerdefense.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="613" column="15" selection-start="11558" selection-end="11558" vertical-scroll-proportion="0.259012" vertical-offset="9001" max-vertical-offset="9750">
-          <folding />
         </state>
       </provider>
     </entry>

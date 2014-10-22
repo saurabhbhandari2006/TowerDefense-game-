@@ -16,6 +16,30 @@ var selectedCard;
 var delay;
 
 $(function () {
+    $.preload( 'img/towerdefense/resource/pouch_of_rubies.png',
+        'img/towerdefense/attack/ohitsuji.png',
+        'img/towerdefense/attack/ballista.png',
+        'img/towerdefense/card_back.png',
+        'img/towerdefense/attack/catapult.png',
+        'img/towerdefense/attack/siege_tower.png',
+        'img/towerdefense/attack/tosekiki.png',
+        'img/towerdefense/build/wood_masonry.png',
+        'img/towerdefense/build/stone_masonry.png',
+        'img/towerdefense/build/iron_masonry.png',
+        'img/towerdefense/attack/earth_crawler.png',
+        'img/towerdefense/attack/firing_lore.png',
+        'img/towerdefense/attack/fire_breather.png',
+        'img/towerdefense/build/strong_belfry.png',
+        'img/towerdefense/build/dominion_tower.png',
+        'img/towerdefense/resource/pouch_of_rubies.png',
+        'img/towerdefense/resource/sack_of_rubies.png',
+        'img/towerdefense/resource/ruby_mine.png',
+        'img/towerdefense/resource/pouch_of_sapphires.png',
+        'img/towerdefense/resource/sack_of_sapphires.png',
+        'img/towerdefense/resource/sapphire_mine.png',
+        'img/towerdefense/resource/emerald_mine.png'
+    );
+
     $('body').css('background-image', "url(" + theme.background + ")");
     blinkit = setInterval(blinker, 2000);
     $('#startClicker').on('click', function () {
